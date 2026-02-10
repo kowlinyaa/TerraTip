@@ -219,7 +219,8 @@ li{
 .guide-arrow {
     width: 50px;
     opacity: 0.3; 
-    margin-bottom: 20px;
+    margin-bottom: 20px;}
+.bounce-w {
     animation: bounce 2s infinite;
 }
 
@@ -348,6 +349,11 @@ li{
 
   .guide-arrow {
     width: 35px;
+      transform: rotate(90deg);
+  }
+  .bounce-w {
+    animation: none;
   }
 }
+
 
