@@ -305,7 +305,7 @@ li{
   /* Content area */
   .crop-tipstyle {
     padding: 15px;
-    min-width: 100%;
+    max-width: 100%;
   }
 
   .crop-header {
@@ -350,3 +350,4 @@ li{
     width: 35px;
   }
 }
+
