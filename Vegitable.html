@@ -1,0 +1,2503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraTip</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="cereals.css">
+</head>
+<body>
+    <div class="main">
+        <div class="sticky">
+            <div class="navbar">
+                <nav class="top">
+                    <img src="logo.png" alt="TerraTip Logo" class="logo">
+                    <a href="index.html" class="navlink" id="page">Home</a>
+                    <!-- <a href="cropcalender.html" class="navlink">Crop Calendar</a>
+                    <a href="disease.html" class="navlink">Disease Info</a>
+                    <a href="basic.html" class="navlink">Basic</a>
+                    <a href="about.html" class="navlink">About Me</a> -->
+                </nav>
+            </div>
+            <div class="legend">
+                <nav class="legend">
+                    <p class="legend-title">SELECT CROP CATEGORY</p>
+                    <img src="pointing-right.png" alt="Arrow" class="arrow-icon">
+                    <a href="cereals.html" class="legend-item">CEREALS</a>
+                    <a href="Pulses.html" class="legend-item">PULSES</a>
+                    <a href="Vegitable.html" class="legend-item">VEGETABLES</a>
+                    <a href="Fruits.html" class="legend-item">FRUITS</a>
+                    <a href="Cash-crops.html" class="legend-item">CASH CROPS</a>
+                    <a href="Oilseeds.html" class="legend-item">OILSEEDS</a>
+                    <a href="Spices.html" class="legend-item">SPICES</a>
+                    <a href="Medicinal.html" class="legend-item">MEDICINALS</a>
+                    <a href="Flowers.html" class="legend-item">FLOWERS</a>
+                    <a href="Nuts.html" class="legend-item">NUTS</a>
+                    <a href="Forage.html" class="legend-item">FORAGE</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="crop-list">
+                <p class="list-head">VEGETABLES</p>
+
+                <button onclick="displaytip('Spinach','spinach')" id="spinach">Spinach</button>
+                <button onclick="displaytip('Cabbage','cabbage')" id="cabbage">Cabbage</button>
+                <button onclick="displaytip('Lettuce','lettuce')" id="lettuce">Lettuce</button>
+                <button onclick="displaytip('Fenugreek','fenugreek')" id="fenugreek">Fenugreek (Methi)</button>
+                <button onclick="displaytip('Mustard Greens','mustard-greens')" id="mustard-greens">Mustard Greens</button>
+                <button onclick="displaytip('Amaranth','amaranth')" id="amaranth">Amaranth</button>
+
+                <button onclick="displaytip('Carrot','carrot')" id="carrot">Carrot</button>
+                <button onclick="displaytip('Radish','radish')" id="radish">Radish</button>
+                <button onclick="displaytip('Beetroot','beetroot')" id="beetroot">Beetroot</button>
+                <button onclick="displaytip('Turnip','turnip')" id="turnip">Turnip</button>
+
+                <button onclick="displaytip('Onion','onion')" id="onion">Onion</button>
+                <button onclick="displaytip('Garlic','garlic')" id="garlic">Garlic</button>
+                <button onclick="displaytip('Leek','leek')" id="leek">Leek</button>
+                <button onclick="displaytip('Spring Onion','spring-onion')" id="spring-onion">Spring Onion</button>
+
+                <button onclick="displaytip('Potato','potato')" id="potato">Potato</button>
+                <button onclick="displaytip('Sweet Potato','sweet-potato')" id="sweet-potato">Sweet Potato</button>
+                <button onclick="displaytip('Yam','yam')" id="yam">Yam</button>
+                <button onclick="displaytip('Colocasia','colocasia')" id="colocasia">Colocasia (Arbi)</button>
+                <button onclick="displaytip('Elephant Foot Yam','suran')" id="suran">Elephant Foot Yam</button>
+
+                <button onclick="displaytip('Tomato','tomato')" id="tomato">Tomato</button>
+                <button onclick="displaytip('Brinjal','brinjal')" id="brinjal">Brinjal</button>
+                <button onclick="displaytip('Capsicum','capsicum')" id="capsicum">Capsicum</button>
+                <button onclick="displaytip('Chilli','chilli')" id="chilli">Chilli</button>
+                <button onclick="displaytip('Okra','okra')" id="okra">Okra</button>
+                <button onclick="displaytip('Cucumber','cucumber')" id="cucumber">Cucumber</button>
+
+                <button onclick="displaytip('Pumpkin','pumpkin')" id="pumpkin">Pumpkin</button>
+                <button onclick="displaytip('Bottle Gourd','bottle-gourd')" id="bottle-gourd">Bottle Gourd</button>
+                <button onclick="displaytip('Ridge Gourd','ridge-gourd')" id="ridge-gourd">Ridge Gourd</button>
+                <button onclick="displaytip('Sponge Gourd','sponge-gourd')" id="sponge-gourd">Sponge Gourd</button>
+                <button onclick="displaytip('Bitter Gourd','bitter-gourd')" id="bitter-gourd">Bitter Gourd</button>
+
+                <button onclick="displaytip('Cauliflower','cauliflower')" id="cauliflower">Cauliflower</button>
+                <button onclick="displaytip('Broccoli','broccoli')" id="broccoli">Broccoli</button>
+
+                <button onclick="displaytip('Green Peas','green-peas')" id="green-peas">Green Peas</button>
+                <button onclick="displaytip('French Beans','french-beans')" id="french-beans">French Beans</button>
+                <button onclick="displaytip('Cluster Beans','cluster-beans')" id="cluster-beans">Cluster Beans</button>
+
+                <button onclick="displaytip('Celery','celery')" id="celery">Celery</button>
+                <button onclick="displaytip('Asparagus','asparagus')" id="asparagus">Asparagus</button>
+                <button onclick="displaytip('Kohlrabi','kohlrabi')" id="kohlrabi">Kohlrabi</button>
+
+                <button onclick="displaytip('Mushroom','mushroom')" id="mushroom">Mushroom</button>
+            </div>
+
+        <div class="crop-tipstyle" id="crop-tip">
+            <div class="empty-state">
+                <img src="arrow-left.png" alt="Arrow" class="guide-arrow">
+                <h2>Ready to grow?</h2>
+                <p>Select a crop from the left list for expert farming guidance.</p>
+            </div>
+        </div>
+        </div>
+            
+
+    <script>
+    function displaytip(crop, clickedId) {
+    const allButtons = document.querySelectorAll('.crop-list button');
+    allButtons.forEach(btn => btn.style.backgroundColor = "");
+    allButtons.forEach(btn => btn.style.color = "black");
+    const cropindisplay = document.getElementById(clickedId);
+    cropindisplay.style.backgroundColor = "#2a6b1f";
+    cropindisplay.style.color = "white";
+    const contentArea = document.getElementById('crop-tip');
+
+    if (crop === 'Spinach') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Spinach (Spinacia oleracea)</h1>
+            <p>A fast-growing leafy vegetable rich in iron, vitamins, and antioxidants.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 30 - 45 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare fine, loose soil</li>
+                        <li>Add compost or organic manure</li>
+                        <li>Ensure good drainage</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds 1–2 cm deep</li>
+                        <li>Maintain 20 cm row spacing</li>
+                        <li>Water lightly after sowing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Keep soil moist</li>
+                        <li>Remove weeds regularly</li>
+                        <li>Harvest leaves early for tenderness</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Harvest frequently to promote regrowth</li>
+                <li>Avoid high heat to prevent bolting</li>
+            </ul>
+        </div>
+    </div>
+    `;
+}
+
+else if (crop === 'Cabbage') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Cabbage (Brassica oleracea)</h1>
+            <p>A cool-season vegetable grown for its dense leafy head.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 6.8</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Deep plough the soil</li>
+                        <li>Add compost or farmyard manure</li>
+                        <li>Level the field</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Transplanting</h3>
+                    <ul>
+                        <li>Transplant healthy seedlings</li>
+                        <li>Maintain 45–60 cm spacing</li>
+                        <li>Irrigate immediately</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Regular watering is essential</li>
+                        <li>Control pests and diseases</li>
+                        <li>Harvest when heads are firm</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Rotate crops to prevent soil diseases</li>
+                <li>Cool weather improves head quality</li>
+            </ul>
+        </div>
+    </div>
+    `;
+}
+else if (crop === 'Lettuce') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Lettuce (Lactuca sativa)</h1>
+            <p>A leafy vegetable commonly used in salads and sandwiches.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 45 - 65 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare fine-textured soil</li>
+                        <li>Add organic compost</li>
+                        <li>Ensure good moisture retention</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds shallowly</li>
+                        <li>Keep soil moist</li>
+                        <li>Thin seedlings after germination</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Water frequently</li>
+                        <li>Remove weeds</li>
+                        <li>Harvest before bolting</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Partial shade improves leaf quality</li>
+                <li>Harvest early morning for freshness</li>
+            </ul>
+        </div>
+    </div>
+    `;
+}
+else if (crop === 'Fenugreek') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Fenugreek (Trigonella foenum-graecum)</h1>
+            <p>A leafy vegetable grown for its aromatic leaves and seeds.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 25 - 40 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Loosen soil thoroughly</li>
+                        <li>Add organic manure</li>
+                        <li>Level the soil</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds evenly</li>
+                        <li>Cover lightly with soil</li>
+                        <li>Water gently</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Minimal irrigation required</li>
+                        <li>Weed once or twice</li>
+                        <li>Harvest leaves early</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Early harvesting gives tender leaves</li>
+                <li>Avoid waterlogging</li>
+            </ul>
+        </div>
+    </div>
+    `;
+}
+else if (crop === 'Mustard Greens') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Mustard Greens (Brassica juncea)</h1>
+            <p>A leafy vegetable known for its pungent flavor and high nutrition.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 30 - 50 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare fertile soil</li>
+                        <li>Add organic compost</li>
+                        <li>Ensure proper drainage</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds shallowly</li>
+                        <li>Maintain proper spacing</li>
+                        <li>Water after sowing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Regular watering</li>
+                        <li>Weed control is essential</li>
+                        <li>Harvest young leaves</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Young leaves taste milder</li>
+                <li>Cold weather improves flavor</li>
+            </ul>
+        </div>
+    </div>
+    `;
+}
+else if (crop === 'Mustard Greens') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Mustard Greens (Brassica juncea)</h1>
+            <p>A leafy vegetable known for its pungent flavor and high nutrition.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 30 - 50 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare fertile soil</li>
+                        <li>Add organic compost</li>
+                        <li>Ensure proper drainage</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds shallowly</li>
+                        <li>Maintain proper spacing</li>
+                        <li>Water after sowing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Regular watering</li>
+                        <li>Weed control is essential</li>
+                        <li>Harvest young leaves</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Young leaves taste milder</li>
+                <li>Cold weather improves flavor</li>
+            </ul>
+        </div>
+    </div>
+    `;
+}
+else if (crop === 'Amaranth') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Amaranth (Amaranthus spp.)</h1>
+            <p>A fast-growing leafy vegetable tolerant to heat and rich in nutrients.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 25 - 45 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare loose soil</li>
+                        <li>Add organic manure</li>
+                        <li>Level the field</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Broadcast seeds evenly</li>
+                        <li>Cover lightly with soil</li>
+                        <li>Water gently</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Water regularly</li>
+                        <li>Thin seedlings if dense</li>
+                        <li>Harvest young leaves</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Heat tolerant leafy vegetable</li>
+                <li>Frequent cutting promotes regrowth</li>
+            </ul>
+        </div>
+    </div>
+    `;
+}
+else if (crop === 'Carrot') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Carrot (Daucus carota)</h1>
+            <p>A root vegetable known for its sweetness, crunch, and high vitamin A content.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 6.8</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 70 - 90 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare deep, loose soil</li>
+                        <li>Remove stones and clods</li>
+                        <li>Add organic compost</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds directly in rows</li>
+                        <li>Keep soil moist</li>
+                        <li>Thin seedlings after germination</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Water regularly</li>
+                        <li>Control weeds</li>
+                        <li>Harvest when roots mature</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Loose soil ensures straight roots</li>
+                <li>Avoid excess nitrogen</li>
+            </ul>
+        </div>
+    </div>
+    `;
+}
+else if (crop === 'Radish') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Radish (Raphanus sativus)</h1>
+            <p>A fast-growing root vegetable with a crisp texture and pungent taste.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.8 - 6.8</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 25 - 40 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare well-drained soil</li>
+                        <li>Add organic matter</li>
+                        <li>Level the field</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds directly</li>
+                        <li>Maintain proper spacing</li>
+                        <li>Water immediately</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Maintain consistent moisture</li>
+                        <li>Remove weeds early</li>
+                        <li>Harvest young roots</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Quick harvesting prevents bitterness</li>
+                <li>Do not let roots overgrow</li>
+            </ul>
+        </div>
+    </div>
+    `;
+}
+else if (crop === 'Beetroot') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Beetroot (Beta vulgaris)</h1>
+            <p>A nutritious root vegetable known for its deep red color and earthy flavor.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 60 - 80 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Loosen soil deeply</li>
+                        <li>Add compost</li>
+                        <li>Remove stones</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds directly</li>
+                        <li>Maintain row spacing</li>
+                        <li>Water gently</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Regular irrigation</li>
+                        <li>Thin seedlings</li>
+                        <li>Harvest medium-sized roots</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Harvest early for tenderness</li>
+                <li>Even moisture prevents cracking</li>
+            </ul>
+        </div>
+    </div>
+    `;
+}
+else if (crop === 'Turnip') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Turnip (Brassica rapa)</h1>
+            <p>A fast-growing root vegetable with edible roots and greens.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 45 - 65 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare loose soil</li>
+                        <li>Add organic manure</li>
+                        <li>Ensure good drainage</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds directly</li>
+                        <li>Maintain spacing</li>
+                        <li>Water lightly</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Regular watering</li>
+                        <li>Weed management</li>
+                        <li>Harvest when tender</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Harvest early for best taste</li>
+                <li>Avoid overcrowding</li>
+            </ul>
+        </div>
+    </div>
+    `;
+}
+else if (crop === 'Onion') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Onion (Allium cepa)</h1>
+            <p>A widely used bulb vegetable known for its strong flavor and aroma.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Mild</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare fine seedbed</li>
+                        <li>Add organic manure</li>
+                        <li>Ensure good drainage</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Transplanting</h3>
+                    <ul>
+                        <li>Transplant healthy seedlings</li>
+                        <li>Maintain proper spacing</li>
+                        <li>Water immediately</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Regular irrigation</li>
+                        <li>Weed control</li>
+                        <li>Harvest when tops dry</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Stop irrigation before harvest</li>
+                <li>Dry bulbs properly for storage</li>
+            </ul>
+        </div>
+    </div>
+    `;
+}
+else if (crop === 'Garlic') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Garlic (Allium sativum)</h1>
+            <p>A bulb vegetable valued for its medicinal and culinary uses.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 120 - 150 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare loose soil</li>
+                        <li>Add organic compost</li>
+                        <li>Ensure drainage</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant cloves directly</li>
+                        <li>Maintain spacing</li>
+                        <li>Water lightly</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Minimal irrigation</li>
+                        <li>Weed control</li>
+                        <li>Harvest when leaves dry</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Avoid overwatering</li>
+                <li>Proper curing improves storage</li>
+            </ul>
+        </div>
+    </div>
+    `;
+}
+else if (crop === 'Leek') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Leek (Allium porrum)</h1>
+            <p>A mild-flavored vegetable related to onion and garlic.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 120 - 150 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare fertile soil</li>
+                        <li>Add compost</li>
+                        <li>Ensure drainage</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Transplanting</h3>
+                    <ul>
+                        <li>Transplant seedlings</li>
+                        <li>Earth up stems</li>
+                        <li>Water well</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Regular watering</li>
+                        <li>Weed control</li>
+                        <li>Harvest when thick</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Earthing up produces white stems</li>
+                <li>Cool weather enhances flavor</li>
+            </ul>
+        </div>
+    </div>
+    `;
+}
+else if (crop === 'Spring Onion') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Spring Onion (Allium fistulosum)</h1>
+            <p>A young onion harvested early for its tender green leaves.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Mild</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 45 - 60 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare fine soil</li>
+                        <li>Add organic manure</li>
+                        <li>Ensure drainage</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds in rows</li>
+                        <li>Water regularly</li>
+                        <li>Thin plants if crowded</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Maintain moisture</li>
+                        <li>Remove weeds</li>
+                        <li>Harvest early</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Harvest young for best flavor</li>
+                <li>Regular cutting encourages regrowth</li>
+            </ul>
+        </div>
+    </div>
+    `;
+}
+else if (crop === 'Potato') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Potato (Solanum tuberosum)</h1>
+            <p>A major tuber vegetable grown worldwide for its edible underground stems.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.0 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul><li>Prepare loose, well-drained soil</li><li>Add organic manure</li><li>Make ridges and furrows</li></ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul><li>Plant healthy seed tubers</li><li>Maintain proper spacing</li><li>Cover lightly with soil</li></ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul><li>Earth up plants</li><li>Irrigate regularly</li><li>Harvest after foliage dries</li></ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box"><strong>💡 Pro-Tip:</strong>
+            <ul><li>Avoid waterlogging</li><li>Proper earthing increases yield</li></ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Sweet Potato') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Sweet Potato (Ipomoea batatas)</h1>
+            <p>A nutritious root vegetable rich in carbohydrates and vitamins.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ Climate:</strong> Warm</div>
+            <div class="stat-card">💧 Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 Soil pH:</strong> 5.5 - 6.5</div>
+            <div class="stat-card">⏳ Duration:</strong> 100 - 140 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul><li>Prepare ridges</li><li>Add compost</li><li>Ensure drainage</li></ul>
+            </div></div>
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul><li>Use vine cuttings</li><li>Plant on ridges</li><li>Water lightly</li></ul>
+            </div></div>
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul><li>Minimal irrigation</li><li>Control weeds</li><li>Harvest mature roots</li></ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box"><strong>💡 Pro-Tip:</strong>
+            <ul><li>Loose soil improves root size</li></ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Yam') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Yam (Dioscorea spp.)</h1>
+            <p>A tropical tuber crop grown for edible starchy tubers.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 8 - 12 Months</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Loosen deep soil and add organic manure</li>
+                    <li>Create raised ridges 30–40 cm high for planting tubers</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant seed tubers or setts 10–15 cm deep</li>
+                    <li>Spacing: 60–90 cm between plants and rows</li>
+                    <li>Water immediately after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Weed regularly during early growth</li>
+                    <li>Support vines with stakes if needed</li>
+                    <li>Harvest tubers 8–12 months after planting when foliage dies back</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Use healthy, disease-free seed tubers</li>
+                <li>Mulch to conserve moisture and control weeds</li>
+                <li>Ensure proper drainage to prevent tuber rot</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Colocasia') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Colocasia (Arbi)</h1>
+            <p>A tropical root vegetable grown for edible corms and leaves.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Humid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.0 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 7 - 10 Months</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Loosen soil and enrich with organic manure</li>
+                    <li>Create raised beds or flooded plots for wet cultivation</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant healthy corms 5–10 cm deep</li>
+                    <li>Spacing: 30–40 cm between plants, 45–60 cm between rows</li>
+                    <li>Water thoroughly after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Maintain standing water for submerged growth or frequent irrigation</li>
+                    <li>Weed lightly to avoid disturbing corms</li>
+                    <li>Harvest corms when foliage yellows</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Use healthy, disease-free corms to avoid rot</li>
+                <li>Mulching helps retain moisture and prevent weeds</li>
+                <li>Keep water level consistent for optimum growth</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Elephant Foot Yam') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Elephant Foot Yam (Suran)</h1>
+            <p>A tropical tuber crop cultivated for its large, starchy corms.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Humid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 10 - 12 Months</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Prepare loose, well-drained soil with compost or FYM</li>
+                    <li>Create raised ridges or mounds 30–40 cm high</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant seed corms or setts 10–15 cm deep</li>
+                    <li>Spacing: 60–90 cm between plants and rows</li>
+                    <li>Water immediately after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Weed regularly during early growth</li>
+                    <li>Support climbing stems if needed</li>
+                    <li>Harvest corms when foliage yellows, 10–12 months after planting</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Use disease-free corms for planting to avoid rot</li>
+                <li>Mulch to conserve moisture and prevent weeds</li>
+                <li>Do not overwater; maintain moderate moisture for tuber formation</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Tomato') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Tomato (Solanum lycopersicum)</h1>
+            <p>A popular vegetable-fruit grown for its nutritious, red fruits. Thrives in warm, sunny conditions.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Loosen soil and add well-rotted compost or farmyard manure</li>
+                    <li>Ensure raised beds for good drainage</li>
+                    <li>Remove previous crop residues and weeds</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing & Transplanting</h3>
+                <ul>
+                    <li>Sow seeds in nursery trays 6–8 weeks before transplanting</li>
+                    <li>Transplant seedlings 20–25 cm apart in rows 50–60 cm apart</li>
+                    <li>Water seedlings immediately after transplanting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Provide regular irrigation, especially during fruit setting</li>
+                    <li>Stake or support plants to prevent lodging</li>
+                    <li>Prune suckers to improve airflow and reduce disease</li>
+                    <li>Harvest fruits when fully colored and firm</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Mulch around plants to conserve moisture and suppress weeds</li>
+                <li>Apply balanced fertilizer during vegetative and flowering stages</li>
+                <li>Monitor for pests like aphids, whiteflies, and fruit borers</li>
+                <li>Maintain consistent watering to avoid cracking of fruits</li>
+                <li>Remove diseased leaves promptly to prevent spread</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Brinjal') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Brinjal (Solanum melongena)</h1>
+            <p>A warm-season vegetable grown widely for its fleshy purple fruits.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough soil deeply and remove weeds</li>
+                        <li>Add well-rotted farmyard manure</li>
+                        <li>Ensure proper drainage</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Transplanting</h3>
+                    <ul>
+                        <li>Transplant seedlings after 4–5 weeks</li>
+                        <li>Maintain 60 × 45 cm spacing</li>
+                        <li>Irrigate immediately after transplanting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Regular weeding and earthing up</li>
+                        <li>Harvest fruits when glossy and tender</li>
+                        <li>Multiple harvests possible</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Avoid waterlogging</li>
+                <li>Use pest-resistant varieties</li>
+                <li>Regular picking improves yield</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Capsicum') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Capsicum (Capsicum annuum)</h1>
+            <p>A high-value vegetable grown for its thick, bell-shaped fruits.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Mild Warm</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 6.8</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 75 - 100 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare raised beds</li>
+                        <li>Add organic compost</li>
+                        <li>Ensure loose soil structure</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Transplanting</h3>
+                    <ul>
+                        <li>Transplant 30–35 day seedlings</li>
+                        <li>Spacing of 45 × 45 cm</li>
+                        <li>Provide light irrigation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Stake plants if needed</li>
+                        <li>Harvest firm, mature fruits</li>
+                        <li>Avoid moisture stress</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Shade improves fruit quality</li>
+                <li>Balanced fertilization is key</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Chilli') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Chilli (Capsicum frutescens)</h1>
+            <p>A spice vegetable grown for its pungent green and red fruits.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 120 - 150 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Deep ploughing and leveling</li>
+                        <li>Add compost or FYM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Transplanting</h3>
+                    <ul>
+                        <li>Transplant 35–40 day seedlings</li>
+                        <li>Spacing 45 × 45 cm</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Regular intercultural operations</li>
+                        <li>Harvest green or red as needed</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Stress increases pungency</li>
+                <li>Avoid over-irrigation</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Okra') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Okra (Abelmoschus esculentus)</h1>
+            <p>A fast-growing warm-season vegetable valued for tender pods.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 50 - 65 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare fine tilth soil</li>
+                        <li>Add organic manure</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds directly</li>
+                        <li>Spacing 45 × 30 cm</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Harvest pods every 2–3 days</li>
+                        <li>Remove over-mature pods</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Frequent harvesting boosts yield</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Cucumber') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Cucumber (Cucumis sativus)</h1>
+            <p>A fast-growing vine crop grown for its crisp, watery fruits.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 45 - 60 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough soil deeply and level it</li>
+                        <li>Add well-decomposed manure</li>
+                        <li>Ensure good drainage</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds directly in pits or rows</li>
+                        <li>Maintain 1.5–2 m spacing</li>
+                        <li>Water lightly after sowing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Provide support for vines</li>
+                        <li>Harvest tender fruits regularly</li>
+                        <li>Avoid moisture stress</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Regular picking improves yield</li>
+                <li>Mulching conserves soil moisture</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Pumpkin') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Pumpkin (Cucurbita moschata)</h1>
+            <p>A spreading vine crop producing large, nutritious fruits.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare pits with compost</li>
+                        <li>Ensure wide spacing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow 2–3 seeds per pit</li>
+                        <li>Maintain 2–3 m spacing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Control weeds early</li>
+                        <li>Harvest when rind hardens</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Avoid water on leaves</li>
+                <li>Hand pollination improves fruit set</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Bottle Gourd') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Bottle Gourd (Lagenaria siceraria)</h1>
+            <p>A climber vegetable grown for long, tender fruits.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 70 - 90 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare raised beds or pits</li>
+                        <li>Add compost generously</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds directly</li>
+                        <li>Provide trellis support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Harvest fruits young and tender</li>
+                        <li>Frequent picking encourages growth</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Vertical training improves fruit shape</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Ridge Gourd') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Ridge Gourd (Luffa acutangula)</h1>
+            <p>A climbing vegetable producing ridged, tender fruits.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 60 - 80 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough soil thoroughly</li>
+                        <li>Add organic manure</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds near support poles</li>
+                        <li>Maintain wide spacing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Train vines properly</li>
+                        <li>Harvest tender fruits</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Early harvesting improves taste</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Sponge Gourd') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Sponge Gourd (Luffa cylindrica)</h1>
+            <p>A climber vegetable used when fruits are young and soft.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 60 - 75 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare pits with compost</li>
+                        <li>Ensure good sunlight</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds directly</li>
+                        <li>Provide trellis support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Harvest fruits while tender</li>
+                        <li>Remove mature fruits early</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Over-mature fruits reduce yield</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Bitter Gourd') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Bitter Gourd (Momordica charantia)</h1>
+            <p>A climbing vegetable known for its medicinal and nutritional value.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 60 - 90 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Deep ploughing with compost addition</li>
+                        <li>Ensure proper drainage</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds directly in pits</li>
+                        <li>Provide climbing support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Harvest fruits when green</li>
+                        <li>Regular picking improves yield</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Soak seeds before sowing</li>
+                <li>Pinching vines boosts branching</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Cauliflower') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Cauliflower (Brassica oleracea)</h1>
+            <p>A cool-season vegetable grown for its compact white curd.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Prepare fine, fertile soil with compost or well-rotted manure</li>
+                    <li>Plough and level the soil to ensure good drainage</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Transplanting</h3>
+                <ul>
+                    <li>Transplant 4–5 week seedlings into rows 45 × 45 cm apart</li>
+                    <li>Water gently after transplanting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Weed regularly and irrigate moderately</li>
+                    <li>Harvest firm curds before flowers open</li>
+                    <li>Blanch curds by tying leaves around them for uniform white color</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Blanching protects curds from sunlight and improves quality</li>
+                <li>Use nitrogen carefully to avoid excessive leaf growth over curds</li>
+                <li>Frequent monitoring prevents pests like aphids and caterpillars</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Broccoli') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Broccoli (Brassica oleracea var. italica)</h1>
+            <p>A nutrient-rich cool-season vegetable with green flower heads.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 6.8</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 80 - 100 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Prepare well-drained, fertile soil with compost</li>
+                    <li>Ensure fine tilth for seedling growth</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Transplanting</h3>
+                <ul>
+                    <li>Transplant 3–4 week seedlings 45 × 45 cm apart</li>
+                    <li>Water immediately after transplanting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Side-shoots can be harvested after main head</li>
+                    <li>Monitor for pests like aphids and cabbage worms</li>
+                    <li>Regular irrigation is needed for steady growth</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Side shoots give additional harvest</li>
+                <li>Use mulch to conserve moisture and reduce weeds</li>
+                <li>Protect from excessive sun to prevent yellowing</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Green Peas') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Green Peas (Pisum sativum)</h1>
+            <p>A cool-season legume grown for sweet green pods.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 60 - 80 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Loosen soil with compost for good root penetration</li>
+                    <li>Ensure well-drained conditions to prevent root rot</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing</h3>
+                <ul>
+                    <li>Sow seeds directly in rows 5–7 cm deep</li>
+                    <li>Maintain 30–40 cm spacing between rows</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Provide trellis for climbing varieties</li>
+                    <li>Harvest tender pods regularly</li>
+                    <li>Weed lightly and avoid excess nitrogen</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Pick pods early to maintain sweetness</li>
+                <li>Inoculate seeds with Rhizobium for better nitrogen fixation</li>
+                <li>Support climbing varieties with stakes or trellis</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'French Beans') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>French Beans (Phaseolus vulgaris)</h1>
+            <p>A fast-growing legume vegetable cultivated for tender, long pods.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Mild</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 45 - 60 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Prepare loose, fertile soil with compost or organic manure</li>
+                    <li>Ensure good drainage to prevent root rot</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing</h3>
+                <ul>
+                    <li>Sow seeds directly in rows 2–3 cm deep</li>
+                    <li>Spacing: 30–40 cm between rows, 10–15 cm between plants</li>
+                    <li>Provide trellis or support for climbing varieties</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Water regularly but avoid waterlogging</li>
+                    <li>Pick tender pods every 2–3 days to encourage continuous flowering</li>
+                    <li>Weed lightly and apply light fertilizer if needed</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Frequent picking improves yield and pod tenderness</li>
+                <li>Use organic mulch to retain moisture and control weeds</li>
+                <li>Monitor for aphids and caterpillars regularly</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Cluster Beans') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Cluster Beans (Cyamopsis tetragonoloba)</h1>
+            <p>A drought-tolerant legume grown for green, fibrous pods.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 70 - 90 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Prepare light, well-drained soil</li>
+                    <li>Add compost or FYM to enrich fertility</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing</h3>
+                <ul>
+                    <li>Sow seeds directly 2–3 cm deep in rows 30–40 cm apart</li>
+                    <li>Thin seedlings after germination for proper growth</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Minimal irrigation is sufficient</li>
+                    <li>Harvest pods when young and tender</li>
+                    <li>Weed lightly to reduce competition</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Cluster beans thrive in low rainfall conditions</li>
+                <li>Regular picking encourages new pod formation</li>
+                <li>Control pests like pod borers to prevent yield loss</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Celery') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Celery (Apium graveolens)</h1>
+            <p>A cool-season leafy vegetable grown for crunchy stalks.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 80 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Prepare fertile, well-drained soil with compost</li>
+                    <li>Apply organic manure for good stalk growth</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing & Transplanting</h3>
+                <ul>
+                    <li>Sow seeds in nursery and transplant after 5–6 weeks</li>
+                    <li>Spacing: 30 × 30 cm for proper airflow</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Keep soil consistently moist</li>
+                    <li>Harvest stalks when firm and tender</li>
+                    <li>Remove yellow leaves to maintain plant health</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Mulch heavily to retain moisture and keep stalks crisp</li>
+                <li>Blanch stalks to improve tenderness and reduce bitterness</li>
+                <li>Monitor for leaf miners and aphids</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Asparagus') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Asparagus (Asparagus officinalis)</h1>
+            <p>A perennial vegetable grown for tender shoots.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.5 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 2–3 Years for full production</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Deep, fertile soil with good drainage</li>
+                    <li>Add compost and well-rotted manure</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant crowns in trenches 30–40 cm deep</li>
+                    <li>Spacing 50–60 cm between plants</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Water consistently during growth</li>
+                    <li>Wait until the second year for full harvest</li>
+                    <li>Harvest shoots when 15–20 cm tall</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Mulch to control weeds and maintain moisture</li>
+                <li>Do not overharvest in first year to strengthen crowns</li>
+                <li>Protect young shoots from frost</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Kohlrabi') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Kohlrabi (Brassica oleracea var. gongylodes)</h1>
+            <p>A cool-season vegetable grown for swollen edible stems.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 60 - 80 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Prepare fertile, well-drained soil</li>
+                    <li>Add compost or organic manure</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing/Transplanting</h3>
+                <ul>
+                    <li>Sow seeds directly or transplant seedlings 30 × 30 cm apart</li>
+                    <li>Keep soil moist for quick growth</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Remove competing weeds</li>
+                    <li>Harvest stems when they are 5–7 cm in diameter</li>
+                    <li>Water regularly to prevent splitting</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Thin seedlings for uniform stem development</li>
+                <li>Harvest promptly to prevent woody stems</li>
+                <li>Use mulch to conserve moisture and control weeds</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Mushroom') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Mushroom (Agaricus bisporus)</h1>
+            <p>A fungus cultivated in controlled, shaded environments for edible fruiting bodies.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool, Dark</div>
+            <div class="stat-card">💧 <strong>Water:</strong> High Humidity</div>
+            <div class="stat-card">🌱 <strong>Soil/Medium:</strong> Compost/Substrate</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 30 - 50 Days per flush</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Substrate Preparation</h3>
+                <ul>
+                    <li>Prepare composted straw or dung-based medium</li>
+                    <li>Pasteurize to kill unwanted fungi</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Spawning</h3>
+                <ul>
+                    <li>Mix mushroom spawn evenly with substrate</li>
+                    <li>Fill trays or beds with inoculated substrate</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Maintain 80–90% humidity</li>
+                    <li>Keep temperature 18–25°C depending on species</li>
+                    <li>Harvest mushrooms when caps are fully formed but not open</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Keep growing area dark for better fruiting</li>
+                <li>Use clean hands and tools to prevent contamination</li>
+                <li>Regularly mist substrate to maintain humidity</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+ else {
+                // This displays for any button that isn't 'Rice' yet
+                contentArea.innerHTML = `
+                    <div class="crop-display">
+                        <h1>${crop}</h1>
+                        <p>Detailed farming tips for ${crop} are currently being updated. Check back soon!</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Run this once so the page isn't empty when it first loads
+        displaytip('Rice');
+    </script>
+</body>
+</html>
+
+

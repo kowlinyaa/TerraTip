@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraTip</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="cereals.css">
+</head>
+<body>
+    <div class="main">
+        <div class="sticky">
+            <div class="navbar">
+                <nav class="top">
+                    <img src="logo.png" alt="TerraTip Logo" class="logo">
+                    <a href="index.html" class="navlink" id="page">Home</a>
+                    <!-- <a href="cropcalender.html" class="navlink">Crop Calendar</a>
+                    <a href="disease.html" class="navlink">Disease Info</a>
+                    <a href="basic.html" class="navlink">Basic</a>
+                    <a href="about.html" class="navlink">About Me</a> -->
+                </nav>
+            </div>
+            <div class="legend">
+                <nav class="legend">
+                    <p class="legend-title">SELECT CROP CATEGORY</p>
+                    <img src="pointing-right.png" alt="Arrow" class="arrow-icon">
+                    <a href="cereals.html" class="legend-item">CEREALS</a>
+                    <a href="Pulses.html" class="legend-item">PULSES</a>
+                    <a href="Vegitable.html" class="legend-item">VEGETABLES</a>
+                    <a href="Fruits.html" class="legend-item">FRUITS</a>
+                    <a href="Cash-crops.html" class="legend-item">CASH CROPS</a>
+                    <a href="Oilseeds.html" class="legend-item">OILSEEDS</a>
+                    <a href="Spices.html" class="legend-item">SPICES</a>
+                    <a href="Medicinal.html" class="legend-item">MEDICINALS</a>
+                    <a href="Flowers.html" class="legend-item">FLOWERS</a>
+                    <a href="Nuts.html" class="legend-item">NUTS</a>
+                    <a href="Forage.html" class="legend-item">FORAGE</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="content">
+        <div class="crop-list">
+            <p class="list-head">FRUITS</p>
+
+            <button onclick="displaytip('Mango','mango')" id="mango">Mango</button>
+            <button onclick="displaytip('Banana','banana')" id="banana">Banana</button>
+            <button onclick="displaytip('Apple','apple')" id="apple">Apple</button>
+            <button onclick="displaytip('Guava','guava')" id="guava">Guava</button>
+            <button onclick="displaytip('Papaya','papaya')" id="papaya">Papaya</button>
+
+            <button onclick="displaytip('Orange','orange')" id="orange">Orange</button>
+            <button onclick="displaytip('Pomegranate','pomegranate')" id="pomegranate">Pomegranate</button>
+            <button onclick="displaytip('Pineapple','pineapple')" id="pineapple">Pineapple</button>
+            <button onclick="displaytip('Grapes','grapes')" id="grapes">Grapes</button>
+            <button onclick="displaytip('Watermelon','watermelon')" id="watermelon">Watermelon</button>
+
+            <button onclick="displaytip('Muskmelon','muskmelon')" id="muskmelon">Muskmelon</button>
+            <button onclick="displaytip('Lychee','lychee')" id="lychee">Lychee</button>
+            <button onclick="displaytip('Jackfruit','jackfruit')" id="jackfruit">Jackfruit</button>
+            <button onclick="displaytip('Sapota','sapota')" id="sapota">Sapota (Chikoo)</button>
+            <button onclick="displaytip('Custard Apple','custard-apple')" id="custard-apple">Custard Apple (Sitaphal)</button>
+
+            <button onclick="displaytip('Strawberry','strawberry')" id="strawberry">Strawberry</button>
+            <button onclick="displaytip('Kiwi','kiwi')" id="kiwi">Kiwi</button>
+            <button onclick="displaytip('Lemon','lemon')" id="lemon">Lemon</button>
+            <button onclick="displaytip('Ber','ber')" id="ber">Ber (Jujube)</button>
+            <button onclick="displaytip('Jamun','jamun')" id="jamun">Jamun (Indian Blackberry)</button>
+
+            <button onclick="displaytip('Fig','fig')" id="fig">Fig (Anjeer)</button>
+            <button onclick="displaytip('Coconut','coconut')" id="coconut">Coconut</button>
+            <button onclick="displaytip('Mulberry','mulberry')" id="mulberry">Mulberry</button>
+            <button onclick="displaytip('Amla','amla')" id="amla">Amla (Indian Gooseberry)</button>
+            <button onclick="displaytip('Passion Fruit','passion-fruit')" id="passion-fruit">Passion Fruit</button>
+        </div>
+        <div class="crop-tipstyle" id="crop-tip">
+            <div class="empty-state">
+                <img src="arrow-left.png" alt="Arrow" class="guide-arrow">
+                <h2>Ready to grow?</h2>
+                <p>Select a crop from the left list for expert farming guidance.</p>
+            </div>
+        </div>
+        </div>
+
+        <script>
+        function displaytip(crop, clickedId) {
+        const allButtons = document.querySelectorAll('.crop-list button');
+        allButtons.forEach(btn => btn.style.backgroundColor = "");
+        allButtons.forEach(btn => btn.style.color = "black");
+        const cropindisplay = document.getElementById(clickedId);
+        cropindisplay.style.backgroundColor = "#2a6b1f";
+        cropindisplay.style.color = "white";
+        const contentArea = document.getElementById('crop-tip');
+
+    if (crop === 'Mango') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Mango (Mangifera indica)</h1>
+            <p>A tropical fruit known for its sweet, juicy pulp. Grown widely across India.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 3 - 5 Years to Fruit</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Choose well-drained, fertile soil</li>
+                    <li>Dig pits 1m × 1m × 1m and fill with compost</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant grafted saplings or seeds in pits</li>
+                    <li>Spacing: 10 × 10 meters</li>
+                    <li>Water immediately after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Apply mulch and organic fertilizer</li>
+                    <li>Prune branches to maintain shape and airflow</li>
+                    <li>Harvest fruits when mature and fully colored</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Grafted plants bear fruit faster than seed-grown ones</li>
+                <li>Apply light irrigation during flowering to increase fruit set</li>
+                <li>Protect fruits from birds and pests using nets</li>
+                <li>Use balanced fertilizer during flowering and fruiting stages</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Banana') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Banana (Musa spp.)</h1>
+            <p>A tropical fruit grown for its sweet, elongated fruits. Requires warm, humid conditions.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 9 - 12 Months</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Loosen soil and mix with compost or farmyard manure</li>
+                    <li>Dig holes 60 × 60 × 60 cm for planting suckers</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant healthy suckers vertically in prepared holes</li>
+                    <li>Spacing: 2.5 × 2.5 meters between plants</li>
+                    <li>Water immediately after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Provide regular irrigation, especially in dry seasons</li>
+                    <li>Apply fertilizers monthly during growth</li>
+                    <li>Harvest bunches when fruits mature and firm</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Remove old leaves and suckers to reduce disease spread</li>
+                <li>Use mulch to conserve moisture</li>
+                <li>Support heavy bunches with sticks to prevent lodging</li>
+                <li>Plant in well-drained soil to avoid root rot</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Apple') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Apple (Malus domestica)</h1>
+            <p>A temperate fruit tree grown for sweet, crisp fruits. Needs cool winters for flowering.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Temperate / Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 3 - 5 Years to Fruit</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Choose fertile, well-drained soil</li>
+                    <li>Dig pits 60 × 60 × 60 cm and fill with compost</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant grafted saplings 4–5 m apart</li>
+                    <li>Water thoroughly after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Prune regularly to maintain shape and remove dead branches</li>
+                    <li>Apply fertilizers seasonally</li>
+                    <li>Harvest fruits when fully colored and firm</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Use grafted saplings for uniform fruit quality</li>
+                <li>Protect trees from frost and pests using nets or sprays</li>
+                <li>Thin fruits for better size and quality</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Guava') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Guava (Psidium guajava)</h1>
+            <p>A tropical fruit with high vitamin C content. Grows well in subtropical regions.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 2 - 3 Years to Fruit</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Choose well-drained soil with sunlight</li>
+                    <li>Dig pits 60 × 60 × 60 cm and add compost</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant grafted or seedling saplings</li>
+                    <li>Spacing: 4–5 m between plants</li>
+                    <li>Water after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Prune regularly for shape and airflow</li>
+                    <li>Apply fertilizers twice a year</li>
+                    <li>Harvest fruits when they turn yellowish-green or pinkish</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Use organic mulch to retain soil moisture</li>
+                <li>Protect from pests like fruit fly using traps or nets</li>
+                <li>Regular pruning improves fruit quality and size</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Papaya') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Papaya (Carica papaya)</h1>
+            <p>A fast-growing tropical fruit rich in vitamins and digestive enzymes.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 7 - 12 Months</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Prepare raised beds with fertile, well-drained soil</li>
+                    <li>Mix compost or FYM into soil</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing & Planting</h3>
+                <ul>
+                    <li>Sow seeds in nursery trays for 4–6 weeks</li>
+                    <li>Transplant seedlings 2 × 2 meters apart</li>
+                    <li>Water immediately after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Apply fertilizers every 2–3 months</li>
+                    <li>Remove male plants if using dioecious varieties for better fruiting</li>
+                    <li>Harvest fruits when skin turns yellow</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Protect young plants from strong winds</li>
+                <li>Regular watering without waterlogging improves fruit quality</li>
+                <li>Mulch around plants to retain soil moisture</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Orange') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Orange (Citrus sinensis)</h1>
+            <p>A citrus fruit known for its tangy-sweet taste and high vitamin C content.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Subtropical / Tropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 3 - 5 Years to Fruit</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Choose well-drained, fertile soil</li>
+                    <li>Dig pits 60 × 60 × 60 cm and mix compost</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant grafted saplings with 5–6 m spacing</li>
+                    <li>Water immediately after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Prune to remove dead or overcrowded branches</li>
+                    <li>Fertilize 2–3 times a year</li>
+                    <li>Harvest fruits when fully colored and slightly soft</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Use grafted plants for better yield</li>
+                <li>Protect fruits from pests like fruit fly and mites</li>
+                <li>Mulch around plants to conserve moisture</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Pomegranate') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Pomegranate (Punica granatum)</h1>
+            <p>A drought-tolerant fruit with juicy, red seeds. Popular in semi-arid regions.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Semi-arid / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 2 - 3 Years to Fruit</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Dig pits 60 × 60 × 60 cm and mix with compost</li>
+                    <li>Ensure full sun exposure and well-drained soil</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant grafted saplings 3–4 m apart</li>
+                    <li>Water thoroughly after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Apply fertilizers 2–3 times a year</li>
+                    <li>Prune to remove dead branches and allow sunlight penetration</li>
+                    <li>Harvest fruits when skin color turns bright red</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Pomegranates are drought-tolerant but respond well to irrigation</li>
+                <li>Protect from pests like aphids and mealybugs</li>
+                <li>Mulch to conserve soil moisture and prevent weeds</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Pineapple') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Pineapple (Ananas comosus)</h1>
+            <p>A tropical fruit grown for its sweet, tangy taste. Thrives in warm, humid regions.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 4.5 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 18 - 24 Months</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Loosen soil and remove weeds</li>
+                    <li>Add compost or well-rotted manure</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant crown, slips, or suckers in rows 30 × 30 cm apart</li>
+                    <li>Water immediately after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Apply fertilizers 2–3 times per year</li>
+                    <li>Remove weeds regularly</li>
+                    <li>Harvest when fruit turns golden yellow</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Ensure proper drainage; pineapples do not tolerate waterlogging</li>
+                <li>Protect from mealybugs and red mites</li>
+                <li>Mulch around plants to conserve moisture</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Grapes') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Grapes (Vitis vinifera)</h1>
+            <p>A temperate to subtropical fruit grown for table consumption and wine production.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Subtropical / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 2 - 3 Years to Fruit</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Choose well-drained soil with full sun exposure</li>
+                    <li>Dig pits 60 × 60 × 60 cm and mix compost</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant grafted or rooted cuttings</li>
+                    <li>Spacing: 3 × 3 meters for proper airflow</li>
+                    <li>Install trellis for vine support</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Prune annually to maintain vine health</li>
+                    <li>Apply fertilizers and irrigation as needed</li>
+                    <li>Harvest clusters when grapes are fully colored and sweet</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Protect vines from birds using nets</li>
+                <li>Ensure good airflow to prevent fungal diseases</li>
+                <li>Mulch around base to conserve moisture</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Watermelon') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Watermelon (Citrullus lanatus)</h1>
+            <p>A tropical fruit grown for its juicy, sweet flesh. Requires warm temperatures.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 80 - 100 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Prepare raised beds with fertile, well-drained soil</li>
+                    <li>Add compost or organic manure</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing</h3>
+                <ul>
+                    <li>Sow seeds directly in rows or mounds</li>
+                    <li>Spacing: 1.5 × 1.5 meters between plants</li>
+                    <li>Water immediately after sowing</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Provide regular irrigation, avoid waterlogging</li>
+                    <li>Apply fertilizers during growth and flowering stages</li>
+                    <li>Harvest fruits when tendrils near fruit start drying</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Use mulch to conserve moisture and prevent soil-borne diseases</li>
+                <li>Pollinate flowers manually if natural pollination is low</li>
+                <li>Protect fruits from pests like aphids and fruit flies</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Muskmelon') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Muskmelon (Cucumis melo)</h1>
+            <p>A sweet, fragrant melon grown in warm regions. Rich in vitamins A & C.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Semi-arid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 80 - 100 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Plough soil 2–3 times for good aeration</li>
+                    <li>Add compost or well-rotted manure</li>
+                    <li>Prepare raised beds for better drainage</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing</h3>
+                <ul>
+                    <li>Sow seeds directly or transplant seedlings</li>
+                    <li>Maintain 90 × 60 cm spacing between plants</li>
+                    <li>Water lightly after sowing</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Weed regularly and provide trellises if needed</li>
+                    <li>Apply fertilizers 2–3 times during growth</li>
+                    <li>Harvest when fruits emit fragrance and netting appears on skin</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Mulch to conserve moisture and control weeds</li>
+                <li>Water moderately, avoid waterlogging</li>
+                <li>Use trellises for vine support to reduce disease</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Lychee') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Lychee (Litchi chinensis)</h1>
+            <p>A tropical fruit with sweet, juicy pulp. Thrives in subtropical climates.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Subtropical / Humid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.0 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 3 - 5 Years to Fruit</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Select well-drained soil, rich in organic matter</li>
+                    <li>Dig pits 1 × 1 × 1 m, mix with compost</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant grafted saplings 10 × 10 m apart</li>
+                    <li>Water immediately after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Apply fertilizers 2–3 times a year</li>
+                    <li>Prune dead or crowded branches</li>
+                    <li>Harvest when fruits turn red and easily separate from stem</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Protect young trees from frost</li>
+                <li>Mulch heavily to conserve soil moisture</li>
+                <li>Control pests like fruit borer and mites</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Jackfruit') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Jackfruit (Artocarpus heterophyllus)</h1>
+            <p>Large tropical fruit, rich in carbohydrates and fiber. Grows well in warm, humid regions.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Humid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 3 - 4 Years to Fruit</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Choose fertile, well-drained soil</li>
+                    <li>Dig pits 1 × 1 × 1 m and mix with compost</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant grafted or healthy seedlings</li>
+                    <li>Spacing: 8–10 m between trees</li>
+                    <li>Water thoroughly after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Apply fertilizers 2–3 times per year</li>
+                    <li>Prune lightly to allow sunlight</li>
+                    <li>Harvest when fruit skin changes color and emits aroma</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Support branches with heavy fruits to prevent breakage</li>
+                <li>Mulch around base to conserve moisture</li>
+                <li>Control pests like fruit borers regularly</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Sapota') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Sapota / Chikoo (Manilkara zapota)</h1>
+            <p>Sweet tropical fruit rich in calories and minerals, grows in warm regions.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Warm</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 3 - 4 Years to Fruit</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Choose well-drained, fertile soil</li>
+                    <li>Dig pits 60 × 60 × 60 cm and add compost</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant grafted saplings or air-layered plants</li>
+                    <li>Spacing: 6–8 m between plants</li>
+                    <li>Water immediately after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Apply fertilizers 2–3 times per year</li>
+                    <li>Prune to maintain canopy</li>
+                    <li>Harvest fruits when skin turns brown and soft</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Protect young plants from strong winds</li>
+                <li>Mulch around base to retain moisture</li>
+                <li>Thin fruits to improve size and quality</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Custard Apple') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Custard Apple / Sitaphal (Annona squamosa)</h1>
+            <p>Sweet, creamy tropical fruit. Grows in dry tropical regions.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Semi-arid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 2 - 3 Years to Fruit</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Dig pits 50 × 50 × 50 cm, add compost and farmyard manure</li>
+                    <li>Ensure full sun exposure</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant grafted or seedling saplings</li>
+                    <li>Spacing: 5 × 5 m</li>
+                    <li>Water immediately after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Fertilize 2–3 times a year</li>
+                    <li>Prune dead branches</li>
+                    <li>Harvest when fruits turn yellow and slightly soft</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Protect from frost in early growth</li>
+                <li>Mulch to retain moisture</li>
+                <li>Thin crowded fruits for better quality</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Strawberry') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Strawberry (Fragaria × ananassa)</h1>
+            <p>Sweet, juicy berry grown in cool climates. Rich in vitamin C and antioxidants.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 3 - 4 Months</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Plough soil and incorporate organic compost</li>
+                    <li>Ensure raised beds for good drainage</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant runners or seedlings at 30 × 30 cm spacing</li>
+                    <li>Water lightly after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Mulch to conserve moisture and prevent weeds</li>
+                    <li>Apply fertilizers 2–3 times during growth</li>
+                    <li>Harvest when fruits are fully red and firm</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Protect plants from frost and strong winds</li>
+                <li>Keep fruits off soil using straw mulch</li>
+                <li>Regularly remove diseased leaves</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Kiwi') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Kiwi (Actinidia deliciosa)</h1>
+            <p>Fuzzy-skinned fruit rich in vitamin C. Grows best in temperate climates.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Temperate / Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 6.8</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 3 - 5 Years to Fruit</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Dig pits and add compost-rich soil</li>
+                    <li>Ensure trellis support for climbing vines</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant male and female plants (1:8 ratio)</li>
+                    <li>Spacing: 3–4 m between plants</li>
+                    <li>Water immediately after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Fertilize 2–3 times during growing season</li>
+                    <li>Prune to encourage fruiting branches</li>
+                    <li>Harvest when fruits are firm but mature</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Protect young vines from frost</li>
+                <li>Regularly train vines on trellis</li>
+                <li>Provide moderate irrigation, avoid waterlogging</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Lemon') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Lemon (Citrus limon)</h1>
+            <p>Citrus fruit rich in vitamin C. Thrives in warm subtropical climates.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Subtropical / Warm</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 2 - 3 Years to Fruit</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Dig pits 60 × 60 × 60 cm, enrich with compost</li>
+                    <li>Ensure full sun exposure</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant grafted saplings or seedlings</li>
+                    <li>Spacing: 4–5 m between plants</li>
+                    <li>Water immediately after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Apply fertilizers 2–3 times/year</li>
+                    <li>Prune lightly to maintain shape</li>
+                    <li>Harvest when fruits are green-yellow and firm</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Mulch around base to conserve moisture</li>
+                <li>Protect from strong winds</li>
+                <li>Regularly remove fallen leaves to prevent disease</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Ber') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Ber / Jujube (Ziziphus mauritiana)</h1>
+            <p>Small, sweet fruit suited to arid and semi-arid regions. Very hardy.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Arid / Semi-arid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 8.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 2 - 3 Years to Fruit</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Dig pits 50 × 50 × 50 cm, mix with compost</li>
+                    <li>Ensure full sun exposure</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant grafted saplings or healthy seedlings</li>
+                    <li>Spacing: 5 × 5 m</li>
+                    <li>Water immediately after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Prune to maintain shape and airflow</li>
+                    <li>Minimal irrigation needed once established</li>
+                    <li>Harvest fruits when fully red and firm</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Ber tolerates drought; avoid overwatering</li>
+                <li>Control fruit flies and pests</li>
+                <li>Mulch to retain soil moisture</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Jamun') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Jamun / Indian Blackberry (Syzygium cumini)</h1>
+            <p>Tropical fruit, rich in antioxidants. Thrives in subtropical regions.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.5 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 3 - 5 Years to Fruit</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Dig pits 1 × 1 × 1 m and enrich with compost</li>
+                    <li>Ensure well-drained soil</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant grafted saplings or seedlings</li>
+                    <li>Spacing: 8–10 m between trees</li>
+                    <li>Water immediately after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Fertilize 2–3 times/year</li>
+                    <li>Prune lightly to maintain shape</li>
+                    <li>Harvest when fruits are deep purple and glossy</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Protect young trees from frost</li>
+                <li>Mulch to conserve soil moisture</li>
+                <li>Control pests like fruit flies regularly</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Fig') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Fig / Anjeer (Ficus carica)</h1>
+            <p>Sweet, soft fruit. Grows in subtropical and semi-arid regions.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Subtropical / Semi-arid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 2 - 3 Years to Fruit</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Dig pits 60 × 60 × 60 cm, mix with compost</li>
+                    <li>Ensure full sun exposure</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant saplings or cuttings</li>
+                    <li>Spacing: 5 × 5 m</li>
+                    <li>Water after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Apply fertilizers twice a year</li>
+                    <li>Prune old branches for better sunlight</li>
+                    <li>Harvest when fruits are soft and slightly brown</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Mulch to conserve moisture</li>
+                <li>Protect from strong winds</li>
+                <li>Thin crowded fruits for quality</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Coconut') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Coconut (Cocos nucifera)</h1>
+            <p>Tropical palm fruit. Produces water, milk, and oil. Thrives in coastal regions.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Coastal</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.0 - 8.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 6 - 10 Years to Fruit</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Ensure well-drained sandy or loamy soil</li>
+                    <li>Dig pits 1 × 1 × 1 m, add compost</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant healthy seedlings or coconut saplings</li>
+                    <li>Spacing: 7–9 m between palms</li>
+                    <li>Water after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Fertilize 2–3 times/year</li>
+                    <li>Prune dead fronds</li>
+                    <li>Harvest mature coconuts after 6–10 years</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Protect young palms from strong winds</li>
+                <li>Mulch to retain soil moisture</li>
+                <li>Control pests like rhinoceros beetle</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Mulberry') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Mulberry (Morus alba)</h1>
+            <p>Sweet, juicy fruit. Important for sericulture (silk farming) and human consumption.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Subtropical / Tropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 2 - 3 Years to Fruit</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Dig pits 60 × 60 × 60 cm, mix compost with soil</li>
+                    <li>Ensure sunny location with good drainage</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant saplings or cuttings</li>
+                    <li>Spacing: 4 × 4 m between trees</li>
+                    <li>Water immediately after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Fertilize twice a year</li>
+                    <li>Prune for shape and sunlight penetration</li>
+                    <li>Harvest when fruits turn dark purple or black</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Mulch to retain soil moisture</li>
+                <li>Control pests like aphids and caterpillars</li>
+                <li>Keep soil well-drained to avoid root rot</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Amla') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Amla / Indian Gooseberry (Phyllanthus emblica)</h1>
+            <p>Rich in vitamin C. Thrives in subtropical and semi-arid regions.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Subtropical / Semi-arid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 8.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 3 - 5 Years to Fruit</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Dig pits 50 × 50 × 50 cm, mix compost</li>
+                    <li>Ensure sunny location with good drainage</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant saplings or grafted plants</li>
+                    <li>Spacing: 4–5 m between plants</li>
+                    <li>Water lightly after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Prune for shape and sunlight penetration</li>
+                    <li>Fertilize 2–3 times/year</li>
+                    <li>Harvest fruits when fully grown and green</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Mulch around base to retain moisture</li>
+                <li>Protect young plants from frost</li>
+                <li>Control pests like fruit flies and caterpillars</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Passion Fruit') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Passion Fruit (Passiflora edulis)</h1>
+            <p>Exotic tropical fruit. Grown on vines, rich in vitamins and antioxidants.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 1 - 2 Years to Fruit</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Prepare trellis or support system for climbing vines</li>
+                    <li>Dig pits 50 × 50 × 50 cm, enrich soil with compost</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant healthy seedlings or cuttings near trellis</li>
+                    <li>Spacing: 2–3 m between plants</li>
+                    <li>Water immediately after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Prune regularly to maintain airflow</li>
+                    <li>Fertilize 2–3 times/year</li>
+                    <li>Harvest fruits when skin is wrinkled and fully colored</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Ensure trellis is strong for vine support</li>
+                <li>Mulch to conserve moisture</li>
+                <li>Protect from strong winds and frost</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else {
+                // This displays for any button that isn't 'Rice' yet
+                contentArea.innerHTML = `
+                    <div class="crop-display">
+                        <h1>${crop}</h1>
+                        <p>Detailed farming tips for ${crop} are currently being updated. Check back soon!</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Run this once so the page isn't empty when it first loads
+        displaytip('Rice');
+    </script>
+</body>
+</html>

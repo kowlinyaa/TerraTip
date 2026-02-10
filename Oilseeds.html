@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraTip</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="cereals.css">
+</head>
+<body>
+    <div class="main">
+        <div class="sticky">
+            <div class="navbar">
+                <nav class="top">
+                    <img src="logo.png" alt="TerraTip Logo" class="logo">
+                    <a href="index.html" class="navlink" id="page">Home</a>
+                    <!-- <a href="cropcalender.html" class="navlink">Crop Calendar</a>
+                    <a href="disease.html" class="navlink">Disease Info</a>
+                    <a href="basic.html" class="navlink">Basic</a>
+                    <a href="about.html" class="navlink">About Me</a> -->
+                </nav>
+            </div>
+            <div class="legend">
+                <nav class="legend">
+                    <p class="legend-title">SELECT CROP CATEGORY</p>
+                    <img src="pointing-right.png" alt="Arrow" class="arrow-icon">
+                    <a href="cereals.html" class="legend-item">CEREALS</a>
+                    <a href="Pulses.html" class="legend-item">PULSES</a>
+                    <a href="Vegitable.html" class="legend-item">VEGETABLES</a>
+                    <a href="Fruits.html" class="legend-item">FRUITS</a>
+                    <a href="Cash-crops.html" class="legend-item">CASH CROPS</a>
+                    <a href="Oilseeds.html" class="legend-item">OILSEEDS</a>
+                    <a href="Spices.html" class="legend-item">SPICES</a>
+                    <a href="Medicinal.html" class="legend-item">MEDICINALS</a>
+                    <a href="Flowers.html" class="legend-item">FLOWERS</a>
+                    <a href="Nuts.html" class="legend-item">NUTS</a>
+                    <a href="Forage.html" class="legend-item">FORAGE</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="content">
+    <div class="crop-list">
+        <p class="list-head">OILSEEDS</p>
+
+        <button onclick="displaytip('Mustard','mustard')" id="mustard">Mustard (Rapeseed)</button>
+        <button onclick="displaytip('Groundnut','groundnut')" id="groundnut">Groundnut (Peanut)</button>
+        <button onclick="displaytip('Sunflower','sunflower')" id="sunflower">Sunflower</button>
+        <button onclick="displaytip('Soybean','soybean')" id="soybean">Soybean</button>
+        <button onclick="displaytip('Sesame','sesame')" id="sesame">Sesame (Til)</button>
+        <button onclick="displaytip('Safflower','safflower')" id="safflower">Safflower</button>
+        <button onclick="displaytip('Castor','castor')" id="castor">Castor</button>
+        <button onclick="displaytip('Coconut','coconut')" id="coconut">Coconut (for copra oil)</button>
+        <button onclick="displaytip('Oil Palm','oil-palm')" id="oil-palm">Oil Palm</button>
+        <button onclick="displaytip('Linseed','linseed')" id="linseed">Linseed (Flaxseed)</button>
+        <button onclick="displaytip('Niger Seed','niger-seed')" id="niger-seed">Niger Seed</button>
+        <button onclick="displaytip('Pumpkin Seed','pumpkin-seed')" id="pumpkin-seed">Pumpkin Seed</button>
+        <button onclick="displaytip('Cottonseed','cottonseed')" id="cottonseed">Cottonseed</button>
+        <button onclick="displaytip('Walnut','walnut')" id="walnut">Walnut</button>
+        <button onclick="displaytip('Almond','almond')" id="almond">Almond</button>
+
+    </div>
+
+
+ <div class="crop-tipstyle" id="crop-tip">
+                <div class="empty-state">
+                    <img src="arrow-left.png" alt="Arrow" class="guide-arrow">
+                    <h2>Ready to grow?</h2>
+                    <p>Select a crop from the left list for expert farming guidance.</p>
+                </div>
+        </div>
+     </div>
+
+       <script>
+        function displaytip(crop, clickedId) {
+        const allButtons = document.querySelectorAll('.crop-list button');
+        allButtons.forEach(btn => btn.style.backgroundColor = "");
+        allButtons.forEach(btn => btn.style.color = "black");
+        const cropindisplay = document.getElementById(clickedId);
+        cropindisplay.style.backgroundColor = "#2a6b1f";
+        cropindisplay.style.color = "white";
+        const contentArea = document.getElementById('crop-tip');
+
+        if (crop === 'Mustard') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Mustard (Brassica juncea)</h1>
+            <p>Oilseed crop grown for mustard oil. Prefers cool climate and well-drained soil.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Plough the field 2–3 times to loosen soil</li>
+                    <li>Remove weeds and crop residues</li>
+                    <li>Apply well-rotted compost or farmyard manure</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing</h3>
+                <ul>
+                    <li>Sow seeds in rows 30–45 cm apart</li>
+                    <li>Maintain 10–15 cm between plants</li>
+                    <li>Water lightly after sowing</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Apply nitrogen fertilizer after 20–25 days</li>
+                    <li>Weed regularly</li>
+                    <li>Harvest when pods turn brown and dry</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Use well-drained soil to avoid waterlogging</li>
+                <li>Early sowing improves yield and oil content</li>
+                <li>Rotate with cereals to maintain soil fertility</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Groundnut') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Groundnut (Arachis hypogaea)</h1>
+            <p>Leguminous oilseed crop grown for edible oil and nuts. Prefers sandy-loam soil and warm climate.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Tropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 110 - 140 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Deep ploughing to loosen soil</li>
+                    <li>Remove stones and weeds</li>
+                    <li>Apply farmyard manure and compost</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing</h3>
+                <ul>
+                    <li>Sow seeds 5–7 cm deep in rows 30–45 cm apart</li>
+                    <li>Maintain spacing 10–15 cm between plants</li>
+                    <li>Water immediately after sowing</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Weed the field regularly</li>
+                    <li>Apply top-dressing fertilizer at flowering stage</li>
+                    <li>Harvest when leaves start yellowing and pods are mature</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Avoid waterlogging as it affects pod development</li>
+                <li>Rotate with cereals or legumes for better soil health</li>
+                <li>Dry harvested pods under shade to prevent spoilage</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Sunflower') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Sunflower (Helianthus annuus)</h1>
+            <p>Oilseed crop grown for edible oil. Prefers sunny, well-drained soil.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Sunny</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 100 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Deep ploughing and leveling of field</li>
+                    <li>Remove weeds and debris</li>
+                    <li>Add compost or organic manure</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing</h3>
+                <ul>
+                    <li>Sow seeds 3–5 cm deep in rows 45–60 cm apart</li>
+                    <li>Maintain 20–30 cm spacing between plants</li>
+                    <li>Water lightly after sowing</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Weed regularly and thin crowded plants</li>
+                    <li>Apply nitrogen fertilizer after 3–4 weeks</li>
+                    <li>Harvest when back of flower heads turn yellow</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Ensure full sunlight for maximum oil content</li>
+                <li>Drain excess water to prevent root rot</li>
+                <li>Use disease-free seeds for better yield</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Soybean') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Soybean (Glycine max)</h1>
+            <p>Important oilseed and protein-rich legume. Thrives in warm, well-drained soils.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Tropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Plough the field thoroughly</li>
+                    <li>Remove weeds and debris</li>
+                    <li>Add well-rotted compost or FYM</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing</h3>
+                <ul>
+                    <li>Sow seeds in rows 45–60 cm apart</li>
+                    <li>Maintain spacing 5–10 cm between plants</li>
+                    <li>Water lightly after sowing</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Weed field regularly</li>
+                    <li>Apply nitrogen fertilizer at early vegetative stage</li>
+                    <li>Harvest when pods mature and leaves yellow</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Rotate with cereals for better soil health</li>
+                <li>Inoculate seeds with Rhizobium for nitrogen fixation</li>
+                <li>Keep soil moist but not waterlogged</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Sesame') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Sesame (Sesamum indicum)</h1>
+            <p>Oilseed grown in warm regions. Requires light, sandy-loam soil and good drainage.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Dry</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Plough field deeply to loosen soil</li>
+                    <li>Remove stones and weeds</li>
+                    <li>Add compost or well-rotted manure</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing</h3>
+                <ul>
+                    <li>Sow seeds 2–3 cm deep in rows 30–45 cm apart</li>
+                    <li>Maintain 10–15 cm spacing between plants</li>
+                    <li>Water lightly after sowing</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Weed regularly</li>
+                    <li>Reduce watering at flowering stage</li>
+                    <li>Harvest when capsules turn golden brown</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Avoid overwatering as sesame is drought-tolerant</li>
+                <li>Ensure proper spacing for air circulation</li>
+                <li>Harvest early in the morning to prevent seed shattering</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Safflower') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Safflower (Carthamus tinctorius)</h1>
+            <p>Drought-resistant oilseed crop grown for edible oil and dyes.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Semi-Arid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 8.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 120 - 150 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Deep ploughing and leveling</li>
+                    <li>Remove weeds and residues</li>
+                    <li>Apply compost or farmyard manure</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing</h3>
+                <ul>
+                    <li>Sow seeds 2–3 cm deep in rows 30–45 cm apart</li>
+                    <li>Maintain 15–20 cm spacing between plants</li>
+                    <li>Water immediately after sowing</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Weed regularly</li>
+                    <li>Apply fertilizer if necessary at early growth</li>
+                    <li>Harvest when seeds are fully mature and dry</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Keep soil well-drained; avoid waterlogging</li>
+                <li>Thin plants for proper growth</li>
+                <li>Harvest carefully to prevent seed loss</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Castor') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Castor (Ricinus communis)</h1>
+            <p>Oilseed crop grown for castor oil. Thrives in semi-arid, well-drained soils.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Semi-Arid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 150 - 180 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Deep ploughing to loosen soil</li>
+                    <li>Remove weeds and residues</li>
+                    <li>Apply compost or organic manure</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing</h3>
+                <ul>
+                    <li>Sow seeds 3–5 cm deep in rows 75 cm apart</li>
+                    <li>Maintain 50–60 cm spacing between plants</li>
+                    <li>Water lightly after sowing</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Weed regularly</li>
+                    <li>Apply fertilizer if needed at vegetative stage</li>
+                    <li>Harvest when capsules turn brown and dry</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Avoid waterlogging; castor prefers dry conditions</li>
+                <li>Thin crowded plants for better growth</li>
+                <li>Harvest carefully to prevent seed loss</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Coconut') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Coconut (Cocos nucifera)</h1>
+            <p>Tropical oilseed crop grown for copra and oil. Requires sandy soil and high humidity.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate to High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.0 - 8.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 4–6 Years to First Harvest</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Clear land and remove weeds</li>
+                    <li>Dig pits 1m x 1m x 1m and fill with compost and topsoil</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant saplings or germinated nuts in pits</li>
+                    <li>Maintain 7–9 m spacing between palms</li>
+                    <li>Water regularly during dry season</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Apply fertilizers twice a year</li>
+                    <li>Prune dead fronds and control pests</li>
+                    <li>Harvest mature nuts for copra</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Ensure proper spacing to reduce disease spread</li>
+                <li>Mulch around base to retain moisture</li>
+                <li>Protect young palms from strong winds</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Oil Palm') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Oil Palm (Elaeis guineensis)</h1>
+            <p>Tropical oilseed crop grown for palm oil. Requires warm, humid climate.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Humid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 4.5 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 3–4 Years to First Harvest</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Clear land and dig pits 1m x 1m x 1m</li>
+                    <li>Fill with topsoil and compost</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant seedlings in prepared pits</li>
+                    <li>Maintain spacing of 9–10 m between plants</li>
+                    <li>Water regularly during initial growth</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Fertilize regularly with NPK</li>
+                    <li>Control weeds and pests</li>
+                    <li>Harvest bunches when fruits turn orange-red</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Use well-drained soil to avoid root rot</li>
+                <li>Mulch around base to retain moisture</li>
+                <li>Ensure adequate sunlight for maximum yield</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Linseed') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Linseed / Flaxseed (Linum usitatissimum)</h1>
+            <p>Oilseed crop grown for edible and industrial oil. Prefers cool, well-drained soil.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Plough deeply and remove weeds</li>
+                    <li>Apply compost or well-rotted manure</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing</h3>
+                <ul>
+                    <li>Sow seeds in rows 30 cm apart</li>
+                    <li>Maintain 10–15 cm spacing between plants</li>
+                    <li>Water lightly after sowing</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Weed field regularly</li>
+                    <li>Apply nitrogen fertilizer at early growth stage</li>
+                    <li>Harvest when capsules turn brown and dry</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Avoid waterlogging; linseed prefers well-drained soils</li>
+                <li>Thin plants for proper growth and seed development</li>
+                <li>Harvest in dry weather to prevent fungal infections</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Niger Seed') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Niger Seed (Guizotia abyssinica)</h1>
+            <p>Oilseed crop grown in semi-arid areas for edible oil. Requires warm, sunny climate.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Semi-Arid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Deep ploughing and leveling</li>
+                    <li>Remove weeds and debris</li>
+                    <li>Apply organic manure</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing</h3>
+                <ul>
+                    <li>Sow seeds 2–3 cm deep in rows 30–45 cm apart</li>
+                    <li>Maintain spacing 10–15 cm between plants</li>
+                    <li>Water lightly after sowing</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Weed field regularly</li>
+                    <li>Provide light irrigation if needed</li>
+                    <li>Harvest when capsules dry and brown</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Ensure good drainage; niger is drought-tolerant</li>
+                <li>Thin plants for better air circulation</li>
+                <li>Harvest early to avoid bird damage</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Pumpkin Seed') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Pumpkin Seed (Cucurbita pepo)</h1>
+            <p>Oilseed cultivated from pumpkin seeds. Prefers sunny, well-drained soil.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Sunny</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 80 - 100 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Plough deeply and remove weeds</li>
+                    <li>Add compost or well-rotted manure</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing</h3>
+                <ul>
+                    <li>Sow seeds 2–3 cm deep in hills 1 m apart</li>
+                    <li>Maintain 50–60 cm spacing between plants</li>
+                    <li>Water lightly after sowing</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Weed regularly</li>
+                    <li>Provide support for vines if needed</li>
+                    <li>Harvest seeds after fruit matures</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Ensure good sunlight for maximum seed quality</li>
+                <li>Harvest seeds in dry weather to prevent mold</li>
+                <li>Rotate with cereals or legumes to maintain soil fertility</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Cottonseed') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Cottonseed (Gossypium hirsutum)</h1>
+            <p>Byproduct of cotton cultivation used for oil extraction. Grown in warm climates.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Semi-Arid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 150 - 180 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Plough deeply and remove weeds</li>
+                    <li>Add compost or farmyard manure</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing</h3>
+                <ul>
+                    <li>Sow seeds in rows 75 cm apart</li>
+                    <li>Maintain 30–40 cm spacing between plants</li>
+                    <li>Water lightly after sowing</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Weed regularly and control pests</li>
+                    <li>Apply fertilizers at vegetative and flowering stages</li>
+                    <li>Harvest cotton for fiber; seeds collected for oil</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Use certified cotton varieties for better oilseed yield</li>
+                <li>Rotate with legumes to maintain soil fertility</li>
+                <li>Ensure proper spacing to prevent fungal diseases</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Walnut') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Walnut (Juglans regia)</h1>
+            <p>Nut crop grown for edible nuts and oil. Prefers temperate climates and well-drained soils.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 5–7 Years to First Harvest</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Clear land and dig pits 1m x 1m x 1m</li>
+                    <li>Fill with topsoil and compost</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant saplings in prepared pits</li>
+                    <li>Maintain spacing 8–10 m between trees</li>
+                    <li>Water regularly during initial years</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Fertilize annually with compost or NPK</li>
+                    <li>Prune dead branches and manage pests</li>
+                    <li>Harvest nuts when shells harden and dry</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Protect young trees from frost</li>
+                <li>Ensure proper spacing for sunlight and airflow</li>
+                <li>Mulch around base to retain soil moisture</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Almond') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Almond (Prunus dulcis)</h1>
+            <p>Nut crop grown for edible kernels and oil. Prefers temperate, dry climates.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Temperate / Dry</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 3–5 Years to First Harvest</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Clear land and dig pits 1m x 1m x 1m</li>
+                    <li>Fill with compost and topsoil</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant saplings in prepared pits</li>
+                    <li>Maintain 6–8 m spacing between trees</li>
+                    <li>Water regularly during initial growth</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Apply fertilizers annually</li>
+                    <li>Prune dead branches and control pests</li>
+                    <li>Harvest nuts when shells dry and crack</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Protect young trees from frost</li>
+                <li>Ensure well-drained soil to avoid root rot</li>
+                <li>Mulch around base to retain moisture</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else {
+                // This displays for any button that isn't 'Rice' yet
+                contentArea.innerHTML = `
+                    <div class="crop-display">
+                        <h1>${crop}</h1>
+                        <p>Detailed farming tips for ${crop} are currently being updated. Check back soon!</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Run this once so the page isn't empty when it first loads
+        displaytip('Rice');
+    </script>
+</body>
+</html>

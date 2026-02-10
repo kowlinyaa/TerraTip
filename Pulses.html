@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraTip</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="cereals.css">
+</head>
+<body>
+    <div class="main">
+        <div class="sticky">
+            <div class="navbar">
+                <nav class="top">
+                    <img src="logo.png" alt="TerraTip Logo" class="logo">
+                    <a href="index.html" class="navlink" id="page">Home</a>
+                    <!-- <a href="cropcalender.html" class="navlink">Crop Calendar</a>
+                    <a href="disease.html" class="navlink">Disease Info</a>
+                    <a href="basic.html" class="navlink">Basic</a>
+                    <a href="about.html" class="navlink">About Me</a> -->
+                </nav>
+            </div>
+            <div class="legend">
+                <nav class="legend">
+                    <p class="legend-title">SELECT CROP CATEGORY</p>
+                    <img src="pointing-right.png" alt="Arrow" class="arrow-icon">
+                    <a href="cereals.html" class="legend-item">CEREALS</a>
+                    <a href="Pulses.html" class="legend-item">PULSES</a>
+                    <a href="Vegitable.html" class="legend-item">VEGETABLES</a>
+                    <a href="Fruits.html" class="legend-item">FRUITS</a>
+                    <a href="Cash-crops.html" class="legend-item">CASH CROPS</a>
+                    <a href="Oilseeds.html" class="legend-item">OILSEEDS</a>
+                    <a href="Spices.html" class="legend-item">SPICES</a>
+                    <a href="Medicinal.html" class="legend-item">MEDICINALS</a>
+                    <a href="Flowers.html" class="legend-item">FLOWERS</a>
+                    <a href="Nuts.html" class="legend-item">NUTS</a>
+                    <a href="Forage.html" class="legend-item">FORAGE</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="crop-list">
+                <p class="list-head">PULSES</p>
+                <button onclick="displaytip('Chickpea','chickpea')" id="chickpea">Chickpea (Gram)</button>
+                <button onclick="displaytip('Lentil','lentil')" id="lentil">Lentil (Masoor)</button>
+                <button onclick="displaytip('Green Gram','green-gram')" id="green-gram">Green Gram (Moong)</button>
+                <button onclick="displaytip('Black Gram','black-gram')" id="black-gram">Black Gram (Urad)</button>
+                <button onclick="displaytip('Pigeon Pea','pigeon-pea')" id="pigeon-pea">Pigeon Pea (Tur/Arhar)</button>
+                <button onclick="displaytip('Kidney Bean','kidney-bean')" id="kidney-bean">Kidney Bean (Rajma)</button>
+                <button onclick="displaytip('Cowpea','cowpea')" id="cowpea">Cowpea (Lobia)</button>
+                <button onclick="displaytip('Moth Bean','moth-bean')" id="moth-bean">Moth Bean (Matki)</button>
+                <button onclick="displaytip('Horse Gram','horse-gram')" id="horse-gram">Horse Gram (Kulthi)</button>
+                <button onclick="displaytip('Broad Bean','broad-bean')" id="broad-bean">Broad Bean (Fava Bean)</button>
+                <button onclick="displaytip('Lablab Bean','lablab-bean')" id="lablab-bean">Lablab Bean (Hyacinth Bean)</button>
+                <button onclick="displaytip('Soybean','soybean')" id="soybean">Soybean</button>
+                <button onclick="displaytip('White Pea','white-pea')" id="white-pea">White Pea</button>
+                <button onclick="displaytip('Red Lentil','red-lentil')" id="red-lentil">Red Lentil</button>
+                <button onclick="displaytip('Split Pea','split-pea')" id="split-pea">Split Pea</button>
+                <button onclick="displaytip('Adzuki Bean','adzuki-bean')" id="adzuki-bean">Adzuki Bean</button>
+                <button onclick="displaytip('Tepary Bean','tepary-bean')" id="tepary-bean">Tepary Bean</button>
+            </div>
+            <div class="crop-tipstyle" id="crop-tip">
+                <div class="empty-state">
+                    <img src="arrow-left.png" alt="Arrow" class="guide-arrow">
+                    <h2>Ready to grow?</h2>
+                    <p>Select a crop from the left list for expert farming guidance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function displaytip(crop, clickedId) {
+        const allButtons = document.querySelectorAll('.crop-list button');
+        allButtons.forEach(btn => btn.style.backgroundColor = "");
+        allButtons.forEach(btn => btn.style.color = "black");
+        const cropindisplay = document.getElementById(clickedId);
+        cropindisplay.style.backgroundColor = "#2a6b1f";
+        cropindisplay.style.color = "white";
+        const contentArea = document.getElementById('crop-tip');
+
+    if (crop === 'Chickpea') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Chickpea (Cicer arietinum)</h1>
+            <p>A popular pulse rich in protein. Thrives in semi-arid regions with cool, dry growing seasons.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Semi-Arid / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5 (Neutral)</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Choose a well-drained, fertile field</li>
+                        <li>Plough 2–3 times to break soil clods</li>
+                        <li>Remove weeds and previous crop residues</li>
+                        <li>Level the field for uniform irrigation</li>
+                        <li>Apply organic compost before sowing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Use healthy, disease-free seeds</li>
+                        <li>Sow seeds 2–3 cm deep in rows</li>
+                        <li>Maintain 30–40 cm spacing between rows</li>
+                        <li>Provide light irrigation after sowing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Water & Care</h3>
+                    <ul>
+                        <li>Water moderately, avoiding waterlogging</li>
+                        <li>Control weeds manually or chemically</li>
+                        <li>Support nitrogen fixation by inoculating seeds</li>
+                        <li>Harvest when pods turn brown and dry</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Use well-drained soil to prevent root rot</li>
+                <li>Do not over-irrigate; chickpea prefers drier conditions</li>
+                <li>Timely weeding improves yield significantly</li>
+                <li>Harvest early in the morning for minimal seed loss</li>
+            </ul>
+        </div>
+    </div>
+    `;
+} else if (crop === 'Lentil') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Lentil (Lens culinaris)</h1>
+            <p>A short-duration pulse, grown mostly in cool seasons. Rich in protein and essential nutrients.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0 (Neutral)</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 80 - 110 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough the field and remove residues</li>
+                        <li>Level the soil to ensure good drainage</li>
+                        <li>Apply organic manure before sowing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds in rows, 2–3 cm deep</li>
+                        <li>Maintain 25–30 cm spacing between rows</li>
+                        <li>Water lightly after sowing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Weed the field regularly</li>
+                        <li>Apply minimal irrigation as lentils are drought-tolerant</li>
+                        <li>Harvest when pods are dry and seeds firm</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Use well-drained soil to avoid fungal diseases</li>
+                <li>Short-duration pulses benefit from early sowing</li>
+                <li>Inoculate seeds with Rhizobium for better nitrogen fixation</li>
+            </ul>
+        </div>
+    </div>
+    `;
+} else if (crop === 'Green Gram') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Green Gram (Vigna radiata)</h1>
+            <p>A fast-growing pulse, suitable for short-season cropping. Rich in protein and easily digestible.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 60 - 75 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough the land thoroughly and remove weeds</li>
+                        <li>Apply compost or organic manure</li>
+                        <li>Level the soil for uniform irrigation</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds in rows, 2–3 cm deep</li>
+                        <li>Maintain 20–30 cm row spacing</li>
+                        <li>Water lightly after sowing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Regularly weed the field</li>
+                        <li>Water only during dry spells</li>
+                        <li>Harvest when pods are dry and seeds are firm</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Green Gram grows well in short-season fields</li>
+                <li>Avoid waterlogging to prevent root diseases</li>
+                <li>Intercrop with cereals for better soil fertility</li>
+            </ul>
+        </div>
+    </div>
+    `;
+}
+// Black Gram (Urad)
+else if(crop === 'Black Gram') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Black Gram (Vigna mungo)</h1>
+            <p>A protein-rich pulse grown mostly in India and Southeast Asia. Suitable for tropical climates.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 75 - 90 Days</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div>
+            <div class="step-content"><h3>Land Preparation</h3>
+                <ul>
+                    <li>Plough well and remove weeds</li>
+                    <li>Add compost or well-rotted manure</li>
+                    <li>Level the soil for uniform irrigation</li>
+                </ul></div></div>
+            <div class="step"><div class="step-number">2</div>
+            <div class="step-content"><h3>Sowing</h3>
+                <ul>
+                    <li>Sow treated seeds in rows 2–3 cm deep</li>
+                    <li>Maintain 30–40 cm spacing between rows</li>
+                    <li>Water lightly after sowing</li>
+                </ul></div></div>
+            <div class="step"><div class="step-number">3</div>
+            <div class="step-content"><h3>Care & Harvest</h3>
+                <ul>
+                    <li>Regular weeding improves yield</li>
+                    <li>Water only in dry spells</li>
+                    <li>Harvest when pods turn black and dry</li>
+                </ul></div></div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Use well-drained soil to prevent root rot</li>
+                <li>Inoculate seeds for nitrogen fixation</li>
+                <li>Harvest in morning to reduce seed loss</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+// Pigeon Pea (Tur/Arhar)
+else if(crop === 'Pigeon Pea') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Pigeon Pea (Cajanus cajan)</h1>
+            <p>A long-duration pulse commonly grown in India. Drought-tolerant and rich in protein.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Semi-Arid / Tropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 150 - 180 Days</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div>
+            <div class="step-content"><h3>Land Preparation</h3>
+                <ul>
+                    <li>Plough field and remove previous crop residues</li>
+                    <li>Add organic manure before final ploughing</li>
+                    <li>Level the soil for uniform irrigation</li>
+                </ul></div></div>
+            <div class="step"><div class="step-number">2</div>
+            <div class="step-content"><h3>Sowing</h3>
+                <ul>
+                    <li>Sow seeds 3–4 cm deep in rows</li>
+                    <li>Maintain 45–60 cm spacing between rows</li>
+                    <li>Lightly irrigate after sowing</li>
+                </ul></div></div>
+            <div class="step"><div class="step-number">3</div>
+            <div class="step-content"><h3>Care & Harvest</h3>
+                <ul>
+                    <li>Weed the field regularly</li>
+                    <li>Provide water during flowering if needed</li>
+                    <li>Harvest when pods turn brown and dry</li>
+                </ul></div></div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Pigeon pea tolerates drought; avoid overwatering</li>
+                <li>Proper spacing prevents lodging and increases yield</li>
+                <li>Harvest when pods are dry for better storage</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+// Kidney Bean (Rajma)
+else if(crop === 'Kidney Bean') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Kidney Bean (Phaseolus vulgaris)</h1>
+            <p>A popular pulse in India, rich in protein. Grows best in cool climates with well-drained soil.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Temperate / Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 140 Days</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div>
+            <div class="step-content"><h3>Land Preparation</h3>
+                <ul>
+                    <li>Plough and level the soil</li>
+                    <li>Add compost or manure</li>
+                    <li>Remove weeds and debris</li>
+                </ul></div></div>
+            <div class="step"><div class="step-number">2</div>
+            <div class="step-content"><h3>Sowing</h3>
+                <ul>
+                    <li>Sow seeds 2–3 cm deep in rows</li>
+                    <li>Keep 40–50 cm spacing between rows</li>
+                    <li>Water lightly after sowing</li>
+                </ul></div></div>
+            <div class="step"><div class="step-number">3</div>
+            <div class="step-content"><h3>Care & Harvest</h3>
+                <ul>
+                    <li>Support plants with stakes if needed</li>
+                    <li>Weed regularly and irrigate moderately</li>
+                    <li>Harvest when pods are dry and seeds are firm</li>
+                </ul></div></div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Provide support for climbing varieties</li>
+                <li>Timely weeding increases yield</li>
+                <li>Harvest when pods are dry for longer storage</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+// Cowpea (Lobia)
+else if(crop === 'Cowpea') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Cowpea (Vigna unguiculata)</h1>
+            <p>A hardy pulse suitable for semi-arid regions. Provides good protein and green fodder.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Semi-Arid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 60 - 90 Days</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div>
+            <div class="step-content"><h3>Land Preparation</h3>
+                <ul>
+                    <li>Plough and remove previous crop residues</li>
+                    <li>Add compost or manure for fertility</li>
+                    <li>Level the soil for even growth</li>
+                </ul></div></div>
+            <div class="step"><div class="step-number">2</div>
+            <div class="step-content"><h3>Sowing</h3>
+                <ul>
+                    <li>Sow seeds 2–3 cm deep in rows</li>
+                    <li>Keep 30–40 cm spacing between rows</li>
+                    <li>Water lightly after sowing</li>
+                </ul></div></div>
+            <div class="step"><div class="step-number">3</div>
+            <div class="step-content"><h3>Care & Harvest</h3>
+                <ul>
+                    <li>Weed regularly and irrigate during dry spells</li>
+                    <li>Support climbing varieties if needed</li>
+                    <li>Harvest when pods mature and dry</li>
+                </ul></div></div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Cowpea tolerates dry conditions</li>
+                <li>Harvest promptly to prevent seed loss</li>
+                <li>Intercropping with cereals improves soil fertility</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+// Moth Bean (Matki)
+else if(crop === 'Moth Bean') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Moth Bean (Vigna aconitifolia)</h1>
+            <p>A short-duration, drought-tolerant pulse. Mainly grown in arid and semi-arid regions.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Arid / Semi-Arid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 60 - 70 Days</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div>
+            <div class="step-content"><h3>Land Preparation</h3>
+                <ul>
+                    <li>Plough the field thoroughly</li>
+                    <li>Remove weeds and residues</li>
+                    <li>Level the soil for uniform irrigation</li>
+                </ul></div></div>
+            <div class="step"><div class="step-number">2</div>
+            <div class="step-content"><h3>Sowing</h3>
+                <ul>
+                    <li>Sow seeds 2 cm deep in rows</li>
+                    <li>Maintain 25–30 cm spacing between rows</li>
+                    <li>Water lightly after sowing</li>
+                </ul></div></div>
+            <div class="step"><div class="step-number">3</div>
+            <div class="step-content"><h3>Care & Harvest</h3>
+                <ul>
+                    <li>Weed regularly; minimal water required</li>
+                    <li>Harvest when pods turn brown</li>
+                </ul></div></div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Ideal for drought-prone areas</li>
+                <li>Short-duration crop allows multiple cropping</li>
+                <li>Harvest when pods are dry for maximum yield</li>
+            </ul>
+        </div>
+    </div>`;
+}
+// Horse Gram (Kulthi)
+else if(crop === 'Horse Gram') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Horse Gram (Macrotyloma uniflorum)</h1>
+            <p>A hardy pulse used in dry regions. Rich in protein and iron, often grown as a minor crop.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Semi-Arid / Tropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div>
+                <div class="step-content"><h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough the field and remove weeds</li>
+                        <li>Add organic manure to enhance fertility</li>
+                        <li>Level the soil for uniform irrigation</li>
+                    </ul>
+                </div></div>
+            <div class="step"><div class="step-number">2</div>
+                <div class="step-content"><h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds 2–3 cm deep in rows</li>
+                        <li>Maintain 30–40 cm spacing between rows</li>
+                        <li>Water lightly after sowing</li>
+                    </ul>
+                </div></div>
+            <div class="step"><div class="step-number">3</div>
+                <div class="step-content"><h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Weed regularly and irrigate during dry periods</li>
+                        <li>Harvest when pods turn brown and dry</li>
+                    </ul>
+                </div></div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Highly drought-tolerant; ideal for dry lands</li>
+                <li>Minimal care required for good yield</li>
+                <li>Harvest at proper dryness to avoid seed loss</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+// Broad Bean (Fava Bean)
+else if(crop === 'Broad Bean') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Broad Bean (Vicia faba)</h1>
+            <p>A cool-season pulse grown worldwide. Rich in protein and fiber, prefers well-drained soils.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div>
+                <div class="step-content"><h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough and level the soil</li>
+                        <li>Add compost or manure</li>
+                        <li>Remove weeds and debris</li>
+                    </ul>
+                </div></div>
+            <div class="step"><div class="step-number">2</div>
+                <div class="step-content"><h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds 3–5 cm deep in rows</li>
+                        <li>Maintain 40–50 cm spacing between rows</li>
+                        <li>Water lightly after sowing</li>
+                    </ul>
+                </div></div>
+            <div class="step"><div class="step-number">3</div>
+                <div class="step-content"><h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Regular weeding and moderate irrigation</li>
+                        <li>Support tall varieties with stakes if needed</li>
+                        <li>Harvest when pods mature and dry</li>
+                    </ul>
+                </div></div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Grows well in cooler climates</li>
+                <li>Supports nitrogen fixation, improving soil fertility</li>
+                <li>Timely harvest ensures high-quality seeds</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+// Lablab Bean (Hyacinth Bean)
+else if(crop === 'Lablab Bean') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Lablab Bean (Lablab purpureus)</h1>
+            <p>A tropical pulse grown for food and fodder. Adaptable to different soils and climates.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div>
+                <div class="step-content"><h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough and level the soil</li>
+                        <li>Add compost or manure to improve fertility</li>
+                        <li>Remove weeds</li>
+                    </ul>
+                </div></div>
+            <div class="step"><div class="step-number">2</div>
+                <div class="step-content"><h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds 2–3 cm deep in rows</li>
+                        <li>Maintain 40–50 cm row spacing</li>
+                        <li>Water lightly after sowing</li>
+                    </ul>
+                </div></div>
+            <div class="step"><div class="step-number">3</div>
+                <div class="step-content"><h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Weed regularly</li>
+                        <li>Water during dry spells</li>
+                        <li>Harvest when pods dry and seeds firm</li>
+                    </ul>
+                </div></div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Good for intercropping with cereals</li>
+                <li>Adaptable to different soils and climates</li>
+                <li>Harvest promptly to avoid pod shattering</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+// Soybean
+else if(crop === 'Soybean') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Soybean (Glycine max)</h1>
+            <p>A protein-rich legume used for oil and food. Grows best in warm, well-drained soils.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div>
+                <div class="step-content"><h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough field and add organic manure</li>
+                        <li>Level soil for proper irrigation</li>
+                        <li>Remove weeds and debris</li>
+                    </ul>
+                </div></div>
+            <div class="step"><div class="step-number">2</div>
+                <div class="step-content"><h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds 2–3 cm deep</li>
+                        <li>Maintain 30–40 cm row spacing</li>
+                        <li>Water lightly after sowing</li>
+                    </ul>
+                </div></div>
+            <div class="step"><div class="step-number">3</div>
+                <div class="step-content"><h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Control weeds during early stages</li>
+                        <li>Water during dry periods</li>
+                        <li>Harvest when pods mature and seeds are firm</li>
+                    </ul>
+                </div></div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Use inoculated seeds for better nitrogen fixation</li>
+                <li>Ensure good drainage to avoid root rot</li>
+                <li>Harvest when pods dry for better oil content</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+// White Pea
+else if(crop === 'White Pea') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>White Pea (Pisum sativum)</h1>
+            <p>A short-duration pulse grown in cool climates. High in protein and widely consumed as split peas.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 70 - 90 Days</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div>
+                <div class="step-content"><h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough field and level soil</li>
+                        <li>Apply compost or organic manure</li>
+                        <li>Remove weeds</li>
+                    </ul>
+                </div></div>
+            <div class="step"><div class="step-number">2</div>
+                <div class="step-content"><h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds 2–3 cm deep in rows</li>
+                        <li>Maintain 25–30 cm spacing between rows</li>
+                        <li>Water lightly after sowing</li>
+                    </ul>
+                </div></div>
+            <div class="step"><div class="step-number">3</div>
+                <div class="step-content"><h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Weed regularly</li>
+                        <li>Moderate irrigation is sufficient</li>
+                        <li>Harvest when pods dry and seeds firm</li>
+                    </ul>
+                </div></div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>White pea grows well in short-season fields</li>
+                <li>Stop irrigation before harvesting for firm seeds</li>
+                <li>Use well-drained soil to prevent root rot</li>
+            </ul>
+        </div>
+    </div>`;
+}
+// Red Lentil
+else if(crop === 'Red Lentil') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Red Lentil (Lens culinaris)</h1>
+            <p>A short-duration pulse widely consumed as dal. Grows best in cool, well-drained soils.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 80 - 100 Days</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div>
+                <div class="step-content"><h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough and level the soil</li>
+                        <li>Remove previous crop residues</li>
+                        <li>Apply organic manure before sowing</li>
+                    </ul>
+                </div></div>
+            <div class="step"><div class="step-number">2</div>
+                <div class="step-content"><h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds 2–3 cm deep in rows</li>
+                        <li>Maintain 25–30 cm spacing between rows</li>
+                        <li>Water lightly after sowing</li>
+                    </ul>
+                </div></div>
+            <div class="step"><div class="step-number">3</div>
+                <div class="step-content"><h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Weed regularly for better growth</li>
+                        <li>Provide moderate irrigation</li>
+                        <li>Harvest when pods turn brown and dry</li>
+                    </ul>
+                </div></div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Short-duration crop; sow early in the season</li>
+                <li>Ensure proper drainage to avoid root rot</li>
+                <li>Timely harvesting prevents seed shattering</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+// Split Pea
+else if(crop === 'Split Pea') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Split Pea (Pisum sativum var. arvense)</h1>
+            <p>A cool-season pulse, often processed into split peas. Rich in protein and fiber.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 70 - 90 Days</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div>
+                <div class="step-content"><h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough and level the field</li>
+                        <li>Add compost or manure</li>
+                        <li>Remove weeds and debris</li>
+                    </ul>
+                </div></div>
+            <div class="step"><div class="step-number">2</div>
+                <div class="step-content"><h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds 2–3 cm deep</li>
+                        <li>Keep 25–30 cm spacing between rows</li>
+                        <li>Water lightly after sowing</li>
+                    </ul>
+                </div></div>
+            <div class="step"><div class="step-number">3</div>
+                <div class="step-content"><h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Regular weeding</li>
+                        <li>Provide irrigation during dry spells</li>
+                        <li>Harvest when pods dry and seeds firm</li>
+                    </ul>
+                </div></div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Short-season crop, suitable for cool climates</li>
+                <li>Stop irrigation 10–15 days before harvest</li>
+                <li>Harvest when pods are fully dry to prevent seed loss</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+// Adzuki Bean
+else if(crop === 'Adzuki Bean') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Adzuki Bean (Vigna angularis)</h1>
+            <p>A small red bean widely grown in East Asia. Prefers warm, well-drained soils.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div>
+                <div class="step-content"><h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough and level soil</li>
+                        <li>Apply compost or manure</li>
+                        <li>Remove weeds and residues</li>
+                    </ul>
+                </div></div>
+            <div class="step"><div class="step-number">2</div>
+                <div class="step-content"><h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds 2–3 cm deep</li>
+                        <li>Maintain 30–40 cm row spacing</li>
+                        <li>Water lightly after sowing</li>
+                    </ul>
+                </div></div>
+            <div class="step"><div class="step-number">3</div>
+                <div class="step-content"><h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Weed regularly</li>
+                        <li>Provide irrigation if dry spells occur</li>
+                        <li>Harvest when pods mature and seeds hard</li>
+                    </ul>
+                </div></div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Adzuki beans prefer well-drained soils</li>
+                <li>Moderate irrigation is sufficient</li>
+                <li>Harvest when pods dry to prevent seed damage</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+// Tepary Bean
+else if(crop === 'Tepary Bean') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Tepary Bean (Phaseolus acutifolius)</h1>
+            <p>A drought-tolerant bean grown in arid regions. Rich in protein and fiber, ideal for drylands.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Arid / Semi-Arid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 70 - 100 Days</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step"><div class="step-number">1</div>
+                <div class="step-content"><h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough field and remove weeds</li>
+                        <li>Add compost or organic manure</li>
+                        <li>Level soil for uniform irrigation</li>
+                    </ul>
+                </div></div>
+            <div class="step"><div class="step-number">2</div>
+                <div class="step-content"><h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds 2–3 cm deep</li>
+                        <li>Maintain 25–30 cm spacing between rows</li>
+                        <li>Water lightly after sowing</li>
+                    </ul>
+                </div></div>
+            <div class="step"><div class="step-number">3</div>
+                <div class="step-content"><h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Weed regularly, minimal irrigation needed</li>
+                        <li>Harvest when pods dry and seeds hard</li>
+                        <li>Ensure good drainage to prevent root rot</li>
+                    </ul>
+                </div></div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Highly drought-tolerant; ideal for arid regions</li>
+                <li>Short-season crop allows multiple cropping</li>
+                <li>Harvest when pods are dry for maximum seed quality</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+ else {
+                // This displays for any button that isn't 'Rice' yet
+                contentArea.innerHTML = `
+                    <div class="crop-display">
+                        <h1>${crop}</h1>
+                        <p>Detailed farming tips for ${crop} are currently being updated. Check back soon!</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Run this once so the page isn't empty when it first loads
+        displaytip('Rice');
+    </script>
+</body>
+</html>

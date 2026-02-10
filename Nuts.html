@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraTip</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="cereals.css">
+</head>
+<body>
+    <div class="main">
+        <div class="sticky">
+            <div class="navbar">
+                <nav class="top">
+                    <img src="logo.png" alt="TerraTip Logo" class="logo">
+                    <a href="index.html" class="navlink" id="page">Home</a>
+                    <!-- <a href="cropcalender.html" class="navlink">Crop Calendar</a>
+                    <a href="disease.html" class="navlink">Disease Info</a>
+                    <a href="basic.html" class="navlink">Basic</a>
+                    <a href="about.html" class="navlink">About Me</a> -->
+                </nav>
+            </div>
+            <div class="legend">
+                <nav class="legend">
+                    <p class="legend-title">SELECT CROP CATEGORY</p>
+                    <img src="pointing-right.png" alt="Arrow" class="arrow-icon">
+                    <a href="cereals.html" class="legend-item">CEREALS</a>
+                    <a href="Pulses.html" class="legend-item">PULSES</a>
+                    <a href="Vegitable.html" class="legend-item">VEGETABLES</a>
+                    <a href="Fruits.html" class="legend-item">FRUITS</a>
+                    <a href="Cash-crops.html" class="legend-item">CASH CROPS</a>
+                    <a href="Oilseeds.html" class="legend-item">OILSEEDS</a>
+                    <a href="Spices.html" class="legend-item">SPICES</a>
+                    <a href="Medicinal.html" class="legend-item">MEDICINALS</a>
+                    <a href="Flowers.html" class="legend-item">FLOWERS</a>
+                    <a href="Nuts.html" class="legend-item">NUTS</a>
+                    <a href="Forage.html" class="legend-item">FORAGE</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="content">
+    <div class="crop-list">
+        <p class="list-head">NUTS</p>
+
+        <button onclick="displaytip('Almond','almond')" id="almond">Almond</button>
+        <button onclick="displaytip('Cashew','cashew')" id="cashew">Cashew</button>
+        <button onclick="displaytip('Walnut','walnut')" id="walnut">Walnut</button>
+        <button onclick="displaytip('Pistachio','pistachio')" id="pistachio">Pistachio</button>
+        <button onclick="displaytip('Hazelnut','hazelnut')" id="hazelnut">Hazelnut</button>
+
+        <button onclick="displaytip('Peanut','peanut')" id="peanut">Peanut (Groundnut)</button>
+        <button onclick="displaytip('Macadamia','macadamia')" id="macadamia">Macadamia</button>
+        <button onclick="displaytip('Pecan','pecan')" id="pecan">Pecan</button>
+        <button onclick="displaytip('Brazil Nut','brazil-nut')" id="brazil-nut">Brazil Nut</button>
+        <button onclick="displaytip('Pine Nut','pine-nut')" id="pine-nut">Pine Nut</button>
+
+        <button onclick="displaytip('Chestnut','chestnut')" id="chestnut">Chestnut</button>
+        <button onclick="displaytip('Kola Nut','kola-nut')" id="kola-nut">Kola Nut</button>
+    </div>
+
+
+<div class="crop-tipstyle" id="crop-tip">
+                <div class="empty-state">
+                    <img src="arrow-left.png" alt="Arrow" class="guide-arrow">
+                    <h2>Ready to grow?</h2>
+                    <p>Select a crop from the left list for expert farming guidance.</p>
+                </div>
+        </div>
+     </div>
+
+       <script>
+        function displaytip(crop, clickedId) {
+        const allButtons = document.querySelectorAll('.crop-list button');
+        allButtons.forEach(btn => btn.style.backgroundColor = "");
+        allButtons.forEach(btn => btn.style.color = "black");
+        const cropindisplay = document.getElementById(clickedId);
+        cropindisplay.style.backgroundColor = "#2a6b1f";
+        cropindisplay.style.color = "white";
+        const contentArea = document.getElementById('crop-tip');
+
+if (crop === 'Almond') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Almond (Prunus dulcis)</h1>
+            <p>A tree nut cultivated for its edible seeds. Almonds require warm, dry climates and well-drained soil.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Mediterranean</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 8.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 3-4 Years to Full Bearing</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant in well-drained sandy loam soil</li>
+                        <li>Choose a sunny location for maximum growth</li>
+                        <li>Space trees about 5–6 meters apart</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care & Irrigation</h3>
+                    <ul>
+                        <li>Water young plants regularly, reduce after establishment</li>
+                        <li>Prune annually to maintain canopy and remove diseased branches</li>
+                        <li>Fertilize with balanced NPK and organic compost</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvesting</h3>
+                    <ul>
+                        <li>Harvest when hulls start splitting</li>
+                        <li>Sun-dry seeds before storage</li>
+                        <li>Store in cool, dry place to maintain quality</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Regular pruning increases nut yield</li>
+                <li>Prevent waterlogging to avoid root rot</li>
+                <li>Use mulch to conserve moisture and improve soil health</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Cashew') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Cashew (Anacardium occidentale)</h1>
+            <p>A tropical tree nut producing both nuts and cashew apple. Requires humid, warm conditions.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Humid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.0 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 3-5 Years to Bearing</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Use well-drained sandy or laterite soil</li>
+                        <li>Plant seedlings in sunny areas with spacing of 7–8 meters</li>
+                        <li>Raise seedlings in nursery beds for 6–12 months before transplanting</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water during dry spells, avoid overwatering</li>
+                        <li>Mulch around the base to conserve moisture</li>
+                        <li>Prune to maintain tree shape and remove dead branches</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Collect mature nuts when they fall naturally</li>
+                        <li>Separate nut from cashew apple carefully</li>
+                        <li>Dry and roast nuts to remove toxic oils</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Cashew trees tolerate poor soil but yield better with fertilization</li>
+                <li>Protect young trees from strong winds</li>
+                <li>Regular pest monitoring is key to healthy nuts</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Walnut') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Walnut (Juglans regia)</h1>
+            <p>A temperate tree nut grown for edible seeds. Walnuts require cool winters and well-drained soils.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Temperate / Cool Winters</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 4-5 Years to Bearing</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant seedlings in deep, fertile, well-drained soil</li>
+                        <li>Maintain spacing of 7–10 meters between trees</li>
+                        <li>Choose sunny locations with cool winter conditions</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water young trees regularly, reduce irrigation as trees mature</li>
+                        <li>Apply organic manure and balanced fertilizers annually</li>
+                        <li>Prune branches to allow sunlight penetration and airflow</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Collect nuts when hulls begin to split</li>
+                        <li>Remove hulls and sun-dry seeds</li>
+                        <li>Store in cool, dry conditions</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Mulch to retain soil moisture and reduce weeds</li>
+                <li>Protect young trees from frost</li>
+                <li>Regular pruning improves nut quality and yield</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Pistachio') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Pistachio (Pistacia vera)</h1>
+            <p>A nut tree suited to arid and semi-arid regions. Requires hot summers and cold winters.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Hot Summer / Cold Winter</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 7.0 - 8.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 5-7 Years to Bearing</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant in sandy loam or calcareous soils with good drainage</li>
+                        <li>Maintain spacing of 5–6 meters</li>
+                        <li>Ensure full sunlight exposure</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Provide irrigation only during dry periods</li>
+                        <li>Prune to remove dead or crossing branches</li>
+                        <li>Apply organic fertilizers during dormancy</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Shake trees when shells begin splitting</li>
+                        <li>Dry nuts immediately in sun or shade</li>
+                        <li>Store in airtight containers to maintain freshness</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Low water requirements reduce fungal disease risks</li>
+                <li>Mulching helps retain soil moisture and control weeds</li>
+                <li>Pollination requires male and female trees for proper nut set</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Hazelnut') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Hazelnut (Corylus avellana)</h1>
+            <p>A temperate nut tree grown for edible kernels, requires well-drained fertile soils.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Temperate / Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 3-4 Years to Bearing</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Choose sunny locations with fertile, well-drained soil</li>
+                        <li>Space plants 4–5 meters apart</li>
+                        <li>Plant seedlings 30–50 cm deep in pits filled with compost</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Prune to maintain shape and remove old branches</li>
+                        <li>Apply organic manure and fertilizers annually</li>
+                        <li>Control pests such as weevils and mites</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Collect nuts when shells split</li>
+                        <li>Dry under shade for a few days</li>
+                        <li>Store in cool, dry place</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Regular pruning improves yield and nut quality</li>
+                <li>Mulch to conserve moisture and suppress weeds</li>
+                <li>Protect young plants from frost</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Peanut') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Peanut (Arachis hypogaea)</h1>
+            <p>A legume grown for edible seeds and oil, thrives in warm, sandy soils.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Tropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 110 - 150 Days</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Plant in well-prepared sandy loam soil</li>
+                        <li>Sow seeds 4–5 cm deep in rows spaced 30–40 cm apart</li>
+                        <li>Ensure good seed-to-soil contact</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Irrigate during dry periods, avoid waterlogging</li>
+                        <li>Apply NPK fertilizers as needed</li>
+                        <li>Weed regularly to reduce competition</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Lift pods from soil when leaves yellow</li>
+                        <li>Sun-dry for 3–5 days</li>
+                        <li>Store in dry, ventilated place</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Rotate crops to improve soil health</li>
+                <li>Ensure adequate spacing to prevent disease</li>
+                <li>Harvest timely to prevent pod shattering</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Macadamia') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Macadamia (Macadamia integrifolia)</h1>
+            <p>A tropical/subtropical tree nut, valued for rich, buttery seeds.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Subtropical / Warm</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.0 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 5-7 Years to Bearing</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant in deep, fertile, well-drained soils</li>
+                        <li>Maintain spacing of 6–8 meters between trees</li>
+                        <li>Ensure full sun exposure for optimal growth</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Irrigate during dry spells but avoid waterlogging</li>
+                        <li>Fertilize with nitrogen-rich and organic manure annually</li>
+                        <li>Prune to remove dead branches and improve airflow</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Collect nuts when they fall naturally from trees</li>
+                        <li>Remove husks and sun-dry seeds for several days</li>
+                        <li>Store in cool, dry conditions to preserve freshness</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Mulch to conserve moisture and suppress weeds</li>
+                <li>Regular pruning improves nut yield and quality</li>
+                <li>Protect young plants from frost and strong winds</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Pecan') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Pecan (Carya illinoinensis)</h1>
+            <p>A temperate nut tree producing rich, oily seeds, requiring well-drained soil and full sunlight.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Temperate / Warm Summers</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 6-8 Years to Bearing</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Choose sunny, well-drained fertile soils</li>
+                        <li>Space trees 8–10 meters apart</li>
+                        <li>Plant seedlings at same depth as nursery container</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water young trees regularly; mature trees tolerate drought</li>
+                        <li>Apply balanced fertilizers annually</li>
+                        <li>Prune to remove dead, diseased, or crowded branches</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Shake trees or collect nuts after natural drop</li>
+                        <li>Remove husks promptly to prevent spoilage</li>
+                        <li>Dry and store in ventilated areas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Mulch to retain soil moisture</li>
+                <li>Regular pruning ensures better light penetration</li>
+                <li>Plant male and female trees for proper pollination</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Brazil Nut') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Brazil Nut (Bertholletia excelsa)</h1>
+            <p>A rainforest tree nut thriving in humid tropical climates; grown mainly in South America.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical Humid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 8-12 Years to Bearing</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant in humid tropical forests with rich, well-drained soils</li>
+                        <li>Maintain wide spacing of 15–20 meters</li>
+                        <li>Ensure partial shade for seedlings</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Protect young trees from pests and animals</li>
+                        <li>Apply organic mulch to retain moisture</li>
+                        <li>Minimal irrigation is required due to high rainfall</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Collect fallen fruit pods from the forest floor</li>
+                        <li>Extract seeds by cracking hard outer shells</li>
+                        <li>Dry seeds and store in ventilated areas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Plant in rich, undisturbed soil for maximum yield</li>
+                <li>Forest canopy provides necessary humidity and shade</li>
+                <li>Harvest after full maturity for better quality nuts</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Pine Nut') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Pine Nut (Pinus spp.)</h1>
+            <p>Seeds from pine cones used for cooking and oil; grows in temperate and subtropical regions.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Temperate / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 6-8 Years to Bearing</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant in sandy or loamy well-drained soils</li>
+                        <li>Provide full sunlight exposure</li>
+                        <li>Maintain spacing of 5–6 meters</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water young trees regularly</li>
+                        <li>Prune dead branches to maintain tree shape</li>
+                        <li>Control pests like pine weevils</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Collect mature cones and extract seeds</li>
+                        <li>Dry seeds in shade</li>
+                        <li>Store in cool, dry areas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Ensure good air circulation to prevent fungal diseases</li>
+                <li>Harvest cones when fully mature for better seed quality</li>
+                <li>Mulching conserves moisture and improves soil fertility</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Chestnut') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Chestnut (Castanea spp.)</h1>
+            <p>A temperate nut tree producing edible seeds, requiring deep, fertile soils.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Temperate / Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 4-6 Years to Bearing</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant seedlings in sunny, fertile, well-drained soils</li>
+                        <li>Space trees 5–7 meters apart</li>
+                        <li>Plant at same depth as nursery pot</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water young trees regularly</li>
+                        <li>Prune to shape and remove deadwood</li>
+                        <li>Apply organic manure annually</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Collect nuts when burrs split naturally</li>
+                        <li>Remove outer burr and dry nuts</li>
+                        <li>Store in cool, ventilated areas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Mulch around the base to conserve moisture</li>
+                <li>Protect young plants from frost</li>
+                <li>Regular pruning improves airflow and nut quality</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Kola Nut') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Kola Nut (Cola spp.)</h1>
+            <p>A tropical nut grown mainly in West Africa and some tropical regions, used for beverages and cultural purposes.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical Humid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 6-8 Years to Bearing</div>
+        </div>
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant in rich, moist, well-drained tropical soils</li>
+                        <li>Provide partial shade for young seedlings</li>
+                        <li>Space trees 6–8 meters apart</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water regularly to maintain soil moisture</li>
+                        <li>Apply organic manure and compost annually</li>
+                        <li>Protect from pests and strong winds</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest nuts when they mature and fall naturally</li>
+                        <li>Remove husks and sun-dry seeds</li>
+                        <li>Store in cool, dry conditions for long-term use</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Maintain shade for young seedlings</li>
+                <li>Ensure adequate rainfall or irrigation</li>
+                <li>Protect trees from strong winds and pests</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else {
+                // This displays for any button that isn't 'Rice' yet
+                contentArea.innerHTML = `
+                    <div class="crop-display">
+                        <h1>${crop}</h1>
+                        <p>Detailed farming tips for ${crop} are currently being updated. Check back soon!</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Run this once so the page isn't empty when it first loads
+        displaytip('Rice');
+    </script>
+</body>
+</html>

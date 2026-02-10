@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraTip</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="cereals.css">
+</head>
+<body>
+    <div class="main">
+        <div class="sticky">
+            <div class="navbar">
+                <nav class="top">
+                    <img src="logo.png" alt="TerraTip Logo" class="logo">
+                    <a href="index.html" class="navlink" id="page">Home</a>
+                    <!-- <a href="cropcalender.html" class="navlink">Crop Calendar</a>
+                    <a href="disease.html" class="navlink">Disease Info</a>
+                    <a href="basic.html" class="navlink">Basic</a>
+                    <a href="about.html" class="navlink">About Me</a> -->
+                </nav>
+            </div>
+            <div class="legend">
+                <nav class="legend">
+                    <p class="legend-title">SELECT CROP CATEGORY</p>
+                    <img src="pointing-right.png" alt="Arrow" class="arrow-icon">
+                    <a href="cereals.html" class="legend-item">CEREALS</a>
+                    <a href="Pulses.html" class="legend-item">PULSES</a>
+                    <a href="Vegitable.html" class="legend-item">VEGETABLES</a>
+                    <a href="Fruits.html" class="legend-item">FRUITS</a>
+                    <a href="Cash-crops.html" class="legend-item">CASH CROPS</a>
+                    <a href="Oilseeds.html" class="legend-item">OILSEEDS</a>
+                    <a href="Spices.html" class="legend-item">SPICES</a>
+                    <a href="Medicinal.html" class="legend-item">MEDICINALS</a>
+                    <a href="Flowers.html" class="legend-item">FLOWERS</a>
+                    <a href="Nuts.html" class="legend-item">NUTS</a>
+                    <a href="Forage.html" class="legend-item">FORAGE</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="content">
+    <div class="crop-list">
+        <p class="list-head">FLOWERS</p>
+
+        <button onclick="displaytip('Rose','rose')" id="rose">Rose</button>
+        <button onclick="displaytip('Marigold','marigold')" id="marigold">Marigold</button>
+        <button onclick="displaytip('Jasmine','jasmine')" id="jasmine">Jasmine</button>
+        <button onclick="displaytip('Chrysanthemum','chrysanthemum')" id="chrysanthemum">Chrysanthemum</button>
+        <button onclick="displaytip('Tuberose','tuberose')" id="tuberose">Tuberose</button>
+        <button onclick="displaytip('Hibiscus','hibiscus')" id="hibiscus">Hibiscus</button>
+        <button onclick="displaytip('Lily','lily')" id="lily">Lily</button>
+        <button onclick="displaytip('Orchid','orchid')" id="orchid">Orchid</button>
+        <button onclick="displaytip('Sunflower','sunflower')" id="sunflower">Sunflower (also ornamental)</button>
+        <button onclick="displaytip('Gladiolus','gladiolus')" id="gladiolus">Gladiolus</button>
+        <button onclick="displaytip('Gerbera','gerbera')" id="gerbera">Gerbera</button>
+        <button onclick="displaytip('Bougainvillea','bougainvillea')" id="bougainvillea">Bougainvillea</button>
+        <button onclick="displaytip('Dahlia','dahlia')" id="dahlia">Dahlia</button>
+        <button onclick="displaytip('Carnation','carnation')" id="carnation">Carnation</button>
+        <button onclick="displaytip('Petunia','petunia')" id="petunia">Petunia</button>
+    </div>
+<div class="crop-tipstyle" id="crop-tip">
+                <div class="empty-state">
+                    <img src="arrow-left.png" alt="Arrow" class="guide-arrow">
+                    <h2>Ready to grow?</h2>
+                    <p>Select a crop from the left list for expert farming guidance.</p>
+                </div>
+        </div>
+     </div>
+
+       <script>
+        function displaytip(crop, clickedId) {
+        const allButtons = document.querySelectorAll('.crop-list button');
+        allButtons.forEach(btn => btn.style.backgroundColor = "");
+        allButtons.forEach(btn => btn.style.color = "black");
+        const cropindisplay = document.getElementById(clickedId);
+        cropindisplay.style.backgroundColor = "#2a6b1f";
+        cropindisplay.style.color = "white";
+        const contentArea = document.getElementById('crop-tip');
+if (crop === 'Rose') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Rose (Rosa spp.)</h1>
+            <p>A popular ornamental flower known for its fragrance and beauty.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Temperate / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 120 - 150 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant healthy rose saplings or grafted plants in well-drained soil</li>
+                        <li>Ensure full sunlight exposure for at least 6 hours daily</li>
+                        <li>Maintain 45–60 cm spacing between plants</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water regularly, avoid waterlogging</li>
+                        <li>Prune branches to maintain shape and encourage blooms</li>
+                        <li>Apply organic compost or fertilizers every 6–8 weeks</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest flowers when buds are semi-open</li>
+                        <li>Use clean tools to avoid damaging stems</li>
+                        <li>Store harvested roses in cool water for longevity</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Mulching reduces weed growth and retains moisture</li>
+                <li>Regular pruning enhances flower production</li>
+                <li>Remove wilted blooms to encourage continuous flowering</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Marigold') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Marigold (Tagetes spp.)</h1>
+            <p>Bright, vibrant flowers commonly used in decoration and festivals.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Tropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 70 - 90 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds in nursery trays or directly in the field</li>
+                        <li>Lightly cover seeds with soil and water gently</li>
+                        <li>Maintain spacing of 20–25 cm between plants</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Provide regular watering without waterlogging</li>
+                        <li>Apply balanced fertilizers for continuous blooms</li>
+                        <li>Remove weeds and mulch around plants to retain moisture</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Pick flowers when fully open for decorations or garlands</li>
+                        <li>Harvest every 2–3 days to prolong flowering</li>
+                        <li>Handle flowers gently to avoid bruising</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Plant in full sun for best flowering</li>
+                <li>Deadhead old flowers to encourage new blooms</li>
+                <li>Use organic mulch to maintain soil moisture and reduce pests</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Jasmine') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Jasmine (Jasminum spp.)</h1>
+            <p>A fragrant flower used for perfumes, garlands, and ceremonial purposes.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Use healthy cuttings or saplings for propagation</li>
+                        <li>Plant in well-drained soil with adequate sunlight</li>
+                        <li>Maintain spacing of 30–40 cm for proper growth</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water regularly and mulch to conserve moisture</li>
+                        <li>Provide trellis support for climbing varieties</li>
+                        <li>Prune regularly to maintain shape and encourage flowers</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest flowers in early morning when buds are partially open</li>
+                        <li>Handle gently to preserve fragrance and petals</li>
+                        <li>Use immediately or store in cool conditions</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Full sunlight enhances flowering and fragrance</li>
+                <li>Regular pruning promotes bushy growth and more blooms</li>
+                <li>Fertilize with organic compost every 2–3 months</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Chrysanthemum') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Chrysanthemum (Chrysanthemum spp.)</h1>
+            <p>Popular ornamental flower, often used in bouquets and festivals.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Use healthy cuttings or saplings for propagation</li>
+                        <li>Plant in fertile, well-drained soil</li>
+                        <li>Maintain spacing of 30–35 cm between plants</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water consistently, avoid waterlogging</li>
+                        <li>Provide partial sunlight or filtered light in hot climates</li>
+                        <li>Pinch tips to encourage bushy growth and more flowers</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest flowers when fully open but firm</li>
+                        <li>Use sharp scissors to prevent stem damage</li>
+                        <li>Store in cool water to extend vase life</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Use well-drained soil to prevent root rot</li>
+                <li>Regular pinching increases flower density</li>
+                <li>Apply balanced fertilizers to maintain vibrant blooms</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Tuberose') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Tuberose (Polianthes tuberosa)</h1>
+            <p>A fragrant ornamental flower often used for perfumes and garlands.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Tropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 120 - 150 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant healthy bulbs in well-drained fertile soil</li>
+                        <li>Maintain spacing of 20–25 cm between bulbs</li>
+                        <li>Ensure partial to full sunlight for optimal growth</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water regularly but avoid waterlogging</li>
+                        <li>Apply organic fertilizers every 4–6 weeks</li>
+                        <li>Remove weeds to prevent nutrient competition</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest flowers early morning for best fragrance</li>
+                        <li>Handle flowers gently to avoid bruising</li>
+                        <li>Store in cool, shaded area if not used immediately</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Use well-drained soil to prevent bulb rot</li>
+                <li>Mulch around bulbs to retain moisture</li>
+                <li>Regular weeding ensures better flower quality and size</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Hibiscus') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Hibiscus (Hibiscus rosa-sinensis)</h1>
+            <p>A tropical flower known for large, colorful blooms used in decoration and medicine.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate to High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 100 - 130 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Use healthy saplings for propagation in well-drained soil</li>
+                        <li>Plant in full sunlight for optimal flowering</li>
+                        <li>Maintain spacing of 50–60 cm between plants</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water regularly but avoid waterlogging</li>
+                        <li>Apply organic fertilizers monthly</li>
+                        <li>Prune dead or weak branches to encourage new growth</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest flowers in early morning for best quality</li>
+                        <li>Use sharp scissors to avoid stem damage</li>
+                        <li>Store harvested flowers in cool water if not used immediately</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Mulch around roots to retain soil moisture</li>
+                <li>Regular pruning improves flowering and plant shape</li>
+                <li>Protect from strong winds to prevent branch damage</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Lily') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Lily (Lilium spp.)</h1>
+            <p>A beautiful ornamental flower, popular in bouquets and gardens.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.5 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 100 - 140 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant bulbs 10–15 cm deep in well-drained soil</li>
+                        <li>Provide full sunlight for at least 6 hours daily</li>
+                        <li>Maintain spacing of 20–25 cm between bulbs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water regularly, avoid waterlogging</li>
+                        <li>Apply balanced fertilizers every 4–6 weeks</li>
+                        <li>Stake tall stems for support to prevent bending</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest flowers when buds are partially open</li>
+                        <li>Handle carefully to avoid bruising petals</li>
+                        <li>Store in cool water if not used immediately</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Mulch bulbs to retain moisture and regulate temperature</li>
+                <li>Regularly remove faded flowers to promote continuous blooms</li>
+                <li>Ensure good drainage to prevent bulb rot</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Orchid') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Orchid (Orchidaceae)</h1>
+            <p>A diverse and exotic flower, highly valued for its beauty and uniqueness.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 6.5 (Epiphytic Medium)</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 120 - 180 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Use healthy orchid seedlings or tissue-cultured plants</li>
+                        <li>Plant in epiphytic medium or well-drained pots</li>
+                        <li>Maintain bright, indirect sunlight</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water carefully to avoid root rot</li>
+                        <li>Maintain humidity and good air circulation</li>
+                        <li>Apply orchid-specific fertilizers every 3–4 weeks</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest / Bloom</h3>
+                    <ul>
+                        <li>Wait for flowers to fully bloom before harvesting</li>
+                        <li>Handle gently to preserve delicate petals</li>
+                        <li>Keep flowers in cool, humid conditions for longevity</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Provide indirect light to prevent leaf burn</li>
+                <li>Ensure good drainage and avoid stagnant water</li>
+                <li>Regularly check for pests like mealybugs and aphids</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Sunflower') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Sunflower (Helianthus annuus)</h1>
+            <p>Bright and cheerful flowers, often grown for decoration and seeds.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 80 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds in well-drained soil with full sun exposure</li>
+                        <li>Maintain spacing of 30–40 cm between plants</li>
+                        <li>Water lightly after sowing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water regularly, avoid waterlogging</li>
+                        <li>Apply fertilizers every 4–6 weeks</li>
+                        <li>Support tall plants with stakes to prevent falling</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest flowers or seeds when mature</li>
+                        <li>Use sharp tools to prevent stem damage</li>
+                        <li>Dry seeds in shade before storage</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Plant in sunny areas for best flowering</li>
+                <li>Mulch around plants to retain soil moisture</li>
+                <li>Regularly remove weeds to reduce nutrient competition</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Gladiolus') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Gladiolus (Gladiolus spp.)</h1>
+            <p>Elegant flowers with tall spikes, ideal for bouquets and gardens.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant corms 5–10 cm deep in well-drained soil</li>
+                        <li>Maintain spacing of 10–15 cm between corms</li>
+                        <li>Ensure full sunlight exposure</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water consistently but avoid waterlogging</li>
+                        <li>Apply organic fertilizer every 3–4 weeks</li>
+                        <li>Stake tall spikes to prevent bending or breaking</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest when flowers begin to open but still firm</li>
+                        <li>Handle carefully to avoid bruising</li>
+                        <li>Store in cool, shaded area if not used immediately</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Ensure well-drained soil to prevent rot</li>
+                <li>Regularly remove faded flowers to encourage new blooms</li>
+                <li>Use stakes to support tall flower spikes</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Gerbera') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Gerbera (Gerbera jamesonii)</h1>
+            <p>A bright and cheerful ornamental flower, widely used in bouquets and decoration.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Use healthy seedlings or tissue-cultured plants</li>
+                        <li>Plant in well-drained soil with proper spacing of 25–30 cm</li>
+                        <li>Provide bright but indirect sunlight for optimal growth</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water regularly, ensuring soil remains moist but not waterlogged</li>
+                        <li>Apply balanced fertilizers every 4–6 weeks</li>
+                        <li>Remove weeds and old leaves regularly</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest flowers when buds are fully formed but not fully open</li>
+                        <li>Handle flowers gently to avoid bruising petals</li>
+                        <li>Store harvested flowers in cool water or shaded area</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Mulch around plants to retain moisture and prevent weeds</li>
+                <li>Keep leaves dry to reduce fungal diseases</li>
+                <li>Ensure consistent sunlight and good air circulation</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Bougainvillea') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Bougainvillea (Bougainvillea spp.)</h1>
+            <p>A hardy ornamental climber, famous for vibrant colored bracts.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Tropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 150 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Use healthy cuttings or saplings for propagation</li>
+                        <li>Plant in well-drained soil with full sunlight</li>
+                        <li>Maintain spacing of 50–60 cm if planting multiple shrubs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water moderately; avoid overwatering</li>
+                        <li>Prune regularly to encourage branching and flowering</li>
+                        <li>Apply fertilizers every 6–8 weeks during growth phase</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest / Display</h3>
+                    <ul>
+                        <li>Use flowers or bracts for decoration when vibrant and fresh</li>
+                        <li>Trim long branches carefully for arrangements</li>
+                        <li>Store in a cool place if needed for bouquets</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Bougainvillea thrives on minimal water; overwatering reduces blooms</li>
+                <li>Full sunlight increases flower production</li>
+                <li>Regular pruning maintains bushy growth and long flowering period</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Dahlia') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Dahlia (Dahlia spp.)</h1>
+            <p>Elegant tuberous flowers, widely cultivated for cut flowers and gardens.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Temperate / Warm</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 100 - 140 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant healthy tubers 10–15 cm deep in fertile, well-drained soil</li>
+                        <li>Maintain spacing of 30–40 cm between tubers</li>
+                        <li>Provide full sunlight for strong growth and flowering</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water consistently; avoid waterlogging</li>
+                        <li>Apply organic fertilizers every 3–4 weeks</li>
+                        <li>Stake tall varieties to prevent bending</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest flowers when buds are half-open for longest vase life</li>
+                        <li>Handle carefully to prevent petal damage</li>
+                        <li>Store cut flowers in cool water if not immediately used</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Regular deadheading promotes continuous blooming</li>
+                <li>Mulch to retain moisture and prevent weed growth</li>
+                <li>Ensure good air circulation to avoid fungal infections</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Carnation') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Carnation (Dianthus caryophyllus)</h1>
+            <p>Popular cut flower with fragrant blooms, widely grown in gardens and greenhouses.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.5 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant healthy seedlings or cuttings in well-drained soil</li>
+                        <li>Provide spacing of 20–25 cm between plants</li>
+                        <li>Ensure full sun for 6–7 hours daily</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water regularly; avoid waterlogging</li>
+                        <li>Fertilize every 3–4 weeks with balanced nutrients</li>
+                        <li>Remove weeds and dead flowers to promote blooming</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest flowers when buds are partially open for longer vase life</li>
+                        <li>Cut stems carefully to prevent damage</li>
+                        <li>Keep harvested flowers in cool water if not used immediately</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Regular pinching encourages bushy growth and more flowers</li>
+                <li>Mulch to retain soil moisture</li>
+                <li>Ensure good air circulation to prevent fungal diseases</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Petunia') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Petunia (Petunia spp.)</h1>
+            <p>A colorful ornamental flower, perfect for hanging baskets and garden borders.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 70 - 100 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Use healthy seedlings or seeds for planting</li>
+                        <li>Plant in well-drained soil with proper spacing of 20–25 cm</li>
+                        <li>Provide full sunlight for best flowering</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water regularly without waterlogging</li>
+                        <li>Apply balanced fertilizers every 4–5 weeks</li>
+                        <li>Remove faded flowers to encourage continuous blooms</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest / Display</h3>
+                    <ul>
+                        <li>Use flowers in arrangements when fully open</li>
+                        <li>Handle gently to avoid petal damage</li>
+                        <li>Keep in cool, shaded areas if not immediately used</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Petunia thrives with regular deadheading</li>
+                <li>Mulch soil to maintain moisture</li>
+                <li>Ensure sufficient sunlight for vibrant flowers</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+
+else {
+                // This displays for any button that isn't 'Rice' yet
+                contentArea.innerHTML = `
+                    <div class="crop-display">
+                        <h1>${crop}</h1>
+                        <p>Detailed farming tips for ${crop} are currently being updated. Check back soon!</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Run this once so the page isn't empty when it first loads
+        displaytip('Rice');
+    </script>
+</body>
+</html>

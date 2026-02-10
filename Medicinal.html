@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraTip</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="cereals.css">
+</head>
+<body>
+    <div class="main">
+        <div class="sticky">
+            <div class="navbar">
+                <nav class="top">
+                    <img src="logo.png" alt="TerraTip Logo" class="logo">
+                    <a href="index.html" class="navlink" id="page">Home</a>
+                    <!-- <a href="cropcalender.html" class="navlink">Crop Calendar</a>
+                    <a href="disease.html" class="navlink">Disease Info</a>
+                    <a href="basic.html" class="navlink">Basic</a>
+                    <a href="about.html" class="navlink">About Me</a> -->
+                </nav>
+            </div>
+            <div class="legend">
+                <nav class="legend">
+                    <p class="legend-title">SELECT CROP CATEGORY</p>
+                    <img src="pointing-right.png" alt="Arrow" class="arrow-icon">
+                    <a href="cereals.html" class="legend-item">CEREALS</a>
+                    <a href="Pulses.html" class="legend-item">PULSES</a>
+                    <a href="Vegitable.html" class="legend-item">VEGETABLES</a>
+                    <a href="Fruits.html" class="legend-item">FRUITS</a>
+                    <a href="Cash-crops.html" class="legend-item">CASH CROPS</a>
+                    <a href="Oilseeds.html" class="legend-item">OILSEEDS</a>
+                    <a href="Spices.html" class="legend-item">SPICES</a>
+                    <a href="Medicinal.html" class="legend-item">MEDICINALS</a>
+                    <a href="Flowers.html" class="legend-item">FLOWERS</a>
+                    <a href="Nuts.html" class="legend-item">NUTS</a>
+                    <a href="Forage.html" class="legend-item">FORAGE</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="content">
+    <div class="crop-list">
+        <p class="list-head">MEDICINAL PLANTS</p>
+
+        <button onclick="displaytip('Tulsi','tulsi')" id="tulsi">Tulsi (Holy Basil)</button>
+        <button onclick="displaytip('Aloe Vera','aloe-vera')" id="aloe-vera">Aloe Vera</button>
+        <button onclick="displaytip('Neem','neem')" id="neem">Neem</button>
+        <button onclick="displaytip('Ashwagandha','ashwagandha')" id="ashwagandha">Ashwagandha</button>
+        <button onclick="displaytip('Amla','amla')" id="amla">Amla (Indian Gooseberry)</button>
+
+        <button onclick="displaytip('Mint','mint')" id="mint">Mint (Pudina)</button>
+        <button onclick="displaytip('Lemongrass','lemongrass')" id="lemongrass">Lemongrass</button>
+        <button onclick="displaytip('Ginger','ginger')" id="ginger">Ginger</button>
+        <button onclick="displaytip('Turmeric','turmeric')" id="turmeric">Turmeric</button>
+        <button onclick="displaytip('Brahmi','brahmi')" id="brahmi">Brahmi</button>
+
+        <button onclick="displaytip('Giloy','giloy')" id="giloy">Giloy (Guduchi)</button>
+        <button onclick="displaytip('Shatavari','shatavari')" id="shatavari">Shatavari</button>
+        <button onclick="displaytip('Sarpagandha','sarpagandha')" id="sarpagandha">Sarpagandha</button>
+        <button onclick="displaytip('Kalmegh','kalmegh')" id="kalmegh">Kalmegh</button>
+        <button onclick="displaytip('Arjuna','arjuna')" id="arjuna">Arjuna</button>
+    </div>
+    <div class="crop-tipstyle" id="crop-tip">
+                <div class="empty-state">
+                    <img src="arrow-left.png" alt="Arrow" class="guide-arrow">
+                    <h2>Ready to grow?</h2>
+                    <p>Select a crop from the left list for expert farming guidance.</p>
+                </div>
+        </div>
+     </div>
+
+       <script>
+        function displaytip(crop, clickedId) {
+        const allButtons = document.querySelectorAll('.crop-list button');
+        allButtons.forEach(btn => btn.style.backgroundColor = "");
+        allButtons.forEach(btn => btn.style.color = "black");
+        const cropindisplay = document.getElementById(clickedId);
+        cropindisplay.style.backgroundColor = "#2a6b1f";
+        cropindisplay.style.color = "white";
+        const contentArea = document.getElementById('crop-tip');
+    
+    if (crop === 'Tulsi') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Tulsi (Holy Basil)</h1>
+            <p>A sacred medicinal herb widely used in Ayurveda.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Tropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds in nursery beds</li>
+                        <li>Lightly cover with soil</li>
+                        <li>Maintain consistent moisture</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Provide full sunlight</li>
+                        <li>Remove weeds regularly</li>
+                        <li>Avoid waterlogging</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest leaves before flowering</li>
+                        <li>Dry leaves in shade</li>
+                        <li>Store in airtight containers</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Regular pruning boosts leaf yield</li>
+                <li>Use well-drained soil to prevent root rot</li>
+                <li>Planting in raised beds improves drainage</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Aloe Vera') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Aloe Vera</h1>
+            <p>A succulent medicinal plant known for skin and health uses.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Hot / Dry</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 7.0 - 8.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 8 - 10 Months</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant suckers directly in well-drained soil</li>
+                        <li>Maintain 30–40 cm spacing between plants</li>
+                        <li>Use sandy or loamy soil</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Minimal irrigation, avoid waterlogging</li>
+                        <li>Remove weeds regularly</li>
+                        <li>Ensure good air circulation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest mature leaves after 8–10 months</li>
+                        <li>Cut leaves near the base</li>
+                        <li>Process gel immediately for best quality</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Use slightly raised beds to prevent waterlogging</li>
+                <li>Regular removal of old leaves improves plant health</li>
+                <li>Plant in sandy soil for better drainage and growth</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Neem') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Neem (Azadirachta indica)</h1>
+            <p>A multipurpose medicinal and timber tree widely used for its antibacterial and antifungal properties.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.2 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 5 - 7 Years (for mature leaves)</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Propagation & Sowing</h3>
+                    <ul>
+                        <li>Collect healthy neem seeds from mature fruits</li>
+                        <li>Remove pulp and soak seeds in water for 24 hours</li>
+                        <li>Sow seeds in raised nursery beds or pots with sandy-loamy soil</li>
+                        <li>Maintain proper spacing and keep soil moist but not waterlogged</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care & Maintenance</h3>
+                    <ul>
+                        <li>Transplant seedlings into open fields after 2–3 months</li>
+                        <li>Ensure adequate sunlight for optimal growth</li>
+                        <li>Mulch around the base to retain moisture</li>
+                        <li>Prune lower branches to improve airflow and sunlight penetration</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest & Utilization</h3>
+                    <ul>
+                        <li>Leaves can be harvested periodically after 3–4 years</li>
+                        <li>Seeds and bark are collected for medicinal and neem oil use</li>
+                        <li>Dry harvested leaves in shade before storage</li>
+                        <li>Ensure sustainable harvesting to avoid damage to the tree</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Neem thrives in well-drained soils; avoid waterlogging</li>
+                <li>Regular pruning increases leaf and fruit yield</li>
+                <li>Young plants require light irrigation during dry periods</li>
+                <li>Intercropping with short-duration crops is possible in early years</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Ashwagandha') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Ashwagandha (Withania somnifera)</h1>
+            <p>A popular Ayurvedic herb used for stress relief, immunity, and vitality.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Semi-arid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 7.0 - 8.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 150 - 180 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds in nursery beds or directly in field</li>
+                        <li>Cover lightly with sandy-loam soil</li>
+                        <li>Maintain spacing of 30–45 cm between plants</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care & Maintenance</h3>
+                    <ul>
+                        <li>Provide full sunlight for optimal root development</li>
+                        <li>Water sparingly; avoid waterlogging</li>
+                        <li>Remove weeds regularly to prevent competition</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvesting</h3>
+                    <ul>
+                        <li>Harvest roots after 150–180 days</li>
+                        <li>Clean roots and dry in shade</li>
+                        <li>Store in dry, cool place to maintain medicinal properties</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Sandy-loamy soil improves root quality</li>
+                <li>Avoid excess irrigation to prevent root rot</li>
+                <li>Mulching retains moisture and reduces weeds</li>
+                <li>Harvest during dry weather for better shelf life</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Ashwagandha') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Ashwagandha (Withania somnifera)</h1>
+            <p>A popular Ayurvedic herb used for stress relief, immunity, and vitality.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Semi-arid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 7.0 - 8.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 150 - 180 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds in nursery beds or directly in field</li>
+                        <li>Cover lightly with sandy-loam soil</li>
+                        <li>Maintain spacing of 30–45 cm between plants</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care & Maintenance</h3>
+                    <ul>
+                        <li>Provide full sunlight for optimal root development</li>
+                        <li>Water sparingly; avoid waterlogging</li>
+                        <li>Remove weeds regularly to prevent competition</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvesting</h3>
+                    <ul>
+                        <li>Harvest roots after 150–180 days</li>
+                        <li>Clean roots and dry in shade</li>
+                        <li>Store in dry, cool place to maintain medicinal properties</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Sandy-loamy soil improves root quality</li>
+                <li>Avoid excess irrigation to prevent root rot</li>
+                <li>Mulching retains moisture and reduces weeds</li>
+                <li>Harvest during dry weather for better shelf life</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Amla') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Amla (Indian Gooseberry)</h1>
+            <p>A vitamin-C rich fruit tree extensively used in Ayurveda and health tonics.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.5 - 8.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 3 - 4 Years (for fruiting)</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Propagation</h3>
+                    <ul>
+                        <li>Plant saplings or use seeds in nursery beds</li>
+                        <li>Maintain 4–5 m spacing between trees</li>
+                        <li>Provide support in initial months for proper growth</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water young plants regularly; mature trees are drought tolerant</li>
+                        <li>Prune branches to maintain canopy and sunlight penetration</li>
+                        <li>Apply organic fertilizers twice a year</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Fruits mature in 3–4 years</li>
+                        <li>Pluck carefully to avoid branch damage</li>
+                        <li>Store fruits in dry, cool conditions for medicinal use</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Plant in well-drained soil to prevent root diseases</li>
+                <li>Regular pruning improves fruit yield and tree health</li>
+                <li>Mulch around the base to retain moisture</li>
+                <li>Harvest in dry weather to reduce spoilage</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Mint') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Mint (Pudina)</h1>
+            <p>A refreshing herb used widely in culinary dishes, teas, and traditional medicine.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Moderate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 60 - 90 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Propagation</h3>
+                    <ul>
+                        <li>Use stem cuttings or runners for planting</li>
+                        <li>Plant in rows with 30–40 cm spacing</li>
+                        <li>Ensure soil is moist and rich in organic matter</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water regularly to keep soil moist</li>
+                        <li>Provide partial shade in hot regions</li>
+                        <li>Remove weeds frequently to prevent competition</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest leaves when plants reach 15–20 cm height</li>
+                        <li>Cut in the morning for best aroma</li>
+                        <li>Store leaves in shade or process immediately for oil extraction</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Regular trimming encourages bushier growth</li>
+                <li>Use compost-enriched soil for better flavor</li>
+                <li>Plant in raised beds to improve drainage</li>
+                <li>Harvest every 30–40 days for continuous yield</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Lemongrass') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Lemongrass (Cymbopogon citratus)</h1>
+            <p>A fragrant herb used in teas, culinary dishes, and essential oil production.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Use slips or root divisions for propagation</li>
+                        <li>Plant in rows with 30–45 cm spacing</li>
+                        <li>Ensure well-drained sandy-loamy soil</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water moderately; avoid waterlogging</li>
+                        <li>Fertilize with organic compost every 2–3 months</li>
+                        <li>Remove weeds regularly</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest leaves and stems after 3–4 months</li>
+                        <li>Cut near the base for regrowth</li>
+                        <li>Dry leaves in shade or process for oil extraction</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Regular harvesting promotes vigorous regrowth</li>
+                <li>Plant in raised beds to prevent root rot</li>
+                <li>Mulch to retain moisture and suppress weeds</li>
+                <li>Ensure full sunlight for maximum oil content</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Ginger') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Ginger (Zingiber officinale)</h1>
+            <p>A popular rhizome used for culinary purposes, medicine, and flavoring.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Humid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 8 - 10 Months</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Use healthy rhizomes with visible buds for propagation</li>
+                        <li>Plant in raised beds or ridges to ensure drainage</li>
+                        <li>Maintain 20–25 cm spacing between rhizomes</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care & Maintenance</h3>
+                    <ul>
+                        <li>Water regularly, especially in dry months</li>
+                        <li>Apply organic manure every 2–3 months</li>
+                        <li>Remove weeds and mulch to retain moisture</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest rhizomes after 8–10 months when leaves yellow</li>
+                        <li>Clean and dry rhizomes in shade</li>
+                        <li>Store in cool, dry conditions for long shelf life</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Loose, sandy-loam soil improves rhizome growth</li>
+                <li>Regular mulching keeps soil moist and cool</li>
+                <li>Plant disease-free rhizomes to prevent rhizome rot</li>
+                <li>Ensure partial shade in hot climates for better yield</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Turmeric') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Turmeric (Curcuma longa)</h1>
+            <p>A medicinal rhizome used for cooking, traditional medicine, and dyes.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Humid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate to High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 7 - 9 Months</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Use healthy rhizomes with buds for propagation</li>
+                        <li>Plant in raised beds with rich, loamy soil</li>
+                        <li>Maintain spacing of 30–40 cm between rhizomes</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care & Maintenance</h3>
+                    <ul>
+                        <li>Water regularly but avoid waterlogging</li>
+                        <li>Fertilize with compost or well-decomposed manure every 2 months</li>
+                        <li>Remove weeds and maintain soil aeration</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest rhizomes when leaves turn yellow and dry</li>
+                        <li>Clean and boil rhizomes to remove soil and microbes</li>
+                        <li>Dry in shade or hot air for storage and turmeric powder preparation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Raised beds prevent rhizome rot during heavy rains</li>
+                <li>Use disease-free rhizomes to avoid fungal infections</li>
+                <li>Mulch helps retain soil moisture and suppress weeds</li>
+                <li>Partial shade in hot climates improves leaf and rhizome quality</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Brahmi') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Brahmi (Bacopa monnieri)</h1>
+            <p>A revered Ayurvedic herb known for improving memory and cognitive function.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Wet</div>
+            <div class="stat-card">💧 <strong>Water:</strong> High (moist soil required)</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 60 - 90 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Propagation</h3>
+                    <ul>
+                        <li>Use stem cuttings or divisions for propagation</li>
+                        <li>Plant in shallow beds with consistently moist soil</li>
+                        <li>Maintain spacing of 15–20 cm between plants</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Keep soil moist; do not let it dry out</li>
+                        <li>Remove weeds frequently</li>
+                        <li>Ensure partial to full sunlight depending on local climate</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest leaves and stems after 60–90 days</li>
+                        <li>Wash gently and dry in shade</li>
+                        <li>Store in cool, dry conditions for medicinal use</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Consistent moisture improves leaf quality</li>
+                <li>Prune regularly to encourage bushy growth</li>
+                <li>Use organic manure for better medicinal potency</li>
+                <li>Harvest in morning hours for maximum active compounds</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Giloy') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Giloy (Tinospora cordifolia)</h1>
+            <p>An immunomodulatory herb used in Ayurveda to strengthen immunity and combat infections.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Warm</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days (for stem harvest)</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Propagation</h3>
+                    <ul>
+                        <li>Use stem cuttings for propagation</li>
+                        <li>Plant near support trees or trellises</li>
+                        <li>Maintain spacing of 50–60 cm between cuttings</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Provide partial sunlight for optimal growth</li>
+                        <li>Water moderately, avoid waterlogging</li>
+                        <li>Mulch around base to retain moisture</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest stems after 90–120 days</li>
+                        <li>Cut selectively to encourage regrowth</li>
+                        <li>Dry harvested stems in shade before processing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Grow near trees or trellises for better vine support</li>
+                <li>Regular pruning improves yield of new shoots</li>
+                <li>Partial shade reduces leaf scorching in hot climates</li>
+                <li>Harvest before flowering for maximum potency</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Shatavari') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Shatavari (Asparagus racemosus)</h1>
+            <p>A medicinal herb widely used for female reproductive health and overall vitality.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 150 - 180 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Use healthy root cuttings or seeds</li>
+                        <li>Plant in rows with 30–40 cm spacing</li>
+                        <li>Ensure loamy, well-drained soil</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care & Maintenance</h3>
+                    <ul>
+                        <li>Water regularly but avoid waterlogging</li>
+                        <li>Mulch around plants to retain moisture</li>
+                        <li>Apply compost or organic fertilizers every 2–3 months</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest roots after 5–6 months</li>
+                        <li>Clean and dry roots in shade</li>
+                        <li>Store in dry, cool conditions for medicinal use</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Ensure well-drained soil to prevent root rot</li>
+                <li>Mulching improves soil moisture retention</li>
+                <li>Harvest before flowering for better root quality</li>
+                <li>Regular weeding reduces nutrient competition</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Sarpagandha') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Sarpagandha (Rauvolfia serpentina)</h1>
+            <p>A medicinal herb traditionally used to manage hypertension and nervous disorders.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Tropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 180 - 240 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Use healthy root cuttings or seedlings for propagation</li>
+                        <li>Plant in well-drained, loamy soil</li>
+                        <li>Maintain spacing of 30–40 cm between plants</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care & Maintenance</h3>
+                    <ul>
+                        <li>Water moderately, avoid waterlogging</li>
+                        <li>Apply organic compost or manure every 2–3 months</li>
+                        <li>Remove weeds regularly to reduce nutrient competition</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest roots after 6–8 months</li>
+                        <li>Clean and dry roots in shade</li>
+                        <li>Store in cool, dry place for medicinal use</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Use disease-free seedlings to avoid root decay</li>
+                <li>Regular pruning improves root growth and yield</li>
+                <li>Mulch helps retain soil moisture during dry months</li>
+                <li>Harvest before flowering for maximum active compounds</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Kalmegh') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Kalmegh (Andrographis paniculata)</h1>
+            <p>A bitter medicinal herb used to treat liver disorders, fever, and infections.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Use healthy seedlings or seeds for propagation</li>
+                        <li>Plant in well-drained loamy soil</li>
+                        <li>Maintain spacing of 20–25 cm between plants</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care & Maintenance</h3>
+                    <ul>
+                        <li>Water regularly to keep soil moist</li>
+                        <li>Apply compost or organic fertilizer for healthy growth</li>
+                        <li>Remove weeds and mulch to retain moisture</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest whole plants after 90–120 days</li>
+                        <li>Wash and dry in shade before storage</li>
+                        <li>Store in cool, dry conditions for medicinal use</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Regular watering ensures lush green leaves</li>
+                <li>Mulching reduces water loss and weed growth</li>
+                <li>Harvest before flowering for maximum active compounds</li>
+                <li>Use organic fertilizers for better medicinal quality</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Arjuna') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Arjuna (Terminalia arjuna)</h1>
+            <p>A medicinal tree whose bark is used to support cardiovascular health.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 2 - 3 Years (for bark harvest)</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Propagate via seeds or saplings</li>
+                        <li>Plant in well-drained loamy soil</li>
+                        <li>Maintain spacing of 3–4 meters between trees</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care & Maintenance</h3>
+                    <ul>
+                        <li>Water regularly during initial growth stages</li>
+                        <li>Apply organic manure or compost around base annually</li>
+                        <li>Protect young plants from pests and grazing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest bark after 2–3 years of growth</li>
+                        <li>Peel bark carefully without harming tree</li>
+                        <li>Dry bark in shade before storage</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Ensure good drainage to prevent root rot</li>
+                <li>Mulch young trees to retain moisture</li>
+                <li>Harvest bark sustainably to avoid tree damage</li>
+                <li>Regularly prune lower branches for better growth</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else {
+                // This displays for any button that isn't 'Rice' yet
+                contentArea.innerHTML = `
+                    <div class="crop-display">
+                        <h1>${crop}</h1>
+                        <p>Detailed farming tips for ${crop} are currently being updated. Check back soon!</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Run this once so the page isn't empty when it first loads
+        displaytip('Rice');
+    </script>
+</body>
+</html>

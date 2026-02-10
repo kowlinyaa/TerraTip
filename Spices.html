@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraTip</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="cereals.css">
+</head>
+<body>
+    <div class="main">
+        <div class="sticky">
+            <div class="navbar">
+                <nav class="top">
+                    <img src="logo.png" alt="TerraTip Logo" class="logo">
+                    <a href="index.html" class="navlink" id="page">Home</a>
+                    <!-- <a href="cropcalender.html" class="navlink">Crop Calendar</a>
+                    <a href="disease.html" class="navlink">Disease Info</a>
+                    <a href="basic.html" class="navlink">Basic</a>
+                    <a href="about.html" class="navlink">About Me</a> -->
+                </nav>
+            </div>
+            <div class="legend">
+                <nav class="legend">
+                    <p class="legend-title">SELECT CROP CATEGORY</p>
+                    <img src="pointing-right.png" alt="Arrow" class="arrow-icon">
+                    <a href="cereals.html" class="legend-item">CEREALS</a>
+                    <a href="Pulses.html" class="legend-item">PULSES</a>
+                    <a href="Vegitable.html" class="legend-item">VEGETABLES</a>
+                    <a href="Fruits.html" class="legend-item">FRUITS</a>
+                    <a href="Cash-crops.html" class="legend-item">CASH CROPS</a>
+                    <a href="Oilseeds.html" class="legend-item">OILSEEDS</a>
+                    <a href="Spices.html" class="legend-item">SPICES</a>
+                    <a href="Medicinal.html" class="legend-item">MEDICINALS</a>
+                    <a href="Flowers.html" class="legend-item">FLOWERS</a>
+                    <a href="Nuts.html" class="legend-item">NUTS</a>
+                    <a href="Forage.html" class="legend-item">FORAGE</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="content">
+    <div class="crop-list">
+        <p class="list-head">SPICES</p>
+
+        <button onclick="displaytip('Black Pepper','black-pepper')" id="black-pepper">Black Pepper</button>
+        <button onclick="displaytip('Cardamom','cardamom')" id="cardamom">Cardamom</button>
+        <button onclick="displaytip('Cloves','cloves')" id="cloves">Cloves</button>
+        <button onclick="displaytip('Cinnamon','cinnamon')" id="cinnamon">Cinnamon</button>
+        <button onclick="displaytip('Nutmeg','nutmeg')" id="nutmeg">Nutmeg</button>
+        <button onclick="displaytip('Mace','mace')" id="mace">Mace</button>
+        <button onclick="displaytip('Turmeric','turmeric')" id="turmeric">Turmeric</button>
+        <button onclick="displaytip('Ginger','ginger')" id="ginger">Ginger</button>
+        <button onclick="displaytip('Chili','chili')" id="chili">Chili (Red Pepper)</button>
+        <button onclick="displaytip('Coriander','coriander')" id="coriander">Coriander</button>
+        <button onclick="displaytip('Cumin','cumin')" id="cumin">Cumin</button>
+        <button onclick="displaytip('Fennel','fennel')" id="fennel">Fennel</button>
+        <button onclick="displaytip('Mustard Seed','mustard-seed')" id="mustard-seed">Mustard Seed</button>
+        <button onclick="displaytip('Fenugreek','fenugreek-seed')" id="fenugreek-seed">Fenugreek</button>
+        <button onclick="displaytip('Star Anise','star-anise')" id="star-anise">Star Anise</button>
+        <button onclick="displaytip('Bay Leaf','bay-leaf')" id="bay-leaf">Bay Leaf</button>
+        <button onclick="displaytip('Saffron','saffron')" id="saffron">Saffron</button>
+        <button onclick="displaytip('Caraway','caraway')" id="caraway">Caraway</button>
+        <button onclick="displaytip('Asafoetida','asafoetida')" id="asafoetida">Asafoetida (Hing)</button>
+    </div>
+
+<div class="crop-tipstyle" id="crop-tip">
+                <div class="empty-state">
+                    <img src="arrow-left.png" alt="Arrow" class="guide-arrow">
+                    <h2>Ready to grow?</h2>
+                    <p>Select a crop from the left list for expert farming guidance.</p>
+                </div>
+        </div>
+     </div>
+
+       <script>
+        function displaytip(crop, clickedId) {
+        const allButtons = document.querySelectorAll('.crop-list button');
+        allButtons.forEach(btn => btn.style.backgroundColor = "");
+        allButtons.forEach(btn => btn.style.color = "black");
+        const cropindisplay = document.getElementById(clickedId);
+        cropindisplay.style.backgroundColor = "#2a6b1f";
+        cropindisplay.style.color = "white";
+        const contentArea = document.getElementById('crop-tip');
+
+if (crop === 'Black Pepper') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Black Pepper (Piper nigrum)</h1>
+            <p>Climbing vine spice grown for its peppercorns. Prefers humid tropical climates.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Humid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 3 - 4 Years for First Harvest</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Select partially shaded land</li>
+                    <li>Provide trellises or support trees for climbing</li>
+                    <li>Apply compost and organic manure</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant vine cuttings 1–2 m apart near supports</li>
+                    <li>Provide regular irrigation</li>
+                    <li>Mulch around base to retain moisture</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Prune old or weak shoots</li>
+                    <li>Support vines as they grow</li>
+                    <li>Harvest peppercorns when they turn red and mature</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Provide shade to avoid direct harsh sunlight</li>
+                <li>Ensure high humidity for better growth</li>
+                <li>Use organic mulch to maintain soil moisture</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Cardamom') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Cardamom (Elettaria cardamomum)</h1>
+            <p>Shade-loving spice grown for aromatic seeds. Requires humid tropical conditions.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Humid / Shade</div>
+            <div class="stat-card">💧 <strong>Water:</strong> High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 2 - 3 Years for First Harvest</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Select shaded slopes or under canopy trees</li>
+                    <li>Prepare soil with compost and leaf litter</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant seedlings 1–1.5 m apart</li>
+                    <li>Provide partial shade if in open land</li>
+                    <li>Water regularly to maintain soil moisture</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Weed and mulch to retain soil moisture</li>
+                    <li>Prune older leaves and weak plants</li>
+                    <li>Harvest pods when they turn green and mature</li>
+                </ul>
+            </div></div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Maintain shade and humidity for proper growth</li>
+                <li>Apply organic mulch regularly</li>
+                <li>Harvest pods carefully to avoid seed loss</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Cardamom') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Cardamom (Elettaria cardamomum)</h1>
+            <p>Known as the Queen of Spices, cardamom grows in humid, shaded tropical regions.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Humid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 2 - 3 Years</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Select shaded land with rich soil</li>
+                        <li>Ensure good drainage</li>
+                        <li>Add organic manure</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant seedlings at proper spacing</li>
+                        <li>Maintain partial shade</li>
+                        <li>Water regularly</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Remove weeds and dry leaves</li>
+                        <li>Mulch to retain moisture</li>
+                        <li>Harvest mature green pods</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Shade is crucial for quality pods</li>
+                <li>Never allow soil to dry completely</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Cloves') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Cloves (Syzygium aromaticum)</h1>
+            <p>Cloves are dried flower buds grown in warm, humid tropical climates.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 6 - 7 Years</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Choose well-drained loamy soil</li>
+                        <li>Prepare pits with organic manure</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant seedlings 3–4 m apart</li>
+                        <li>Water lightly but regularly</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Prune weak branches</li>
+                        <li>Harvest unopened flower buds</li>
+                        <li>Dry buds properly</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Harvest before flowers open</li>
+                <li>Dry slowly for better aroma</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Cinnamon') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Cinnamon (Cinnamomum verum)</h1>
+            <p>Cinnamon is obtained from the inner bark of the cinnamon tree.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 2 - 3 Years</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Select fertile, well-drained soil</li>
+                        <li>Add organic compost</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant seedlings with proper spacing</li>
+                        <li>Water regularly</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Cut mature stems</li>
+                        <li>Remove outer bark</li>
+                        <li>Dry inner bark</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Harvest during rainy season for easy peeling</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Nutmeg') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Nutmeg (Myristica fragrans)</h1>
+            <p>Nutmeg is the seed spice of a tropical evergreen tree.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical Humid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 7 - 8 Years</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Choose deep, well-drained soil</li>
+                        <li>Add organic manure</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant seedlings with wide spacing</li>
+                        <li>Provide partial shade</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest when fruit splits open</li>
+                        <li>Separate nutmeg and mace</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Ensure both male and female trees are present</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Mace') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Mace (Nutmeg Aril)</h1>
+            <p>Mace is the red outer covering of the nutmeg seed.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 7 - 8 Years</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Harvesting</h3>
+                    <ul>
+                        <li>Collect ripe nutmeg fruits</li>
+                        <li>Carefully remove mace covering</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Drying</h3>
+                    <ul>
+                        <li>Sun-dry mace slowly</li>
+                        <li>Store in airtight containers</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Handle gently to avoid breakage</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Turmeric') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Turmeric (Curcuma longa)</h1>
+            <p>An important rhizome spice used for culinary and medicinal purposes.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 7 - 9 Months</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare well-drained loamy soil</li>
+                        <li>Add compost or farmyard manure</li>
+                        <li>Make raised beds for planting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant healthy rhizomes 5–7 cm deep</li>
+                        <li>Maintain proper spacing</li>
+                        <li>Irrigate immediately after planting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest when leaves turn yellow</li>
+                        <li>Boil and dry rhizomes</li>
+                        <li>Store in dry conditions</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Use disease-free rhizomes</li>
+                <li>Mulching improves yield</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Ginger') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Ginger (Zingiber officinale)</h1>
+            <p>A widely used spice grown for its aromatic rhizomes.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm Tropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 8 - 10 Months</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare loose, well-drained soil</li>
+                        <li>Add organic manure</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant rhizome pieces with buds</li>
+                        <li>Cover lightly with soil</li>
+                        <li>Water regularly</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest when leaves dry</li>
+                        <li>Clean and dry rhizomes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Avoid waterlogging</li>
+                <li>Use mulching to retain moisture</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Chili') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Chili (Capsicum annuum)</h1>
+            <p>A spicy vegetable and spice crop grown worldwide.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare fertile, well-drained soil</li>
+                        <li>Add compost before planting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Transplanting</h3>
+                    <ul>
+                        <li>Transplant healthy seedlings</li>
+                        <li>Maintain proper spacing</li>
+                        <li>Water after transplanting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest green or ripe red chilies</li>
+                        <li>Dry for spice use</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Regular picking increases yield</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Coriander') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Coriander (Coriandrum sativum)</h1>
+            <p>Dual-purpose spice used for both leaves and seeds.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Dry</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 110 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds directly in field</li>
+                        <li>Maintain row spacing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Light irrigation</li>
+                        <li>Remove weeds regularly</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest when seeds turn brown</li>
+                        <li>Dry and store seeds</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Crush seeds lightly before sowing</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Cumin') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Cumin (Cuminum cyminum)</h1>
+            <p>A seed spice grown in dry and cool climates.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Dry</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.5 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 100 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds in rows</li>
+                        <li>Ensure proper drainage</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Avoid excess irrigation</li>
+                        <li>Protect from fungal diseases</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest when plants turn yellow</li>
+                        <li>Dry and thresh seeds</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Dry climate improves seed quality</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Fennel') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Fennel (Foeniculum vulgare)</h1>
+            <p>An aromatic seed spice grown widely for culinary and medicinal use.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Dry</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 110 - 130 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare a fine seedbed with proper drainage</li>
+                        <li>Add organic manure before sowing</li>
+                        <li>Level the field to avoid water stagnation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing & Care</h3>
+                    <ul>
+                        <li>Sow seeds directly in rows</li>
+                        <li>Irrigate lightly during early growth</li>
+                        <li>Control weeds regularly</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvesting</h3>
+                    <ul>
+                        <li>Harvest when seeds turn greenish-yellow</li>
+                        <li>Dry plants properly before threshing</li>
+                        <li>Store seeds in dry conditions</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Dry weather during maturity improves seed quality</li>
+                <li>Avoid excess nitrogen fertilizer</li>
+                <li>Timely harvesting prevents seed shattering</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Mustard Seed') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Mustard Seed (Brassica juncea)</h1>
+            <p>A major oilseed and spice crop grown in cool seasons.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 110 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds directly in prepared fields</li>
+                        <li>Maintain proper row spacing</li>
+                        <li>Ensure soil moisture at sowing time</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Crop Care</h3>
+                    <ul>
+                        <li>Thin seedlings after germination</li>
+                        <li>Control pests like aphids</li>
+                        <li>Avoid excess irrigation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest when pods turn yellow</li>
+                        <li>Dry plants before threshing</li>
+                        <li>Store seeds moisture-free</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Early sowing increases yield</li>
+                <li>Cool nights improve oil content</li>
+                <li>Avoid water stress at flowering</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Fenugreek') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Fenugreek (Trigonella foenum-graecum)</h1>
+            <p>A dual-purpose spice and leafy vegetable crop.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 110 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare fine soil bed</li>
+                        <li>Remove weeds and debris</li>
+                        <li>Add compost before sowing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing & Care</h3>
+                    <ul>
+                        <li>Sow seeds shallow</li>
+                        <li>Light irrigation after sowing</li>
+                        <li>Weed regularly</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvesting</h3>
+                    <ul>
+                        <li>Harvest leaves for greens</li>
+                        <li>Allow plants to mature for seeds</li>
+                        <li>Dry pods before threshing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Can be grown as intercrop</li>
+                <li>Fixes nitrogen naturally in soil</li>
+                <li>Early leaf harvest boosts regrowth</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Star Anise') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Star Anise (Illicium verum)</h1>
+            <p>A perennial spice tree known for star-shaped aromatic fruits.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 6 - 7 Years</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant saplings in fertile soil</li>
+                        <li>Choose shaded location</li>
+                        <li>Ensure proper spacing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care</h3>
+                    <ul>
+                        <li>Water regularly</li>
+                        <li>Protect from frost</li>
+                        <li>Apply organic manure yearly</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Harvest unripe fruits</li>
+                        <li>Sun dry thoroughly</li>
+                        <li>Store in airtight containers</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Shade improves fruit quality</li>
+                <li>Dry fruits slowly for better aroma</li>
+                <li>Long-term crop with high value</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Bay Leaf') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Bay Leaf (Laurus nobilis)</h1>
+            <p>An aromatic perennial tree cultivated for flavorful leaves.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Mild / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> Perennial</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant saplings in well-drained soil</li>
+                        <li>Choose sunny location</li>
+                        <li>Allow sufficient spacing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Maintenance</h3>
+                    <ul>
+                        <li>Regular pruning</li>
+                        <li>Moderate irrigation</li>
+                        <li>Apply compost annually</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvest</h3>
+                    <ul>
+                        <li>Pick mature leaves</li>
+                        <li>Shade dry leaves</li>
+                        <li>Store dry leaves properly</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Dried leaves have stronger flavor</li>
+                <li>Pruning increases leaf yield</li>
+                <li>Grow in pots for easy control</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Saffron') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Saffron (Crocus sativus)</h1>
+            <p>A highly valuable spice obtained from the dried stigmas of saffron flowers.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Dry</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Very Low</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 8.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 210 - 240 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare loose, well-drained soil</li>
+                        <li>Remove stones and weeds</li>
+                        <li>Add organic manure before planting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Planting & Care</h3>
+                    <ul>
+                        <li>Plant healthy corms at proper depth</li>
+                        <li>Avoid waterlogging completely</li>
+                        <li>Minimal irrigation during growth</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvesting</h3>
+                    <ul>
+                        <li>Harvest flowers early morning</li>
+                        <li>Separate stigmas carefully by hand</li>
+                        <li>Dry stigmas in shade</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Dry climate improves saffron quality</li>
+                <li>Excess water can destroy corms</li>
+                <li>Hand harvesting ensures best grade spice</li>
+                <li>High altitude regions give better yield</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Caraway') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Caraway (Carum carvi)</h1>
+            <p>An aromatic seed spice grown in cool temperate regions.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 120 - 150 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Prepare fine seedbed</li>
+                        <li>Ensure proper drainage</li>
+                        <li>Add compost before sowing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing & Care</h3>
+                    <ul>
+                        <li>Sow seeds shallow in rows</li>
+                        <li>Irrigate lightly after sowing</li>
+                        <li>Control weeds during early stages</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Harvesting</h3>
+                    <ul>
+                        <li>Harvest when seeds turn brown</li>
+                        <li>Cut plants and dry completely</li>
+                        <li>Thresh seeds carefully</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Cool weather improves aroma</li>
+                <li>Avoid excess nitrogen fertilizer</li>
+                <li>Harvest on dry days for better storage</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Asafoetida') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Asafoetida (Ferula asafoetida)</h1>
+            <p>A medicinal spice obtained from the resin of the Ferula plant.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Dry / Cold Desert</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Very Low</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 7.0 - 8.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 4 - 5 Years</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Plant root cuttings or seeds</li>
+                        <li>Choose dry, sandy soil</li>
+                        <li>Ensure full sunlight exposure</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Care & Growth</h3>
+                    <ul>
+                        <li>Very minimal irrigation</li>
+                        <li>Protect from excess moisture</li>
+                        <li>Allow long-term root development</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Resin Collection</h3>
+                    <ul>
+                        <li>Cut root crown carefully</li>
+                        <li>Collect milky resin</li>
+                        <li>Dry resin into solid form</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Dry climate is essential for survival</li>
+                <li>Waterlogging kills the plant quickly</li>
+                <li>High patience crop with very high value</li>
+                <li>Resin quality improves with plant age</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else {
+                // This displays for any button that isn't 'Rice' yet
+                contentArea.innerHTML = `
+                    <div class="crop-display">
+                        <h1>${crop}</h1>
+                        <p>Detailed farming tips for ${crop} are currently being updated. Check back soon!</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Run this once so the page isn't empty when it first loads
+        displaytip('Rice');
+    </script>
+</body>
+</html>

@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraTip</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="cereals.css">
+</head>
+<body>
+    <div class="main">
+        <div class="sticky">
+            <div class="navbar">
+                <nav class="top">
+                    <img src="logo.png" alt="TerraTip Logo" class="logo">
+                    <a href="index.html" class="navlink" id="page">Home</a>
+                    <!-- <a href="cropcalender.html" class="navlink">Crop Calendar</a>
+                    <a href="disease.html" class="navlink">Disease Info</a>
+                    <a href="basic.html" class="navlink">Basic</a>
+                    <a href="about.html" class="navlink">About Me</a> -->
+                </nav>
+            </div>
+            <div class="legend">
+                <nav class="legend">
+                    <p class="legend-title">SELECT CROP CATEGORY</p>
+                    <img src="pointing-right.png" alt="Arrow" class="arrow-icon">
+                    <a href="cereals.html" class="legend-item">CEREALS</a>
+                    <a href="Pulses.html" class="legend-item">PULSES</a>
+                    <a href="Vegitable.html" class="legend-item">VEGETABLES</a>
+                    <a href="Fruits.html" class="legend-item">FRUITS</a>
+                    <a href="Cash-crops.html" class="legend-item">CASH CROPS</a>
+                    <a href="Oilseeds.html" class="legend-item">OILSEEDS</a>
+                    <a href="Spices.html" class="legend-item">SPICES</a>
+                    <a href="Medicinal.html" class="legend-item">MEDICINALS</a>
+                    <a href="Flowers.html" class="legend-item">FLOWERS</a>
+                    <a href="Nuts.html" class="legend-item">NUTS</a>
+                    <a href="Forage.html" class="legend-item">FORAGE</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="crop-list">
+                <p class="list-head">CEREALS</p>
+                <button onclick="displaytip('Rice','rice')" id="rice">Rice</button>
+                <button onclick="displaytip('Wheat','wheat')" id="wheat">Wheat</button>
+                <button onclick="displaytip('Maize','maize')" id="maize">Maize</button>
+                <button onclick="displaytip('Barley','barley')" id="barley">Barley</button>
+                <button onclick="displaytip('Sorghum','sorghum')" id="sorghum">Sorghum (Jowar)</button>
+                <button onclick="displaytip('Oats','oats')" id="oats">Oats</button>
+                <button onclick="displaytip('Rye','rye')" id="rye">Rye</button>
+                <button onclick="displaytip('Pearl Millet','pearl-millet')" id="pearl-millet">Pearl Millet (Bajra)</button>
+                <button onclick="displaytip('Finger Millet','finger-millet')" id="finger-millet">Finger Millet (Ragi)</button>
+                <button onclick="displaytip('Foxtail Millet','foxtail-millet')" id="foxtail-millet">Foxtail Millet</button>
+                <button onclick="displaytip('Little Millet','little-millet')" id="little-millet">Little Millet</button>
+                <button onclick="displaytip('Kodo Millet','kodo-millet')" id="kodo-millet">Kodo Millet</button>
+                <button onclick="displaytip('Barnyard Millet','barnyard-millet')" id="barnyard-millet">Barnyard Millet</button>
+                <button onclick="displaytip('Proso Millet','proso-millet')" id="proso-millet">Proso Millet</button>
+                <button onclick="displaytip('Teff','teff')" id="teff">Tef</button>
+            </div>
+
+            <div class="crop-tipstyle" id="crop-tip">
+                    <div class="empty-state">
+                        <img src="arrow-left.png" alt="Arrow" class="guide-arrow">
+                        <h2>Ready to grow?</h2>
+                        <p>Select a crop from the left list for expert farming guidance.</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function displaytip(crop, clickedId) {
+        const allButtons = document.querySelectorAll('.crop-list button');
+        allButtons.forEach(btn => btn.style.backgroundColor = "");
+        allButtons.forEach(btn => btn.style.color = "black");
+        const cropindisplay = document.getElementById(clickedId);
+        cropindisplay.style.backgroundColor = "#2a6b1f";
+        cropindisplay.style.color = "white";
+        const contentArea = document.getElementById('crop-tip');
+
+            if (crop === 'Rice') {
+                contentArea.innerHTML = `
+                    <div class="crop-display">
+                        <header class="crop-header">
+                            <h1>Rice (Oryza sativa)</h1>
+                            <p>The staple grain for half the world's population. Rice thrives in warm, wet climates.</p>
+                        </header>
+                        <hr>
+                        <div class="stats-grid">
+                            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical/Subtropical</div>
+                            <div class="stat-card">💧 <strong>Water:</strong> High (Standing Water)</div>
+                            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.0 - 6.5 (Acidic)</div>
+                            <div class="stat-card">⏳ <strong>Duration:</strong> 100 - 150 Days</div>
+                        </div>
+
+                        <section class="tutorial-section">
+                            <h2>The Growing Process</h2>
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h3>Land Preparation</h3>
+                                    <ul>
+                                        <li>Select the field and remove previous crop residues and weeds</li>
+                                        <li>Plough the dry field 2–3 times to loosen the soil properly</li>
+                                        <li>Break soil clods and level the land for uniform water distribution</li>
+                                        <li>Flood the field with water to the required depth</li>
+                                        <li>Plough the field again under wet conditions</li>
+                                        <li>Perform puddling to make the soil soft and muddy</li>
+                                        <li>Level the puddled field to prepare it for transplanting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h3>Sowing & Transplanting</h3>
+                                    <ul>
+                                        <li>Select healthy, treated seeds for sowing</li>
+                                        <li>Prepare a separate nursery bed for raising seedlings</li>
+                                        <li>Sow seeds evenly in the nursery field</li>
+                                        <li>Provide regular watering and basic care to seedlings</li>
+                                        <li>Allow seedlings to grow for about 20–25 days</li>
+                                        <li>Uproot healthy seedlings carefully from the nursery</li>
+                                        <li>Transplant seedlings into the prepared puddled main field</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h3>Water Management</h3>
+                                    <ul>
+                                        <li>Maintain shallow water level after transplanting</li>
+                                        <li>Ensure continuous water supply during early growth stage</li>
+                                        <li>Avoid deep flooding in young crop stage</li>
+                                        <li>Drain excess water during heavy rainfall</li>
+                                        <li>Maintain proper water level during tillering stage</li>
+                                        <li>Reduce water supply during maturity stage</li>
+                                        <li>Drain the field completely before harvesting</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="pro-tip-box">
+                            <strong>💡 Pro-Tip:</strong>
+                            <ul>
+                                <li>Maintain 2–5 cm shallow water instead of deep flooding</li>
+                                <li>Follow alternate wetting and drying to save water</li>
+                                <li>Drain excess water immediately after heavy rainfall</li>
+                                <li>Ensure seedlings do not dry out in the first 7–10 days</li>
+                                <li>Maintain proper water level during tillering and flowering stages</li>
+                                <li>Stop irrigation 7–10 days before harvesting</li>
+                                <li>Proper field levelling helps reduce water loss</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                `;
+            } else if(crop === 'Wheat'){
+                contentArea.innerHTML = `
+                <div class="crop-display">
+                    <header class="crop-header">
+                        <h1>Wheat (Triticum aestivum)</h1>
+                        <p>A major cereal crop grown worldwide. Wheat grows best in cool climates with moderate rainfall.</p>
+                    </header>
+                    <hr>
+                    <div class="stats-grid">
+                        <div class="stat-card">☀️ <strong>Climate:</strong> Temperate</div>
+                        <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+                        <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5 (Neutral)</div>
+                        <div class="stat-card">⏳ <strong>Duration:</strong> 110 - 130 Days</div>
+                    </div>
+
+                    <section class="tutorial-section">
+                        <h2>The Growing Process</h2>
+
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Land Preparation</h3>
+                                <ul>
+                                    <li>Select a well-drained field and remove crop residues</li>
+                                    <li>Plough the field 2–3 times to loosen the soil</li>
+                                    <li>Break soil clods and remove weeds</li>
+                                    <li>Level the land to ensure uniform irrigation</li>
+                                    <li>Add organic manure before final ploughing</li>
+                                    <li>Prepare a fine seedbed for sowing</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Sowing</h3>
+                                <ul>
+                                    <li>Select certified, healthy wheat seeds</li>
+                                    <li>Treat seeds to prevent seed-borne diseases</li>
+                                    <li>Sow seeds directly in the field</li>
+                                    <li>Use line sowing or seed drill method</li>
+                                    <li>Maintain proper spacing between rows</li>
+                                    <li>Sow seeds at proper depth</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Water Management</h3>
+                                <ul>
+                                    <li>Provide first irrigation after sowing</li>
+                                    <li>Ensure adequate moisture during germination</li>
+                                    <li>Irrigate at tillering stage</li>
+                                    <li>Provide water during flowering stage</li>
+                                    <li>Avoid waterlogging in the field</li>
+                                    <li>Stop irrigation before harvesting</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="pro-tip-box">
+                        <strong>💡 Pro-Tip:</strong>
+                        <ul>
+                            <li>Timely irrigation at tillering and flowering increases yield</li>
+                            <li>Avoid excess water to prevent root diseases</li>
+                            <li>Use certified seeds for better germination</li>
+                            <li>Maintain proper row spacing for good airflow</li>
+                            <li>Apply irrigation early in the morning</li>
+                            <li>Stop watering 10–15 days before harvest</li>
+                        </ul>
+                    </div>
+                </div>
+            `;
+            }else if(crop === 'Maize'){
+            contentArea.innerHTML = `
+                <div class="crop-display">
+                    <header class="crop-header">
+                        <h1>Maize (Zea mays)</h1>
+                        <p>A versatile cereal crop grown for food, fodder, and industrial use. Maize prefers warm climates and well-drained soils.</p>
+                    </header>
+                    <hr>
+                    <div class="stats-grid">
+                        <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Tropical</div>
+                        <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+                        <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.0 (Slightly Acidic to Neutral)</div>
+                        <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+                    </div>
+
+                    <section class="tutorial-section">
+                        <h2>The Growing Process</h2>
+
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Land Preparation</h3>
+                                <ul>
+                                    <li>Select a well-drained field and remove crop residues</li>
+                                    <li>Plough the field 2–3 times to loosen the soil</li>
+                                    <li>Break soil clods and remove weeds</li>
+                                    <li>Level the land for uniform irrigation</li>
+                                    <li>Add organic manure before final ploughing</li>
+                                    <li>Prepare ridges and furrows for sowing</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Sowing</h3>
+                                <ul>
+                                    <li>Select certified, healthy maize seeds</li>
+                                    <li>Treat seeds to prevent fungal diseases</li>
+                                    <li>Sow seeds directly in the main field</li>
+                                    <li>Use line sowing or dibbling method</li>
+                                    <li>Maintain proper row and plant spacing</li>
+                                    <li>Sow seeds at recommended depth</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Water Management</h3>
+                                <ul>
+                                    <li>Provide light irrigation immediately after sowing</li>
+                                    <li>Ensure adequate moisture during germination</li>
+                                    <li>Irrigate at knee-high stage</li>
+                                    <li>Provide water during tasseling and silking stages</li>
+                                    <li>Avoid waterlogging in the field</li>
+                                    <li>Reduce irrigation during maturity stage</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="pro-tip-box">
+                        <strong>💡 Pro-Tip:</strong>
+                        <ul>
+                            <li>Irrigation at knee-high and silking stages is most critical</li>
+                            <li>Avoid excess nitrogen to prevent lodging</li>
+                            <li>Maintain proper spacing for better sunlight</li>
+                            <li>Ensure good drainage during rainy season</li>
+                            <li>Use hybrid seeds for higher yield</li>
+                            <li>Stop irrigation before harvesting</li>
+                        </ul>
+                    </div>
+                </div>
+            `;
+            } else if (crop === 'Barley') {
+            contentArea.innerHTML = `
+                <div class="crop-display">
+                    <header class="crop-header">
+                        <h1>Barley (Hordeum vulgare)</h1>
+                        <p>An ancient cereal crop mainly grown for food, fodder, and malting. Barley grows well in cool and dry climates.</p>
+                    </header>
+                    <hr>
+                    <div class="stats-grid">
+                        <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Temperate</div>
+                        <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+                        <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5 (Neutral)</div>
+                        <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+                    </div>
+
+                    <section class="tutorial-section">
+                        <h2>The Growing Process</h2>
+
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Land Preparation</h3>
+                                <ul>
+                                    <li>Select a well-drained field and remove crop residues</li>
+                                    <li>Plough the field 2–3 times to loosen the soil</li>
+                                    <li>Break soil clods and remove weeds</li>
+                                    <li>Level the land for uniform irrigation</li>
+                                    <li>Add organic manure before final ploughing</li>
+                                    <li>Prepare a fine seedbed for sowing</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Sowing</h3>
+                                <ul>
+                                    <li>Select certified, healthy barley seeds</li>
+                                    <li>Treat seeds to prevent seed-borne diseases</li>
+                                    <li>Sow seeds directly in the main field</li>
+                                    <li>Use line sowing or broadcasting method</li>
+                                    <li>Maintain proper row spacing</li>
+                                    <li>Sow seeds at proper depth</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Water Management</h3>
+                                <ul>
+                                    <li>Provide light irrigation after sowing</li>
+                                    <li>Ensure moisture during germination stage</li>
+                                    <li>Irrigate at tillering stage</li>
+                                    <li>Avoid excess irrigation</li>
+                                    <li>Ensure proper drainage in the field</li>
+                                    <li>Stop irrigation before harvesting</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="pro-tip-box">
+                        <strong>💡 Pro-Tip:</strong>
+                        <ul>
+                            <li>Barley tolerates drought better than other cereals</li>
+                            <li>Avoid waterlogging to prevent root rot</li>
+                            <li>Timely irrigation improves grain quality</li>
+                            <li>Maintain proper spacing for healthy growth</li>
+                            <li>Use certified seeds for better yield</li>
+                            <li>Stop irrigation 10–12 days before harvest</li>
+                        </ul>
+                    </div>
+                </div>
+            `;
+            } else if (crop === 'Sorghum') {
+            contentArea.innerHTML = `
+                <div class="crop-display">
+                    <header class="crop-header">
+                        <h1>Sorghum (Sorghum bicolor)</h1>
+                        <p>A drought-tolerant cereal crop grown for food, fodder, and biofuel. Sorghum thrives in hot and dry climates.</p>
+                    </header>
+                    <hr>
+                    <div class="stats-grid">
+                        <div class="stat-card">☀️ <strong>Climate:</strong> Hot / Semi-arid</div>
+                        <div class="stat-card">💧 <strong>Water:</strong> Low</div>
+                        <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 8.5 (Wide Range)</div>
+                        <div class="stat-card">⏳ <strong>Duration:</strong> 100 - 120 Days</div>
+                    </div>
+
+                    <section class="tutorial-section">
+                        <h2>The Growing Process</h2>
+
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Land Preparation</h3>
+                                <ul>
+                                    <li>Select a well-drained field and remove crop residues</li>
+                                    <li>Plough the field 2–3 times to loosen the soil</li>
+                                    <li>Break soil clods and control weeds</li>
+                                    <li>Level the land for uniform irrigation</li>
+                                    <li>Add organic manure before final ploughing</li>
+                                    <li>Prepare ridges and furrows for sowing</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Sowing</h3>
+                                <ul>
+                                    <li>Select certified, healthy sorghum seeds</li>
+                                    <li>Treat seeds to prevent seed-borne diseases</li>
+                                    <li>Sow seeds directly in the main field</li>
+                                    <li>Use line sowing or drilling method</li>
+                                    <li>Maintain proper row and plant spacing</li>
+                                    <li>Sow seeds at recommended depth</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Water Management</h3>
+                                <ul>
+                                    <li>Provide light irrigation after sowing</li>
+                                    <li>Ensure moisture during germination stage</li>
+                                    <li>Irrigate at critical growth stages if needed</li>
+                                    <li>Avoid excess irrigation</li>
+                                    <li>Sorghum tolerates short dry spells</li>
+                                    <li>Stop irrigation before harvesting</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="pro-tip-box">
+                        <strong>💡 Pro-Tip:</strong>
+                        <ul>
+                            <li>Sorghum is highly drought-resistant</li>
+                            <li>Avoid waterlogging at all stages</li>
+                            <li>Critical irrigation stage is flowering</li>
+                            <li>Proper spacing improves air circulation</li>
+                            <li>Use improved varieties for higher yield</li>
+                            <li>Stop irrigation 10–15 days before harvest</li>
+                        </ul>
+                    </div>
+                </div>
+            `;
+            } else if (crop === 'Oats') {
+            contentArea.innerHTML = `
+                <div class="crop-display">
+                    <header class="crop-header">
+                        <h1>Oats (Avena sativa)</h1>
+                        <p>A nutritious cereal crop grown for grain, fodder, and health foods. Oats prefer cool climates and well-drained soils.</p>
+                    </header>
+                    <hr>
+                    <div class="stats-grid">
+                        <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Temperate</div>
+                        <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+                        <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.0 (Slightly Acidic to Neutral)</div>
+                        <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 110 Days</div>
+                    </div>
+
+                    <section class="tutorial-section">
+                        <h2>The Growing Process</h2>
+
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Land Preparation</h3>
+                                <ul>
+                                    <li>Select a well-drained field and remove crop residues</li>
+                                    <li>Plough the field 2–3 times to loosen the soil</li>
+                                    <li>Break soil clods and remove weeds</li>
+                                    <li>Level the land for uniform irrigation</li>
+                                    <li>Add organic manure before final ploughing</li>
+                                    <li>Prepare a fine seedbed for sowing</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Sowing</h3>
+                                <ul>
+                                    <li>Select certified, healthy oat seeds</li>
+                                    <li>Treat seeds to prevent seed-borne diseases</li>
+                                    <li>Sow seeds directly in the main field</li>
+                                    <li>Use line sowing or broadcasting method</li>
+                                    <li>Maintain proper row spacing</li>
+                                    <li>Sow seeds at proper depth</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Water Management</h3>
+                                <ul>
+                                    <li>Provide first irrigation after sowing</li>
+                                    <li>Ensure adequate moisture during germination</li>
+                                    <li>Irrigate at tillering stage</li>
+                                    <li>Provide water during flowering stage</li>
+                                    <li>Avoid waterlogging in the field</li>
+                                    <li>Stop irrigation before harvesting</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="pro-tip-box">
+                        <strong>💡 Pro-Tip:</strong>
+                        <ul>
+                            <li>Cool weather during growth improves grain quality</li>
+                            <li>Avoid excess nitrogen to prevent lodging</li>
+                            <li>Proper drainage is essential in rainy areas</li>
+                            <li>Maintain timely irrigation at tillering stage</li>
+                            <li>Use certified seeds for uniform germination</li>
+                            <li>Stop irrigation 10–12 days before harvest</li>
+                        </ul>
+                    </div>
+                </div>
+            `;
+
+            } else if (crop === 'Rye') {
+                contentArea.innerHTML = `
+                    <div class="crop-display">
+                        <header class="crop-header">
+                            <h1>Rye (Secale cereale)</h1>
+                            <p>A hardy cereal crop grown for grain, fodder, and bread-making. Rye thrives in cool climates and poor soils.</p>
+                        </header>
+                        <hr>
+                        <div class="stats-grid">
+                            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Temperate</div>
+                            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+                            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.0 - 7.0 (Acidic to Neutral)</div>
+                            <div class="stat-card">⏳ <strong>Duration:</strong> 100 - 120 Days</div>
+                        </div>
+
+                        <section class="tutorial-section">
+                            <h2>The Growing Process</h2>
+
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h3>Land Preparation</h3>
+                                    <ul>
+                                        <li>Select a well-drained field and remove crop residues</li>
+                                        <li>Plough the field 2–3 times to loosen the soil</li>
+                                        <li>Break soil clods and remove weeds</li>
+                                        <li>Level the land for uniform irrigation</li>
+                                        <li>Add organic manure before final ploughing</li>
+                                        <li>Prepare a fine seedbed for sowing</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h3>Sowing</h3>
+                                    <ul>
+                                        <li>Select certified, healthy rye seeds</li>
+                                        <li>Treat seeds to prevent seed-borne diseases</li>
+                                        <li>Sow seeds directly in the main field</li>
+                                        <li>Use line sowing or broadcasting method</li>
+                                        <li>Maintain proper row spacing</li>
+                                        <li>Sow seeds at proper depth</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h3>Water Management</h3>
+                                    <ul>
+                                        <li>Provide light irrigation after sowing</li>
+                                        <li>Ensure moisture during germination stage</li>
+                                        <li>Irrigate at tillering stage if needed</li>
+                                        <li>Avoid excess irrigation</li>
+                                        <li>Rye tolerates dry conditions better than wheat</li>
+                                        <li>Stop irrigation before harvesting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="pro-tip-box">
+                            <strong>💡 Pro-Tip:</strong>
+                            <ul>
+                                <li>Rye grows well in poor and sandy soils</li>
+                                <li>Avoid waterlogging at all stages</li>
+                                <li>Cold tolerance makes rye ideal for winter crops</li>
+                                <li>Proper spacing improves airflow and reduces disease</li>
+                                <li>Use certified seeds for better establishment</li>
+                                <li>Stop irrigation 10–15 days before harvest</li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            } else if (crop === 'Pearl Millet') {
+                contentArea.innerHTML = `
+                    <div class="crop-display">
+                        <header class="crop-header">
+                            <h1>Pearl Millet (Pennisetum glaucum)</h1>
+                            <p>A hardy millet crop grown in arid and semi-arid regions. Pearl millet is highly drought-tolerant and heat-resistant.</p>
+                        </header>
+                        <hr>
+                        <div class="stats-grid">
+                            <div class="stat-card">☀️ <strong>Climate:</strong> Hot / Arid</div>
+                            <div class="stat-card">💧 <strong>Water:</strong> Very Low</div>
+                            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 8.0 (Wide Range)</div>
+                            <div class="stat-card">⏳ <strong>Duration:</strong> 80 - 100 Days</div>
+                        </div>
+
+                        <section class="tutorial-section">
+                            <h2>The Growing Process</h2>
+
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h3>Land Preparation</h3>
+                                    <ul>
+                                        <li>Select a light, well-drained field and remove residues</li>
+                                        <li>Plough the field 2–3 times to loosen the soil</li>
+                                        <li>Break soil clods and control weeds</li>
+                                        <li>Level the land for uniform moisture</li>
+                                        <li>Add organic manure before final ploughing</li>
+                                        <li>Prepare ridges and furrows for sowing</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h3>Sowing</h3>
+                                    <ul>
+                                        <li>Select certified, healthy pearl millet seeds</li>
+                                        <li>Treat seeds to prevent seed-borne diseases</li>
+                                        <li>Sow seeds directly in the main field</li>
+                                        <li>Use line sowing or dibbling method</li>
+                                        <li>Maintain proper row and plant spacing</li>
+                                        <li>Sow seeds at shallow depth</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h3>Water Management</h3>
+                                    <ul>
+                                        <li>Provide light irrigation after sowing if needed</li>
+                                        <li>Ensure moisture during germination stage</li>
+                                        <li>Irrigate only during prolonged dry spells</li>
+                                        <li>Avoid excess irrigation</li>
+                                        <li>Ensure good drainage during rains</li>
+                                        <li>Stop irrigation before harvesting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="pro-tip-box">
+                            <strong>💡 Pro-Tip:</strong>
+                            <ul>
+                                <li>Pearl millet survives well under drought conditions</li>
+                                <li>Excess water reduces yield significantly</li>
+                                <li>Critical stage for moisture is flowering</li>
+                                <li>Proper spacing improves ear head size</li>
+                                <li>Use hybrid varieties for higher yield</li>
+                                <li>Stop irrigation 10–12 days before harvest</li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+
+            } else if (crop === 'Finger Millet') {
+                contentArea.innerHTML = `
+                    <div class="crop-display">
+                        <header class="crop-header">
+                            <h1>Finger Millet (Eleusine coracana)</h1>
+                            <p>A nutritious millet crop rich in calcium and iron. Finger millet grows well in semi-arid regions with low rainfall.</p>
+                        </header>
+                        <hr>
+                        <div class="stats-grid">
+                            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Semi-arid</div>
+                            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+                            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.0 - 7.5 (Acidic to Neutral)</div>
+                            <div class="stat-card">⏳ <strong>Duration:</strong> 100 - 120 Days</div>
+                        </div>
+
+                        <section class="tutorial-section">
+                            <h2>The Growing Process</h2>
+
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h3>Land Preparation</h3>
+                                    <ul>
+                                        <li>Select a well-drained field and remove crop residues</li>
+                                        <li>Plough the field 2–3 times to loosen the soil</li>
+                                        <li>Break soil clods and control weeds</li>
+                                        <li>Level the land for uniform moisture distribution</li>
+                                        <li>Add organic manure before final ploughing</li>
+                                        <li>Prepare fine seedbed or ridges for sowing</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h3>Sowing / Transplanting</h3>
+                                    <ul>
+                                        <li>Select certified, healthy finger millet seeds</li>
+                                        <li>Raise seedlings in nursery (optional method)</li>
+                                        <li>Sow seeds directly or transplant seedlings</li>
+                                        <li>Maintain proper row and plant spacing</li>
+                                        <li>Sow seeds at shallow depth</li>
+                                        <li>Ensure good soil contact with seeds</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h3>Water Management</h3>
+                                    <ul>
+                                        <li>Provide light irrigation after sowing if needed</li>
+                                        <li>Ensure moisture during germination stage</li>
+                                        <li>Irrigate during tillering and flowering stages</li>
+                                        <li>Avoid excess irrigation</li>
+                                        <li>Ensure proper drainage during rainy season</li>
+                                        <li>Stop irrigation before harvesting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="pro-tip-box">
+                            <strong>💡 Pro-Tip:</strong>
+                            <ul>
+                                <li>Finger millet tolerates drought better than most cereals</li>
+                                <li>Transplanting improves yield in low rainfall areas</li>
+                                <li>Critical stage for water is flowering</li>
+                                <li>Proper spacing reduces weed competition</li>
+                                <li>Use improved varieties for higher productivity</li>
+                                <li>Stop irrigation 10–15 days before harvest</li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            } else if (crop === 'Foxtail Millet') {
+                contentArea.innerHTML = `
+                    <div class="crop-display">
+                        <header class="crop-header">
+                            <h1>Foxtail Millet (Setaria italica)</h1>
+                            <p>A short-duration millet crop grown for grain and fodder. Foxtail millet thrives in warm and dry climates.</p>
+                        </header>
+                        <hr>
+                        <div class="stats-grid">
+                            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Semi-arid</div>
+                            <div class="stat-card">💧 <strong>Water:</strong> Low</div>
+                            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.5 (Slightly Acidic to Neutral)</div>
+                            <div class="stat-card">⏳ <strong>Duration:</strong> 70 - 90 Days</div>
+                        </div>
+
+                        <section class="tutorial-section">
+                            <h2>The Growing Process</h2>
+
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h3>Land Preparation</h3>
+                                    <ul>
+                                        <li>Select a well-drained field and remove crop residues</li>
+                                        <li>Plough the field 2–3 times to loosen the soil</li>
+                                        <li>Break soil clods and control weeds</li>
+                                        <li>Level the land for uniform moisture</li>
+                                        <li>Add organic manure before final ploughing</li>
+                                        <li>Prepare a fine seedbed for sowing</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h3>Sowing</h3>
+                                    <ul>
+                                        <li>Select certified, healthy foxtail millet seeds</li>
+                                        <li>Treat seeds to prevent seed-borne diseases</li>
+                                        <li>Sow seeds directly in the main field</li>
+                                        <li>Use line sowing or broadcasting method</li>
+                                        <li>Maintain proper row spacing</li>
+                                        <li>Sow seeds at shallow depth</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h3>Water Management</h3>
+                                    <ul>
+                                        <li>Provide light irrigation after sowing if needed</li>
+                                        <li>Ensure moisture during germination stage</li>
+                                        <li>Irrigate only during prolonged dry spells</li>
+                                        <li>Avoid excess irrigation</li>
+                                        <li>Ensure proper drainage during rainfall</li>
+                                        <li>Stop irrigation before harvesting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="pro-tip-box">
+                            <strong>💡 Pro-Tip:</strong>
+                            <ul>
+                                <li>Foxtail millet is ideal for short growing seasons</li>
+                                <li>Excess water reduces grain quality</li>
+                                <li>Early sowing improves yield</li>
+                                <li>Proper spacing reduces weed competition</li>
+                                <li>Use improved varieties for better output</li>
+                                <li>Stop irrigation 7–10 days before harvest</li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            } else if (crop === 'Little Millet') {
+                contentArea.innerHTML = `
+                    <div class="crop-display">
+                        <header class="crop-header">
+                            <h1>Little Millet (Panicum sumatrense)</h1>
+                            <p>A small-grained millet grown in dry regions for food and fodder. Little millet is hardy and drought-tolerant.</p>
+                        </header>
+                        <hr>
+                        <div class="stats-grid">
+                            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Semi-arid</div>
+                            <div class="stat-card">💧 <strong>Water:</strong> Low</div>
+                            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.0 - 7.5 (Acidic to Neutral)</div>
+                            <div class="stat-card">⏳ <strong>Duration:</strong> 80 - 90 Days</div>
+                        </div>
+
+                        <section class="tutorial-section">
+                            <h2>The Growing Process</h2>
+
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h3>Land Preparation</h3>
+                                    <ul>
+                                        <li>Select a well-drained field and remove crop residues</li>
+                                        <li>Plough the field 2–3 times to loosen the soil</li>
+                                        <li>Break soil clods and control weeds</li>
+                                        <li>Level the land for uniform moisture</li>
+                                        <li>Add organic manure before final ploughing</li>
+                                        <li>Prepare a fine seedbed for sowing</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h3>Sowing</h3>
+                                    <ul>
+                                        <li>Select certified, healthy little millet seeds</li>
+                                        <li>Treat seeds to prevent seed-borne diseases</li>
+                                        <li>Sow seeds directly in the main field</li>
+                                        <li>Use line sowing or broadcasting method</li>
+                                        <li>Maintain proper row spacing</li>
+                                        <li>Sow seeds at shallow depth</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h3>Water Management</h3>
+                                    <ul>
+                                        <li>Provide light irrigation after sowing if needed</li>
+                                        <li>Ensure moisture during germination stage</li>
+                                        <li>Irrigate only during prolonged dry spells</li>
+                                        <li>Avoid excess irrigation</li>
+                                        <li>Ensure proper drainage during rainfall</li>
+                                        <li>Stop irrigation before harvesting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="pro-tip-box">
+                            <strong>💡 Pro-Tip:</strong>
+                            <ul>
+                                <li>Little millet performs well under low-input farming</li>
+                                <li>Excess water severely reduces yield</li>
+                                <li>Timely sowing improves grain formation</li>
+                                <li>Proper spacing helps reduce weeds</li>
+                                <li>Use improved varieties for better yield</li>
+                                <li>Stop irrigation 7–10 days before harvest</li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            } else if (crop === 'Kodo Millet') {
+                contentArea.innerHTML = `
+                    <div class="crop-display">
+                        <header class="crop-header">
+                            <h1>Kodo Millet (Paspalum scrobiculatum)</h1>
+                            <p>A hardy millet crop grown in dry and marginal lands. Kodo millet is known for its drought tolerance and nutritional value.</p>
+                        </header>
+                        <hr>
+                        <div class="stats-grid">
+                            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Semi-arid</div>
+                            <div class="stat-card">💧 <strong>Water:</strong> Low</div>
+                            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 8.0 (Wide Range)</div>
+                            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+                        </div>
+
+                        <section class="tutorial-section">
+                            <h2>The Growing Process</h2>
+
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h3>Land Preparation</h3>
+                                    <ul>
+                                        <li>Select a well-drained field and remove crop residues</li>
+                                        <li>Plough the field 2–3 times to loosen the soil</li>
+                                        <li>Break soil clods and control weeds</li>
+                                        <li>Level the land for uniform moisture</li>
+                                        <li>Add organic manure before final ploughing</li>
+                                        <li>Prepare a fine seedbed for sowing</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h3>Sowing</h3>
+                                    <ul>
+                                        <li>Select certified, healthy kodo millet seeds</li>
+                                        <li>Treat seeds to prevent seed-borne diseases</li>
+                                        <li>Sow seeds directly in the main field</li>
+                                        <li>Use line sowing or broadcasting method</li>
+                                        <li>Maintain proper row spacing</li>
+                                        <li>Sow seeds at shallow depth</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h3>Water Management</h3>
+                                    <ul>
+                                        <li>Provide light irrigation after sowing if needed</li>
+                                        <li>Ensure moisture during germination stage</li>
+                                        <li>Irrigate only during prolonged dry spells</li>
+                                        <li>Avoid excess irrigation</li>
+                                        <li>Ensure proper drainage during rainfall</li>
+                                        <li>Stop irrigation before harvesting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="pro-tip-box">
+                            <strong>💡 Pro-Tip:</strong>
+                            <ul>
+                                <li>Kodo millet performs well on poor soils</li>
+                                <li>Excess water causes lodging and yield loss</li>
+                                <li>Timely sowing improves grain filling</li>
+                                <li>Proper spacing reduces weed competition</li>
+                                <li>Use improved varieties for better productivity</li>
+                                <li>Stop irrigation 10–12 days before harvest</li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            } else if (crop === 'Barnyard Millet') {
+                contentArea.innerHTML = `
+                    <div class="crop-display">
+                        <header class="crop-header">
+                            <h1>Barnyard Millet (Echinochloa frumentacea)</h1>
+                            <p>A fast-growing millet crop grown in dry regions and hill areas. Barnyard millet is valued for its quick maturity and nutrition.</p>
+                        </header>
+                        <hr>
+                        <div class="stats-grid">
+                            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Semi-arid</div>
+                            <div class="stat-card">💧 <strong>Water:</strong> Low</div>
+                            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.0 - 7.5 (Acidic to Neutral)</div>
+                            <div class="stat-card">⏳ <strong>Duration:</strong> 60 - 80 Days</div>
+                        </div>
+
+                        <section class="tutorial-section">
+                            <h2>The Growing Process</h2>
+
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h3>Land Preparation</h3>
+                                    <ul>
+                                        <li>Select a well-drained field and remove crop residues</li>
+                                        <li>Plough the field 2–3 times to loosen the soil</li>
+                                        <li>Break soil clods and control weeds</li>
+                                        <li>Level the land for uniform moisture</li>
+                                        <li>Add organic manure before final ploughing</li>
+                                        <li>Prepare a fine seedbed for sowing</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h3>Sowing</h3>
+                                    <ul>
+                                        <li>Select certified, healthy barnyard millet seeds</li>
+                                        <li>Treat seeds to prevent seed-borne diseases</li>
+                                        <li>Sow seeds directly in the main field</li>
+                                        <li>Use line sowing or broadcasting method</li>
+                                        <li>Maintain proper row spacing</li>
+                                        <li>Sow seeds at shallow depth</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h3>Water Management</h3>
+                                    <ul>
+                                        <li>Provide light irrigation after sowing if needed</li>
+                                        <li>Ensure moisture during germination stage</li>
+                                        <li>Irrigate only during prolonged dry spells</li>
+                                        <li>Avoid excess irrigation</li>
+                                        <li>Ensure proper drainage during rainfall</li>
+                                        <li>Stop irrigation before harvesting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="pro-tip-box">
+                            <strong>💡 Pro-Tip:</strong>
+                            <ul>
+                                <li>Barnyard millet has very short crop duration</li>
+                                <li>Suitable for drought-prone and hill regions</li>
+                                <li>Excess water reduces grain quality</li>
+                                <li>Timely sowing gives better yield</li>
+                                <li>Proper spacing helps reduce weed growth</li>
+                                <li>Stop irrigation 7–10 days before harvest</li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            } else if (crop === 'Proso Millet') {
+                contentArea.innerHTML = `
+                    <div class="crop-display">
+                        <header class="crop-header">
+                            <h1>Proso Millet (Panicum miliaceum)</h1>
+                            <p>A short-duration millet grown in dry and semi-arid regions. Proso millet is valued for its drought tolerance and quick harvest.</p>
+                        </header>
+                        <hr>
+                        <div class="stats-grid">
+                            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Dry</div>
+                            <div class="stat-card">💧 <strong>Water:</strong> Very Low</div>
+                            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.5 (Neutral)</div>
+                            <div class="stat-card">⏳ <strong>Duration:</strong> 60 - 90 Days</div>
+                        </div>
+
+                        <section class="tutorial-section">
+                            <h2>The Growing Process</h2>
+
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h3>Land Preparation</h3>
+                                    <ul>
+                                        <li>Select a dry, well-drained field</li>
+                                        <li>Remove weeds and previous crop residues</li>
+                                        <li>Plough the field 2–3 times</li>
+                                        <li>Break soil clods properly</li>
+                                        <li>Level the field lightly</li>
+                                        <li>Add organic manure before sowing</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h3>Sowing</h3>
+                                    <ul>
+                                        <li>Use healthy, certified proso millet seeds</li>
+                                        <li>Treat seeds to prevent fungal diseases</li>
+                                        <li>Sow seeds directly in the field</li>
+                                        <li>Use line sowing or broadcasting method</li>
+                                        <li>Maintain proper row spacing</li>
+                                        <li>Sow seeds at shallow depth</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h3>Water Management</h3>
+                                    <ul>
+                                        <li>Irrigate lightly after sowing if soil is dry</li>
+                                        <li>Ensure moisture during germination</li>
+                                        <li>Avoid frequent irrigation</li>
+                                        <li>Irrigate only during long dry spells</li>
+                                        <li>Ensure proper drainage during rains</li>
+                                        <li>Stop irrigation before harvesting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="pro-tip-box">
+                            <strong>💡 Pro-Tip:</strong>
+                            <ul>
+                                <li>Proso millet matures very quickly</li>
+                                <li>Best suited for rainfed farming</li>
+                                <li>Too much water reduces yield</li>
+                                <li>Early sowing gives better grain formation</li>
+                                <li>Requires minimal fertilizer input</li>
+                                <li>Harvest on time to avoid grain shattering</li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            } else if (crop === 'Teff') {
+                contentArea.innerHTML = `
+                    <div class="crop-display">
+                        <header class="crop-header">
+                            <h1>Teff (Eragrostis tef)</h1>
+                            <p>A fine-grained cereal crop native to Ethiopia. Teff is highly nutritious and adapts well to diverse growing conditions.</p>
+                        </header>
+                        <hr>
+                        <div class="stats-grid">
+                            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Moderate</div>
+                            <div class="stat-card">💧 <strong>Water:</strong> Low to Medium</div>
+                            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.0 - 7.5 (Wide Range)</div>
+                            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+                        </div>
+
+                        <section class="tutorial-section">
+                            <h2>The Growing Process</h2>
+
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h3>Land Preparation</h3>
+                                    <ul>
+                                        <li>Select a fine-textured, well-drained field</li>
+                                        <li>Remove weeds and previous crop residues</li>
+                                        <li>Plough the field 2–3 times</li>
+                                        <li>Break soil clods into very fine tilth</li>
+                                        <li>Level the field carefully</li>
+                                        <li>Apply organic manure before sowing</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h3>Sowing</h3>
+                                    <ul>
+                                        <li>Use clean, healthy teff seeds</li>
+                                        <li>Mix seeds with sand for even distribution</li>
+                                        <li>Sow seeds by broadcasting or line sowing</li>
+                                        <li>Avoid deep sowing due to very small seed size</li>
+                                        <li>Ensure uniform seed spread</li>
+                                        <li>Sow at the recommended seed rate</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h3>Water Management</h3>
+                                    <ul>
+                                        <li>Provide light irrigation after sowing</li>
+                                        <li>Maintain moisture during early growth stage</li>
+                                        <li>Avoid waterlogging at all stages</li>
+                                        <li>Irrigate during dry spells if rainfall is low</li>
+                                        <li>Ensure proper drainage during heavy rains</li>
+                                        <li>Stop irrigation before maturity</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="pro-tip-box">
+                            <strong>💡 Pro-Tip:</strong>
+                            <ul>
+                                <li>Teff seeds are extremely small—fine land preparation is crucial</li>
+                                <li>Mixing seed with sand improves uniform sowing</li>
+                                <li>Excess water causes lodging and yield loss</li>
+                                <li>Best suited for light, frequent irrigation</li>
+                                <li>Early weed control is very important</li>
+                                <li>Harvest carefully to avoid grain loss</li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+
+            } else {
+                // This displays for any button that isn't 'Rice' yet
+                contentArea.innerHTML = `
+                    <div class="crop-display">
+                        <h1>${crop}</h1>
+                        <p>Detailed farming tips for ${crop} are currently being updated. Check back soon!</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Run this once so the page isn't empty when it first loads
+        displaytip('Rice');
+    </script>
+</body>
+</html>

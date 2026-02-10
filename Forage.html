@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraTip</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="cereals.css">
+</head>
+<body>
+    <div class="main">
+        <div class="sticky">
+            <div class="navbar">
+                <nav class="top">
+                    <img src="logo.png" alt="TerraTip Logo" class="logo">
+                    <a href="index.html" class="navlink" id="page">Home</a>
+                    <!-- <a href="cropcalender.html" class="navlink">Crop Calendar</a>
+                    <a href="disease.html" class="navlink">Disease Info</a>
+                    <a href="basic.html" class="navlink">Basic</a>
+                    <a href="about.html" class="navlink">About Me</a> -->
+                </nav>
+            </div>
+            <div class="legend">
+                <nav class="legend">
+                    <p class="legend-title">SELECT CROP CATEGORY</p>
+                    <img src="pointing-right.png" alt="Arrow" class="arrow-icon">
+                    <a href="cereals.html" class="legend-item">CEREALS</a>
+                    <a href="Pulses.html" class="legend-item">PULSES</a>
+                    <a href="Vegitable.html" class="legend-item">VEGETABLES</a>
+                    <a href="Fruits.html" class="legend-item">FRUITS</a>
+                    <a href="Cash-crops.html" class="legend-item">CASH CROPS</a>
+                    <a href="Oilseeds.html" class="legend-item">OILSEEDS</a>
+                    <a href="Spices.html" class="legend-item">SPICES</a>
+                    <a href="Medicinal.html" class="legend-item">MEDICINALS</a>
+                    <a href="Flowers.html" class="legend-item">FLOWERS</a>
+                    <a href="Nuts.html" class="legend-item">NUTS</a>
+                    <a href="Forage.html" class="legend-item">FORAGE</a>
+                </nav>
+            </div>
+        </div>
+
+<div class="content">
+    <div class="crop-list">
+        <p class="list-head">FORAGE / FODDER CROPS</p>
+
+        <button onclick="displaytip('Napier Grass','napier-grass')" id="napier-grass">Napier Grass (Elephant Grass)</button>
+        <button onclick="displaytip('Lucerne','lucerne')" id="lucerne">Lucerne (Alfalfa)</button>
+        <button onclick="displaytip('Maize Fodder','maize-fodder')" id="maize-fodder">Maize (Fodder Variety)</button>
+        <button onclick="displaytip('Cowpea','cowpea')" id="cowpea">Cowpea</button>
+        <button onclick="displaytip('Berseem','berseem')" id="berseem">Berseem (Egyptian Clover)</button>
+
+        <button onclick="displaytip('Sorghum Fodder','sorghum-fodder')" id="sorghum-fodder">Sorghum (Fodder Type)</button>
+        <button onclick="displaytip('Ryegrass','ryegrass')" id="ryegrass">Ryegrass</button>
+        <button onclick="displaytip('Oats Fodder','oats-fodder')" id="oats-fodder">Oats (Fodder)</button>
+        <button onclick="displaytip('Barley Fodder','barley-fodder')" id="barley-fodder">Barley (Fodder)</button>
+        <button onclick="displaytip('Guinea Grass','guinea-grass')" id="guinea-grass">Guinea Grass</button>
+
+        <button onclick="displaytip('Sorghum-Sudan Hybrid','sorghum-sudan')" id="sorghum-sudan">Sorghum-Sudan Hybrid</button>
+        <button onclick="displaytip('Sesbania','sesbania')" id="sesbania">Sesbania</button>
+        <button onclick="displaytip('Clover','clover')" id="clover">Clover (Red Clover, White Clover)</button>
+    </div>
+
+
+
+<div class="crop-tipstyle" id="crop-tip">
+                <div class="empty-state">
+                    <img src="arrow-left.png" alt="Arrow" class="guide-arrow">
+                    <h2>Ready to grow?</h2>
+                    <p>Select a crop from the left list for expert farming guidance.</p>
+                </div>
+        </div>
+     </div>
+
+       <script>
+        function displaytip(crop, clickedId) {
+        const allButtons = document.querySelectorAll('.crop-list button');
+        allButtons.forEach(btn => btn.style.backgroundColor = "");
+        allButtons.forEach(btn => btn.style.color = "black");
+        const cropindisplay = document.getElementById(clickedId);
+        cropindisplay.style.backgroundColor = "#2a6b1f";
+        cropindisplay.style.color = "white";
+        const contentArea = document.getElementById('crop-tip');
+if (crop === 'Napier Grass') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Napier Grass (Elephant Grass)</h1>
+            <p>A high-yielding perennial grass used as green fodder for livestock.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate to High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days (first cut)</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Clear the field of previous crops and debris</li>
+                        <li>Plough the soil deeply to loosen it</li>
+                        <li>Level the field to ensure uniform growth</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Planting</h3>
+                    <ul>
+                        <li>Use stem cuttings of 30–40 cm length</li>
+                        <li>Plant in rows spaced 50–75 cm apart</li>
+                        <li>Water regularly until establishment</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Fertilize with nitrogen-rich manure for better growth</li>
+                        <li>Cut the crop when it reaches 1–1.5 meters height</li>
+                        <li>Allow regrowth for multiple cuts throughout the year</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Mulch the base to retain soil moisture</li>
+                <li>Ensure spacing to avoid competition for sunlight</li>
+                <li>Use cuttings from healthy, pest-free plants</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Lucerne') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Lucerne (Alfalfa)</h1>
+            <p>A nutritious perennial legume grown for high-protein fodder.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Temperate / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.5 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 80 - 120 Days (first cut)</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough the field 2–3 times to remove weeds</li>
+                        <li>Level the soil to ensure good drainage</li>
+                        <li>Apply organic manure or compost before sowing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds evenly using a seed drill or broadcasting</li>
+                        <li>Maintain row spacing of 30 cm</li>
+                        <li>Water lightly after sowing to encourage germination</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Cut when plants reach 30–40 cm height</li>
+                        <li>Fertilize after each cut for continuous growth</li>
+                        <li>Rotate grazing or cutting to maintain soil fertility</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Lucerne prefers well-drained sandy loam soil</li>
+                <li>Prevent overgrazing to avoid weakening the plant</li>
+                <li>Use pest-free certified seeds for higher yield</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Maize Fodder') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Maize (Fodder Variety)</h1>
+            <p>High-yielding maize grown specifically for livestock feed.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 60 - 90 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough the soil and remove previous crop residues</li>
+                        <li>Level the field for uniform irrigation</li>
+                        <li>Apply compost or organic manure</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds in rows spaced 60–75 cm apart</li>
+                        <li>Maintain plant spacing of 20–25 cm</li>
+                        <li>Water lightly to support germination</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Fertilize with nitrogen-rich fertilizers for better growth</li>
+                        <li>Harvest when plants reach 90–120 cm height</li>
+                        <li>Cut above 10–15 cm from soil to allow regrowth</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Regular watering boosts leaf and stem growth</li>
+                <li>Rotate fodder crops for soil fertility</li>
+                <li>Use disease-free seeds for uniform growth</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Cowpea') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Cowpea</h1>
+            <p>A leguminous fodder crop rich in protein, ideal for livestock feeding.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Tropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 60 - 80 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough and level the soil</li>
+                        <li>Incorporate organic compost before sowing</li>
+                        <li>Remove weeds and previous crop residues</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds in rows 30–40 cm apart</li>
+                        <li>Maintain spacing of 10–15 cm between plants</li>
+                        <li>Water lightly after sowing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Weed regularly to prevent competition</li>
+                        <li>Harvest young leaves for high protein content</li>
+                        <li>Use cuttings for regrowth and multiple harvests</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Inoculate seeds with Rhizobium to improve nitrogen fixation</li>
+                <li>Harvest early to maintain quality protein</li>
+                <li>Rotate with cereal fodder crops for balanced feed</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Berseem') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Berseem (Egyptian Clover)</h1>
+            <p>A fast-growing leguminous fodder crop with high digestibility for livestock.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate to High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 45 - 60 Days (first cut)</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough and level the field thoroughly</li>
+                        <li>Apply well-decomposed manure</li>
+                        <li>Remove weeds before sowing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds evenly with row spacing of 20–25 cm</li>
+                        <li>Maintain depth of 1–2 cm</li>
+                        <li>Water immediately after sowing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Harvest when plants are 30–35 cm tall</li>
+                        <li>Provide irrigation during dry spells</li>
+                        <li>Multiple cuttings possible in a season</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Apply nitrogen fertilizer after each cut for higher yield</li>
+                <li>Rotate with cereal fodder crops to maintain soil fertility</li>
+                <li>Ensure proper drainage to avoid waterlogging</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Sorghum Fodder') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Sorghum (Fodder Type)</h1>
+            <p>A drought-tolerant crop grown for green fodder with high biomass yield.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Semi-Arid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 60 - 90 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Clear the field and plough thoroughly</li>
+                        <li>Apply organic compost or farmyard manure</li>
+                        <li>Level the soil for uniform germination</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds in rows spaced 45–60 cm apart</li>
+                        <li>Maintain 15–20 cm spacing between plants</li>
+                        <li>Water immediately after sowing to support germination</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Apply nitrogen fertilizer for better leaf growth</li>
+                        <li>Cut when plants are 1–1.2 m tall</li>
+                        <li>Allow regrowth for multiple fodder harvests</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Sorghum tolerates low water, but regular irrigation boosts yield</li>
+                <li>Keep spacing adequate to avoid pest infestation</li>
+                <li>Cutting at early vegetative stage improves digestibility</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Ryegrass') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Ryegrass</h1>
+            <p>A fast-growing perennial grass, ideal for pasture and hay production.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 50 - 70 Days (first cut)</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough and level the soil</li>
+                        <li>Incorporate compost to improve fertility</li>
+                        <li>Ensure a smooth seedbed for uniform germination</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds evenly with a drill or broadcast method</li>
+                        <li>Maintain shallow depth of 1–2 cm</li>
+                        <li>Water lightly to avoid washing away seeds</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Weed regularly to reduce competition</li>
+                        <li>Harvest when 20–25 cm tall for best quality</li>
+                        <li>Allow regrowth for multiple cuttings in a season</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Ryegrass responds well to nitrogen fertilization</li>
+                <li>Cut before flowering to maximize nutritive value</li>
+                <li>Maintain adequate spacing to prevent fungal issues</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Oats Fodder') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Oats (Fodder)</h1>
+            <p>A nutritious cereal crop grown for green fodder and silage.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 60 - 80 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough the field to loosen soil</li>
+                        <li>Remove weeds and previous crop residues</li>
+                        <li>Apply organic manure or compost</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds at 2–3 cm depth in rows 25–30 cm apart</li>
+                        <li>Ensure even distribution of seeds</li>
+                        <li>Water lightly after sowing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Weed and irrigate as necessary</li>
+                        <li>Harvest when plants are 30–40 cm tall</li>
+                        <li>Use cut fodder immediately or store as silage</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Cut before flowering for better digestibility</li>
+                <li>Oats grow well with nitrogen fertilization</li>
+                <li>Maintain moisture during germination</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Barley Fodder') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Barley (Fodder)</h1>
+            <p>A versatile cereal crop cultivated for green fodder and silage.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 60 - 90 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough and level the soil thoroughly</li>
+                        <li>Apply compost or well-rotted manure</li>
+                        <li>Remove weeds before sowing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds evenly in rows spaced 25–30 cm</li>
+                        <li>Maintain 2–3 cm depth for seeds</li>
+                        <li>Water immediately after sowing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Weed regularly to reduce competition</li>
+                        <li>Harvest at 30–40 cm height for best nutritive value</li>
+                        <li>Provide additional irrigation during dry spells</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Barley responds well to nitrogen fertilization</li>
+                <li>Harvest before flowering for better palatability</li>
+                <li>Use disease-free seeds for uniform growth</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Guinea Grass') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Guinea Grass (Panicum maximum)</h1>
+            <p>A tropical grass with high biomass, ideal for grazing and hay production.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Tropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 90 - 120 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Clear weeds and previous crop residues</li>
+                        <li>Plough and level the field</li>
+                        <li>Incorporate well-rotted manure for better growth</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing / Planting</h3>
+                    <ul>
+                        <li>Plant stem cuttings or sow seeds in rows 50–60 cm apart</li>
+                        <li>Maintain 20–25 cm spacing between plants</li>
+                        <li>Water immediately after planting for establishment</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Apply nitrogen-rich fertilizer for leafy growth</li>
+                        <li>Weed regularly to minimize competition</li>
+                        <li>Cut when 1–1.2 m tall; allow regrowth for multiple harvests</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Regular cutting encourages dense regrowth</li>
+                <li>Mulch around plants to retain moisture</li>
+                <li>Ensure adequate spacing to avoid fungal infection</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Sorghum-Sudan Hybrid') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Sorghum-Sudan Hybrid</h1>
+            <p>A fast-growing, drought-tolerant hybrid providing high-quality green fodder.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Semi-Arid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Low to Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 60 - 90 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough the field and remove weeds</li>
+                        <li>Apply organic manure for better soil fertility</li>
+                        <li>Level the land to ensure uniform water distribution</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds in rows 50–60 cm apart</li>
+                        <li>Maintain 15–20 cm spacing between plants</li>
+                        <li>Water lightly after sowing to aid germination</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Apply nitrogen fertilizers for leafy growth</li>
+                        <li>Cut when plants reach 1–1.2 m tall</li>
+                        <li>Allow regrowth for multiple cuts</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Hybrid grows best with moderate irrigation</li>
+                <li>Cut early for better digestibility</li>
+                <li>Ensure good weed control for optimal yield</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Sesbania') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Sesbania</h1>
+            <p>A nitrogen-fixing legume used as green manure and forage crop.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Tropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 60 - 80 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Clear field and plough to a fine tilth</li>
+                        <li>Add compost or well-rotted manure</li>
+                        <li>Level the soil for uniform growth</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds in rows 40–50 cm apart</li>
+                        <li>Maintain 10–15 cm spacing between plants</li>
+                        <li>Water lightly to ensure proper germination</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Weed regularly to reduce competition</li>
+                        <li>Harvest when 60–80 cm tall</li>
+                        <li>Use as green manure or fodder</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Sesbania improves soil fertility through nitrogen fixation</li>
+                <li>Cut regularly to encourage fresh regrowth</li>
+                <li>Ideal for intercropping with cereals for green manure</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else if (crop === 'Clover') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Clover (Red & White)</h1>
+            <p>A legume forage crop providing high-protein fodder and soil enrichment.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Cool / Temperate</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 50 - 70 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Land Preparation</h3>
+                    <ul>
+                        <li>Plough and level the soil thoroughly</li>
+                        <li>Remove any weeds or previous crop residues</li>
+                        <li>Apply compost to improve fertility</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sowing</h3>
+                    <ul>
+                        <li>Sow seeds evenly in rows or broadcast</li>
+                        <li>Maintain shallow depth of 1–2 cm</li>
+                        <li>Water lightly after sowing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Care & Harvest</h3>
+                    <ul>
+                        <li>Weed regularly to prevent competition</li>
+                        <li>Harvest when 20–25 cm tall for best quality</li>
+                        <li>Use as green fodder or for silage</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tip:</strong>
+            <ul>
+                <li>Clover fixes nitrogen, improving soil fertility</li>
+                <li>Cut before flowering for higher protein content</li>
+                <li>Ensure consistent moisture for uniform growth</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else {
+                // This displays for any button that isn't 'Rice' yet
+                contentArea.innerHTML = `
+                    <div class="crop-display">
+                        <h1>${crop}</h1>
+                        <p>Detailed farming tips for ${crop} are currently being updated. Check back soon!</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Run this once so the page isn't empty when it first loads
+        displaytip('Rice');
+    </script>
+</body>
+</html>

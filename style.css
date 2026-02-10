@@ -1,0 +1,1059 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    color: #e0e0e0;
+    max-width: 100%;
+}
+#page{
+    border-bottom: #008000 3.5px solid;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px 0 20px;
+    height: 55px;
+    background-color: white;
+}
+.logo {
+    height: 40px;
+    vertical-align: middle;
+    padding-right: 20px;
+    margin-bottom: 2%;
+}
+.top {
+    margin-top: 10px;
+    vertical-align: center;
+}
+.navlink {
+    color: black;
+    text-decoration: none;
+    margin: 0px 17px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: transparent 4px solid;
+    padding-bottom: 3px;
+   
+}
+.navlink:hover {
+    border-bottom: #008000 3.5px solid;
+    transition: 0.3s;
+}
+.controls { 
+    font-size: 18px;
+    border-radius: 10px;
+    border: solid rgb(141, 134, 134) 2px;
+    padding: 5px;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+.legend{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2a6b1f;
+    max-width: 100%;
+    overflow: auto;
+}
+.legend-title {
+    color: white;
+    font-size: 15px;
+    font-weight: 550;
+    padding: 10px 15px;
+    letter-spacing: 2px;
+}
+.legend-item {
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 5px 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.arrow-icon {
+    width: 25px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+.legend-item:hover {
+   background-color: rgb(41, 77, 36);
+    transition: 0.3s;
+}
+.sticky{
+    position: sticky;
+    top: 0;
+}
+.content {
+    background-color: #2a6b1f;
+    height: 60vh;
+    text-align: center;
+}
+.slogan {
+    color: white;
+    padding-top: 15vh;
+    font-size: 65px;
+    font-weight: 600;
+}
+.mini-slogan {
+    color: rgb(231, 231, 163);
+    padding-top: 15px;
+    font-size: 25px;
+    font-weight: 600;
+}
+.foot{
+    text-align: center;
+}
+.overlap{
+    margin-top:-10px ;
+}
+
+/* cereals */
+.cereals{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #ffd54f;
+    padding-top: 5%;
+    color: #5d4037;
+}
+.cereals-def{
+    color: #5d4037;
+    font-size: 20px;
+    font-weight: 550;
+    padding-top: 20px;
+}
+.cereals-title{
+    color: #5d4037;
+    font-size: 50px;
+    font-weight: 600;
+}
+.cereals-box{
+    width: 50vh;
+    background-color: #E7E9EB;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: black;
+    margin-left: 7.5%;
+    width: 27%;
+    height: 450px;
+    margin-bottom: 70px;
+}
+.box-heading{
+    text-align: left;
+    padding: 40px 0 0 25px;
+    font-size: 23px;
+}
+.intro{
+    min-width: 400px;
+}
+.cereals-about-box{
+    height: 70%;
+    background-color: white;
+    margin: 30px;
+    border-left: solid #ffd54f 7px;
+    overflow-y: auto;
+    scrollbar-color: #ffd54f transparent;
+}
+.cereals-characters{
+    list-style-type: none;
+    margin-top: 40px;
+    font-size: 20px;
+    width: 200px;
+    margin: auto;
+    color: white;
+    font-weight: 550;
+}
+.cereals-characters li{
+    margin-top: 20px;
+    padding: 13px;
+    border-radius: 60px;
+}
+.staple{
+    background-color: #47a847;
+}
+.grainy{
+    background-color: rgb(60, 60, 33);
+}
+.nutritive{
+    background-color: black;
+}
+.cereals-para{
+    padding: 18px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.1px;
+}
+
+/* pulses */
+.pulses{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #ff8a65;
+    padding-top: 5%;
+    color: #5d4037;
+}
+.pulses-def{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 550;
+    padding-top: 20px;
+}
+.pulses-title{
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 600;
+}
+.pulses-box{
+    width: 50vh;
+    background-color: #E7E9EB;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: black;
+    margin-left: 7.5%;
+    width: 27%;
+    height: 450px;
+    margin-bottom: 70px;
+}
+.box-heading{
+    text-align: left;
+    padding: 40px 0 0 25px;
+    font-size: 23px;
+}
+.pulses-about-box{
+    height: 70%;
+    background-color: white;
+    margin: 30px;
+    border-left: solid #ff8a65 7px;
+    overflow-y: auto;
+    scrollbar-color: #ff8a65 transparent;
+}
+.pulses-characters{
+    list-style-type: none;
+    margin-top: 40px;
+    font-size: 20px;
+    width: 200px;
+    margin: auto;
+    color: white;
+    font-weight: 550;
+}
+.pulses-characters li{
+    margin-top: 20px;
+    padding: 13px;
+    border-radius: 60px;
+}
+.protein{
+    background-color: #8d4040;
+}
+.nitrogen{
+    background-color: rgb(137, 137, 45);
+}
+.nutritive{
+    background-color: black;
+}
+.pulses-para{
+    padding: 18px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.1px;
+}
+
+/* vegetables */
+
+.vegetables{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #81c784;
+    padding-top: 5%;
+    color: #5d4037;
+}
+.vegetables-def{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 550;
+    padding-top: 20px;
+}
+.vegetables-title{
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 600;
+}
+.vegetables-box{
+    width: 50vh;
+    background-color: #E7E9EB;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: black;
+    margin-left: 7.5%;
+    width: 27%;
+    height: 450px;
+    margin-bottom: 70px;
+}
+.box-heading{
+    text-align: left;
+    padding: 40px 0 0 25px;
+    font-size: 23px;
+}
+.vegetables-about-box{
+    height: 70%;
+    background-color: white;
+    margin: 30px;
+    border-left: solid #81c784 7px;
+    overflow-y: auto;
+    scrollbar-color: #81c784 transparent;
+}
+.vegetables-characters{
+    list-style-type: none;
+    margin-top: 40px;
+    font-size: 20px;
+    width: 200px;
+    margin: auto;
+    color: white;
+    font-weight: 550;
+}
+.vegetables-characters li{
+    margin-top: 20px;
+    padding: 13px;
+    border-radius: 60px;
+}
+.vitamin{
+    background-color: #384281;
+}
+.mineral{
+    background-color: rgb(107, 107, 107);
+}
+.nutritive{
+    background-color: black;
+}
+.vegetables-para{
+    padding: 18px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.1px;
+}
+
+/*fruits*/
+.fruits{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #ffb74d;
+    padding-top: 5%;
+    color: #5d4037;
+}
+.fruits-def{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 550;
+    padding-top: 20px;
+}
+.fruits-title{
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 600;
+}
+.fruits-box{
+    width: 50vh;
+    background-color: #E7E9EB;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: black;
+    margin-left: 7.5%;
+    width: 27%;
+    height: 450px;
+    margin-bottom: 70px;
+}
+.box-heading{
+    text-align: left;
+    padding: 40px 0 0 25px;
+    font-size: 23px;
+}
+.fruits-about-box{
+    height: 70%;
+    background-color: white;
+    margin: 30px;
+    border-left: solid #ffb74d 7px;
+    overflow-y: auto;
+    scrollbar-color: #ffb74d transparent;
+}
+.fruits-characters{
+    list-style-type: none;
+    margin-top: 40px;
+    font-size: 20px;
+    width: 200px;
+    margin: auto;
+    color: white;
+    font-weight: 550;
+}
+.fruits-characters li{
+    margin-top: 20px;
+    padding: 13px;
+    border-radius: 60px;
+}
+.vitamin{
+    background-color: #384281;
+}
+.juicy{
+    background-color: rgb(223, 88, 88);
+}
+.refreshing{
+    background-color: #2a6b1f;
+}
+.fruits-para{
+    padding: 18px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.1px;
+}
+
+/*Cash-crops*/
+.Cash-crops{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #ba68c8;
+    padding-top: 5%;
+    color: #5d4037;
+}
+.Cash-crops-def{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 550;
+    padding-top: 20px;
+}
+.Cash-crops-title{
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 600;
+}
+.Cash-crops-box{
+    width: 50vh;
+    background-color: #E7E9EB;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: black;
+    margin-left: 7.5%;
+    width: 27%;
+    height: 450px;
+    margin-bottom: 70px;
+}
+.box-heading{
+    text-align: left;
+    padding: 40px 0 0 25px;
+    font-size: 23px;
+}
+.Cash-crops-about-box{
+    height: 70%;
+    background-color: white;
+    margin: 30px;
+    border-left: solid #ba68c8 7px;
+    overflow-y: auto;
+    scrollbar-color: #ba68c8 transparent;
+}
+.Cash-crops-characters{
+    list-style-type: none;
+    margin-top: 40px;
+    font-size: 20px;
+    width: 200px;
+    margin: auto;
+    color: white;
+    font-weight: 550;
+}
+.Cash-crops-characters li{
+    margin-top: 20px;
+    padding: 13px;
+    border-radius: 60px;
+}
+.profitable{
+    background-color: #42b12b;
+}
+.commercial{
+    background-color: rgb(165, 42, 42);
+}
+.marketable{
+    background-color: #25b6b6;
+}
+.Cash-crops-para{
+    padding: 18px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.1px;
+}
+
+/* oilseeds */
+.oilseeds{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #fff176;
+    padding-top: 5%;
+    color: #5d4037;
+}
+.oilseeds-def{
+    color: #440909;
+    font-size: 20px;
+    font-weight: 550;
+    padding-top: 20px;
+}
+.oilseeds-title{
+    color: #440909;
+    font-size: 50px;
+    font-weight: 600;
+}
+.oilseeds-box{
+    width: 50vh;
+    background-color: #E7E9EB;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: black;
+    margin-left: 7.5%;
+    width: 27%;
+    height: 450px;
+    margin-bottom: 70px;
+}
+.box-heading{
+    text-align: left;
+    padding: 40px 0 0 25px;
+    font-size: 23px;
+}
+.oilseeds-about-box{
+    height: 70%;
+    background-color: white;
+    margin: 30px;
+    border-left: solid #fff176 7px;
+    overflow-y: auto;
+    scrollbar-color: #fff176 transparent;
+}
+.oilseeds-characters{
+    list-style-type: none;
+    margin-top: 40px;
+    font-size: 20px;
+    width: 200px;
+    margin: auto;
+    color: white;
+    font-weight: 550;
+}
+.oilseeds-characters li{
+    margin-top: 20px;
+    padding: 13px;
+    border-radius: 60px;
+}
+.oilbearing{
+    background-color: #571b1b;
+}
+.energy{
+    background-color: rgb(126, 52, 130);
+}
+.refreshing{
+    background-color: #2a6b1f;
+}
+.oilseeds-para{
+    padding: 18px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.1px;
+}
+
+/*Spices*/
+.spices{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #e57373;
+    padding-top: 5%;
+    color: #5d4037;
+}
+.spices-def{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 550;
+    padding-top: 20px;
+}
+.spices-title{
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 600;
+}
+.spices-box{
+    width: 50vh;
+    background-color: #E7E9EB;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: black;
+    margin-left: 7.5%;
+    width: 27%;
+    height: 450px;
+    margin-bottom: 70px;
+}
+.box-heading{
+    text-align: left;
+    padding: 40px 0 0 25px;
+    font-size: 23px;
+}
+.spices-about-box{
+    height: 70%;
+    background-color: white;
+    margin: 30px;
+    border-left: solid #e57373 7px;
+    overflow-y: auto;
+    scrollbar-color: #e57373 transparent;
+}
+.spices-characters{
+    list-style-type: none;
+    margin-top: 40px;
+    font-size: 20px;
+    width: 200px;
+    margin: auto;
+    color: white;
+    font-weight: 550;
+}
+.spices-characters li{
+    margin-top: 20px;
+    padding: 13px;
+    border-radius: 60px;
+}
+.aromatic{
+    background-color: #3cac89;
+}
+.flavoring{
+    background-color: rgb(173, 1, 1);
+}
+.preservative{
+    background-color: #007d00;
+}
+.spices-para{
+    padding: 18px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.1px;
+}
+
+/*Medicinals*/
+.medicinals{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #4db6ac;
+    padding-top: 5%;
+    color: #5d4037;
+}
+.medicinals-def{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 550;
+    padding-top: 20px;
+}
+.medicinals-title{
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 600;
+}
+.medicinals-box{
+    width: 50vh;
+    background-color: #E7E9EB;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: black;
+    margin-left: 7.5%;
+    width: 27%;
+    height: 450px;
+    margin-bottom: 70px;
+}
+.box-heading{
+    text-align: left;
+    padding: 40px 0 0 25px;
+    font-size: 23px;
+}
+.medicinals-about-box{
+    height: 70%;
+    background-color: white;
+    margin: 30px;
+    border-left: solid #4db6ac 7px;
+    overflow-y: auto;
+    scrollbar-color: #4db6ac transparent;
+}
+.medicinals-characters{
+    list-style-type: none;
+    margin-top: 40px;
+    font-size: 20px;
+    width: 200px;
+    margin: auto;
+    color: white;
+    font-weight: 550;
+}
+.medicinals-characters li{
+    margin-top: 20px;
+    padding: 13px;
+    border-radius: 60px;
+}
+.aromatic{
+    background-color: #3c92ac;
+}
+.curative{
+    background-color: rgb(1, 173, 33);
+}
+.restorative{
+    background-color: #7d7b00;
+}
+.medicinals-para{
+    padding: 18px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.1px;
+}
+
+/*flowers*/
+.flowers{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #f06292;
+    padding-top: 5%;
+    color: #5d4037;
+}
+.flowers-def{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 550;
+    padding-top: 20px;
+}
+.flowers-title{
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 600;
+}
+.flowers-box{
+    width: 50vh;
+    background-color: #E7E9EB;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: black;
+    margin-left: 7.5%;
+    width: 27%;
+    height: 450px;
+    margin-bottom: 70px;
+}
+.box-heading{
+    text-align: left;
+    padding: 40px 0 0 25px;
+    font-size: 23px;
+}
+.flowers-about-box{
+    height: 70%;
+    background-color: white;
+    margin: 30px;
+    border-left: solid #f06292 7px;
+    overflow-y: auto;
+    scrollbar-color: #f06292 transparent;
+}
+.flowers-characters{
+    list-style-type: none;
+    margin-top: 40px;
+    font-size: 20px;
+    width: 200px;
+    margin: auto;
+    color: white;
+    font-weight: 550;
+}
+.flowers-characters li{
+    margin-top: 20px;
+    padding: 13px;
+    border-radius: 60px;
+}
+.decorative{
+    background-color: #ae1fbb;
+}
+.fragrant{
+    background-color: rgb(196, 112, 3);
+}
+.ornamental{
+    background-color: #aca90e;
+}
+.flowers-para{
+    padding: 18px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.1px;
+}
+
+/*nuts*/
+.nuts{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #a1887f;
+    padding-top: 5%;
+    color: #5d4037;
+}
+.nuts-def{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 550;
+    padding-top: 20px;
+}
+.nuts-title{
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 600;
+}
+.nuts-box{
+    width: 50vh;
+    background-color: #E7E9EB;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: black;
+    margin-left: 7.5%;
+    width: 27%;
+    height: 450px;
+    margin-bottom: 70px;
+}
+.box-heading{
+    text-align: left;
+    padding: 40px 0 0 25px;
+    font-size: 23px;
+}
+.nuts-about-box{
+    height: 70%;
+    background-color: white;
+    margin: 30px;
+    border-left: solid #a1887f 7px;
+    overflow-y: auto;
+    scrollbar-color: #a1887f transparent;
+}
+.nuts-characters{
+    list-style-type: none;
+    margin-top: 40px;
+    font-size: 20px;
+    width: 200px;
+    margin: auto;
+    color: white;
+    font-weight: 550;
+}
+.nuts-characters li{
+    margin-top: 20px;
+    padding: 13px;
+    border-radius: 60px;
+}
+.edible{
+    background-color: #2cbb1f;
+}
+.fragrant{
+    background-color: rgb(196, 112, 3);
+}
+.oil-rich{
+    background-color: #aca90e;
+}
+.nuts-para{
+    padding: 18px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.1px;
+}
+
+/*forage*/
+.forage{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #6d0404;
+    padding-top: 5%;
+    color: #5d4037;
+}
+.forage-def{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 550;
+    padding-top: 20px;
+}
+.forage-title{
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 600;
+}
+.forage-box{
+    width: 50vh;
+    background-color: #E7E9EB;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: black;
+    margin-left: 7.5%;
+    width: 27%;
+    height: 450px;
+    margin-bottom: 70px;
+}
+.box-heading{
+    text-align: left;
+    padding: 40px 0 0 25px;
+    font-size: 23px;
+}
+.forage-about-box{
+    height: 70%;
+    background-color: white;
+    margin: 30px;
+    border-left: solid #6d0404 7px;
+    overflow-y: auto;
+    scrollbar-color: #6d0404 transparent;
+}
+.forage-characters{
+    list-style-type: none;
+    margin-top: 40px;
+    font-size: 20px;
+    width: 200px;
+    margin: auto;
+    color: white;
+    font-weight: 550;
+}
+.forage-characters li{
+    margin-top: 20px;
+    padding: 13px;
+    border-radius: 60px;
+}
+.edible{
+    background-color: #2cbb1f;
+}
+.palatable{
+    background-color: rgb(22, 81, 9);
+}
+.digestible{
+    background-color: #aeac1f;
+}
+.forage-para{
+    padding: 18px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.1px;
+}
+.footer{
+    background-color: #282A35;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- RESPONSIVE GLOBAL FIXES ---------- */
+
+@media (max-width: 1024px) {
+    .slogan {
+        font-size: 48px;
+    }
+}
+
+
+
+
+
+
+/* MOBILE PHONES */
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navlink {
+        font-size: 16px;
+        margin: 6px;
+    }
+
+    /* HERO SECTION */
+    .slogan {
+        font-size: 36px;
+        padding-top: 10vh;
+    }
+
+    .mini-slogan {
+        font-size: 18px;
+    }
+
+    /* ALL CROP SECTIONS */
+    .cereals,
+    .pulses,
+    .vegetables,
+    .fruits,
+    .Cash-crops,
+    .oilseeds,
+    .spices,
+    .medicinals,
+    .flowers,
+    .nuts,
+    .forage {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 15px;
+    }
+
+    .intro {
+        min-width: unset;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    /* ALL BOXES */
+    .cereals-box,
+    .pulses-box,
+    .vegetables-box,
+    .fruits-box,
+    .Cash-crops-box,
+    .oilseeds-box,
+    .spices-box,
+    .medicinals-box,
+    .flowers-box,
+    .nuts-box,
+    .forage-box {
+        width: 100%;
+        max-width: 420px;
+        height: auto;
+        margin: 0 auto 40px;
+    }
+
+    /* ABOUT BOX */
+    .cereals-about-box,
+    .pulses-about-box,
+    .vegetables-about-box,
+    .fruits-about-box,
+    .Cash-crops-about-box,
+    .oilseeds-about-box,
+    .spices-about-box,
+    .medicinals-about-box,
+    .flowers-about-box,
+    .nuts-about-box,
+    .forage-about-box {
+        height: auto;
+        max-height: 300px;
+    }
+
+    /* TITLES */
+    h2 {
+        font-size: 32px !important;
+    }
+
+    .box-heading {
+        font-size: 20px;
+    }
+}

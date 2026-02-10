@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraTip</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="cereals.css">
+</head>
+<body>
+    <div class="main">
+        <div class="sticky">
+            <div class="navbar">
+                <nav class="top">
+                    <img src="logo.png" alt="TerraTip Logo" class="logo">
+                    <a href="index.html" class="navlink" id="page">Home</a>
+                    <!-- <a href="cropcalender.html" class="navlink">Crop Calendar</a>
+                    <a href="disease.html" class="navlink">Disease Info</a>
+                    <a href="basic.html" class="navlink">Basic</a>
+                    <a href="about.html" class="navlink">About Me</a> -->
+                </nav>
+            </div>
+            <div class="legend">
+                <nav class="legend">
+                    <p class="legend-title">SELECT CROP CATEGORY</p>
+                    <img src="pointing-right.png" alt="Arrow" class="arrow-icon">
+                    <a href="cereals.html" class="legend-item">CEREALS</a>
+                    <a href="Pulses.html" class="legend-item">PULSES</a>
+                    <a href="Vegitable.html" class="legend-item">VEGETABLES</a>
+                    <a href="Fruits.html" class="legend-item">FRUITS</a>
+                    <a href="Cash-crops.html" class="legend-item">CASH CROPS</a>
+                    <a href="Oilseeds.html" class="legend-item">OILSEEDS</a>
+                    <a href="Spices.html" class="legend-item">SPICES</a>
+                    <a href="Medicinal.html" class="legend-item">MEDICINALS</a>
+                    <a href="Flowers.html" class="legend-item">FLOWERS</a>
+                    <a href="Nuts.html" class="legend-item">NUTS</a>
+                    <a href="Forage.html" class="legend-item">FORAGE</a>
+                </nav>
+            </div>
+        </div>
+
+    <div class="content">
+        <div class="crop-list">
+            <p class="list-head">CASH CROPS</p>
+
+            <button onclick="displaytip('Cotton','cotton')" id="cotton">Cotton</button>
+            <button onclick="displaytip('Sugarcane','sugarcane')" id="sugarcane">Sugarcane</button>
+            <button onclick="displaytip('Jute','jute')" id="jute">Jute</button>
+            <button onclick="displaytip('Tea','tea')" id="tea">Tea</button>
+            <button onclick="displaytip('Coffee','coffee')" id="coffee">Coffee</button>
+            <button onclick="displaytip('Tobacco','tobacco')" id="tobacco">Tobacco</button>
+            <button onclick="displaytip('Rubber','rubber')" id="rubber">Rubber</button>
+            <button onclick="displaytip('Cocoa','cocoa')" id="cocoa">Cocoa</button>
+            <button onclick="displaytip('Arecanut','arecanut')" id="arecanut">Arecanut (Betel Nut)</button>
+            <button onclick="displaytip('Oil Palm','oil-palm')" id="oil-palm">Oil Palm</button>
+            <button onclick="displaytip('Vanilla','vanilla')" id="vanilla">Vanilla</button>
+        </div>
+
+        <div class="crop-tipstyle" id="crop-tip">
+                <div class="empty-state">
+                    <img src="arrow-left.png" alt="Arrow" class="guide-arrow">
+                    <h2>Ready to grow?</h2>
+                    <p>Select a crop from the left list for expert farming guidance.</p>
+                </div>
+        </div>
+     </div>
+
+        <script>
+        function displaytip(crop, clickedId) {
+        const allButtons = document.querySelectorAll('.crop-list button');
+        allButtons.forEach(btn => btn.style.backgroundColor = "");
+        allButtons.forEach(btn => btn.style.color = "black");
+        const cropindisplay = document.getElementById(clickedId);
+        cropindisplay.style.backgroundColor = "#2a6b1f";
+        cropindisplay.style.color = "white";
+        const contentArea = document.getElementById('crop-tip');
+if (crop === 'Cotton') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Cotton (Gossypium spp.)</h1>
+            <p>Major fiber crop. Thrives in warm climates with moderate rainfall.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Tropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 150 - 180 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Plough the field 2–3 times to loosen soil</li>
+                    <li>Apply well-rotted farmyard manure or compost</li>
+                    <li>Level the land for uniform irrigation</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing</h3>
+                <ul>
+                    <li>Select certified seeds, treated for pests</li>
+                    <li>Sow in rows, 45–60 cm apart</li>
+                    <li>Water lightly after sowing</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Apply fertilizers at key growth stages</li>
+                    <li>Control pests like bollworms using integrated pest management</li>
+                    <li>Harvest bolls when they open and cotton is fluffy</li>
+                </ul>
+            </div></div>
+
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Rotate with legumes to maintain soil fertility</li>
+                <li>Avoid waterlogging; cotton prefers well-drained soil</li>
+                <li>Timely pest monitoring increases yield</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Sugarcane') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Sugarcane (Saccharum officinarum)</h1>
+            <p>High-yielding crop grown for sugar, jaggery, and ethanol. Needs plenty of water.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 10 - 18 Months</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Plough deeply 2–3 times</li>
+                    <li>Remove all weeds and residues</li>
+                    <li>Level the land for irrigation</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Use healthy cane setts treated with fungicide</li>
+                    <li>Plant in furrows 1 m apart, 10–15 cm deep</li>
+                    <li>Water immediately after planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Apply fertilizers as per soil test recommendations</li>
+                    <li>Maintain proper irrigation, especially in dry spells</li>
+                    <li>Harvest when stalks are mature (12–18 months)</li>
+                </ul>
+            </div></div>
+
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Use intercropping in early stages to maximize land use</li>
+                <li>Control weeds regularly to improve growth</li>
+                <li>Timely fertilizer application boosts sugar content</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Jute') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Jute (Corchorus spp.)</h1>
+            <p>Fiber crop grown in wet climates, used for making ropes, bags, and textiles.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Humid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 4 - 5 Months</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Plough the field deeply and remove all weeds</li>
+                    <li>Level the field to allow waterlogging for jute growth</li>
+                    <li>Mix compost or well-rotted manure</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing</h3>
+                <ul>
+                    <li>Sow seeds in rows 20–25 cm apart</li>
+                    <li>Water immediately after sowing</li>
+                    <li>Thin seedlings to proper spacing after 2–3 weeks</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Keep soil moist and control weeds</li>
+                    <li>Apply light fertilizer for better fiber quality</li>
+                    <li>Harvest 120–150 days after sowing when stems turn yellowish</li>
+                </ul>
+            </div></div>
+
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Plant after the monsoon begins for adequate water supply</li>
+                <li>Keep seedlings spaced to avoid competition</li>
+                <li>Retain water in field for optimal fiber length and quality</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Tea') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Tea (Camellia sinensis)</h1>
+            <p>Leafy beverage crop grown in hilly regions with heavy rainfall. Requires acidic soil.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Humid / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 4.5 - 5.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> Perennial</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Clear weeds and level the sloped terrain</li>
+                    <li>Dig pits 45–60 cm wide and deep, spacing 1 m apart</li>
+                    <li>Fill pits with compost and topsoil mixture</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Use healthy nursery-raised saplings</li>
+                    <li>Plant in pits and water immediately</li>
+                    <li>Mulch around plants to retain moisture</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Prune regularly to maintain bush shape</li>
+                    <li>Control pests and diseases using organic sprays</li>
+                    <li>Harvest young leaves 3–4 years after planting</li>
+                </ul>
+            </div></div>
+
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Shade the young plants in the first year</li>
+                <li>Maintain acidic soil for better leaf quality</li>
+                <li>Pluck only tender leaves for premium tea</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Coffee') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Coffee (Coffea spp.)</h1>
+            <p>Perennial beverage crop grown in shaded hilly areas. Requires rich, well-drained soil.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate to High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> Perennial</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Clear field of weeds and debris</li>
+                    <li>Dig pits 50 cm wide and deep with spacing 2 m</li>
+                    <li>Mix compost and topsoil in pits</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Use healthy nursery-raised saplings</li>
+                    <li>Plant pits and provide shade with temporary covers</li>
+                    <li>Water regularly during dry season</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Prune plants to maintain shape and encourage growth</li>
+                    <li>Fertilize annually with organic or chemical fertilizers</li>
+                    <li>Harvest berries 3–4 years after planting</li>
+                </ul>
+            </div></div>
+
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Shade is crucial in the first 2–3 years</li>
+                <li>Mulch around plants to retain soil moisture</li>
+                <li>Use drip irrigation for water efficiency</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Tobacco') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Tobacco (Nicotiana tabacum)</h1>
+            <p>Leaf crop grown for cigarettes, cigars, and smokeless tobacco products.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Warm / Subtropical</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> 100 - 130 Days</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Plough field thoroughly and remove weeds</li>
+                    <li>Apply organic manure or compost</li>
+                    <li>Level the soil for irrigation</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Sowing & Transplanting</h3>
+                <ul>
+                    <li>Raise seedlings in nursery beds for 6–8 weeks</li>
+                    <li>Transplant healthy seedlings to main field in rows 75 cm apart</li>
+                    <li>Water immediately after transplanting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Apply fertilizer as per soil requirement</li>
+                    <li>Control pests like tobacco caterpillar</li>
+                    <li>Harvest leaves in stages when mature</li>
+                </ul>
+            </div></div>
+
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Do not overwater; keep soil moist but not soggy</li>
+                <li>Remove diseased leaves to prevent spread</li>
+                <li>Use shade net in hot regions to prevent leaf burn</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Rubber') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Rubber (Hevea brasiliensis)</h1>
+            <p>Perennial latex-producing tree, grown in tropical areas for natural rubber.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical Humid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 4.5 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> Perennial</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Clear weeds and level the field</li>
+                    <li>Dig pits 60 cm wide and deep with spacing 2.5–3 m</li>
+                    <li>Mix compost in pits before planting</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant healthy saplings in pits</li>
+                    <li>Provide temporary shade if necessary</li>
+                    <li>Water regularly during dry periods</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Prune lower branches to facilitate tapping</li>
+                    <li>Apply fertilizer annually</li>
+                    <li>Begin latex tapping 5–7 years after planting</li>
+                </ul>
+            </div></div>
+
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Maintain shade for young trees to prevent stress</li>
+                <li>Ensure drainage; rubber does not tolerate waterlogging</li>
+                <li>Regularly check for pests and diseases like leaf blight</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Cocoa') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Cocoa (Theobroma cacao)</h1>
+            <p>Leafy tropical crop grown for chocolate. Requires shade and high humidity.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Humid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate to High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.0 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> Perennial</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Plant under shade trees to protect from direct sun</li>
+                    <li>Prepare holes 50–60 cm deep and mix compost</li>
+                    <li>Remove all weeds and debris</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Use healthy seedlings from nursery</li>
+                    <li>Plant 3 m apart in rows</li>
+                    <li>Water seedlings regularly</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Maintain shade and irrigation</li>
+                    <li>Apply fertilizers periodically</li>
+                    <li>Harvest pods when fully ripe and ferment beans properly</li>
+                </ul>
+            </div></div>
+
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Intercrop with banana or coconut for shade and soil conservation</li>
+                <li>Prune regularly for better airflow and disease control</li>
+                <li>Mulching helps retain moisture and improve soil health</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Arecanut') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Arecanut (Areca catechu)</h1>
+            <p>Palm crop grown for areca nuts. Prefers humid tropics with well-drained soil.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Humid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 5.5 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> Perennial</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Clear the field of weeds and stumps</li>
+                    <li>Dig pits 50–60 cm deep, mix with compost</li>
+                    <li>Provide shade if planting in open field</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Use healthy seedlings or suckers</li>
+                    <li>Plant 2.5–3 m apart in rows</li>
+                    <li>Water regularly during early establishment</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Mulch around base to retain moisture</li>
+                    <li>Apply fertilizers based on soil test</li>
+                    <li>Harvest nuts after 4–5 years when trees mature</li>
+                </ul>
+            </div></div>
+
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Intercrop with coconut or banana for better shade and income</li>
+                <li>Control pests like red palm weevil and leaf spot</li>
+                <li>Provide irrigation during dry spells for better nut size</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Oil Palm') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Oil Palm (Elaeis guineensis)</h1>
+            <p>Perennial tropical crop grown for palm oil. Needs humid climate and deep soil.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Humid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> High</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 4.0 - 6.5</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> Perennial</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Clear field and remove debris</li>
+                    <li>Dig pits 60–75 cm deep, mix with compost</li>
+                    <li>Ensure proper drainage to prevent waterlogging</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant seedlings 8–9 m apart</li>
+                    <li>Water immediately after planting</li>
+                    <li>Mulch to retain moisture and suppress weeds</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Apply fertilizers as recommended</li>
+                    <li>Prune dead fronds and maintain cleanliness</li>
+                    <li>Harvest fruit bunches when ripe (3–4 years after planting)</li>
+                </ul>
+            </div></div>
+
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Intercrop with short-duration crops in early years</li>
+                <li>Monitor for pests like rhinoceros beetle</li>
+                <li>Maintain irrigation in dry months for fruit quality</li>
+            </ul>
+        </div>
+    </div>`;
+}
+else if (crop === 'Vanilla') {
+    contentArea.innerHTML = `
+    <div class="crop-display">
+        <header class="crop-header">
+            <h1>Vanilla (Vanilla planifolia)</h1>
+            <p>Climbing orchid grown for aromatic pods. Requires warm, humid climate and shade.</p>
+        </header>
+        <hr>
+        <div class="stats-grid">
+            <div class="stat-card">☀️ <strong>Climate:</strong> Tropical / Humid</div>
+            <div class="stat-card">💧 <strong>Water:</strong> Moderate</div>
+            <div class="stat-card">🌱 <strong>Soil pH:</strong> 6.0 - 7.0</div>
+            <div class="stat-card">⏳ <strong>Duration:</strong> Perennial</div>
+        </div>
+
+        <section class="tutorial-section">
+            <h2>The Growing Process</h2>
+
+            <div class="step"><div class="step-number">1</div><div class="step-content">
+                <h3>Land Preparation</h3>
+                <ul>
+                    <li>Provide trellis or support trees for climbing vines</li>
+                    <li>Prepare pits 30–40 cm deep, mix with compost</li>
+                    <li>Ensure partial shade to protect from direct sun</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">2</div><div class="step-content">
+                <h3>Planting</h3>
+                <ul>
+                    <li>Plant healthy vine cuttings 1–1.5 m apart</li>
+                    <li>Water regularly to keep soil moist</li>
+                    <li>Train vines on supports as they grow</li>
+                </ul>
+            </div></div>
+
+            <div class="step"><div class="step-number">3</div><div class="step-content">
+                <h3>Care & Harvest</h3>
+                <ul>
+                    <li>Hand-pollinate flowers for fruit set</li>
+                    <li>Maintain trellis and remove dead leaves</li>
+                    <li>Harvest pods when they turn yellow-green for curing</li>
+                </ul>
+            </div></div>
+
+        </section>
+
+        <div class="pro-tip-box">
+            <strong>💡 Pro-Tips:</strong>
+            <ul>
+                <li>Use shade and humidity to prevent vine stress</li>
+                <li>Pollinate flowers manually for better yield</li>
+                <li>Proper curing improves flavor and aroma of vanilla pods</li>
+            </ul>
+        </div>
+    </div>`;
+}
+
+else {
+                // This displays for any button that isn't 'Rice' yet
+                contentArea.innerHTML = `
+                    <div class="crop-display">
+                        <h1>${crop}</h1>
+                        <p>Detailed farming tips for ${crop} are currently being updated. Check back soon!</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Run this once so the page isn't empty when it first loads
+        displaytip('Rice');
+    </script>
+</body>
+</html>
+
